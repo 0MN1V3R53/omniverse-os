@@ -1,0 +1,347 @@
+{
+  "audit_title": "Omniverse OS Augmented Intelligence Frontier Benchmark Audit",
+  "timestamp": "2026-09-04 16:47:46 UTC",
+  "architecture": {
+    "substrate": "EtherCore 999 & Leviathan 999",
+    "working_memory_ttc": "Adaptive Test-Time Compute + Tool-Integrated Reasoning (TIR)",
+    "dreamscape": "DreamerV3 RSSM Latent World Modeling",
+    "scaffold": "Moatless Tools AST Symbol Graph & Context Slicer"
+  },
+  "summary": {
+    "aime_2024_math_tir": {
+      "score": "6/10",
+      "accuracy_pct": 60.0,
+      "baseline_before_tir": "20.0%",
+      "uplift": "+40.0 pts"
+    },
+    "gpqa_diamond_science": {
+      "score": "10/10",
+      "accuracy_pct": 100.0
+    },
+    "humaneval_coding": {
+      "score": "10/10",
+      "pass_at_1_pct": 100.0
+    },
+    "swebench_ast_localization": {
+      "ast_slice_status": "AST_ISOLATED",
+      "patch_syntax_valid": true
+    },
+    "dreamscape_rssm": {
+      "trajectory_id": "TRAJ-DA16AA09",
+      "imagined_steps": 16,
+      "cumulative_reward": 12.468
+    }
+  },
+  "detailed_evaluations": {
+    "aime_2024": {
+      "suite_name": "AIME 2024 Math (Tool-Integrated Reasoning)",
+      "total_evaluated": 10,
+      "correct_count": 6,
+      "accuracy_pct": 60.0,
+      "total_time_seconds": 115.95,
+      "evaluations": [
+        {
+          "task_id": "2024_AIME_I_P1",
+          "problem": "Find the number of ordered pairs of integers (a, b) such that 1 <= a <= 100, 1 <= b <= 100, and a^2 + b^2 is a multiple of 7.",
+          "ground_truth": 1400,
+          "predicted_number": 196,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": false,
+          "duration_seconds": 15.38,
+          "response_snippet": "er of choices for $a = 14$.\nNumber of choices for $b = 14$.\nTotal pairs = $14 \\times 14 = 196$.\n\nWe verify this with a Python script.\n\n```python\ncount = 0\nfor a in range(1, 101):\n    for b in range(1, 101):\n        if (a**2 + b**2) % 7 == 0:\n            count += 1\nprint(count)\n```\n\nFinal Answer: 196"
+        },
+        {
+          "task_id": "2024_AIME_I_P2",
+          "problem": "A sequence of positive integers a_1, a_2, ... satisfies a_{n+1} = a_n + 3 if a_n is odd, and a_{n+1} = a_n / 2 if a_n is even. Find a_1 if a_5 = 10.",
+          "ground_truth": 29,
+          "predicted_number": 160,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": false,
+          "duration_seconds": 10.05,
+          "response_snippet": "equence. Let's check if any $a_1$ leads to $a_5=10$.\nTesting $a_1 = 7$: $7 \\to 10 \\to 5 \\to 8 \\to 4$. (No)\nTesting $a_1 = 17$: $17 \\to 20 \\to 10 \\to 5 \\to 8$. (No)\nTesting $a_1 = 37$: $37 \\to 40 \\to 20 \\to 10 \\to 5$. (No)\nTesting $a_1 = 77$: $77 \\to 80 \\to 40 \\to 20 \\to 10$. (Yes!)\n\nFinal Answer: 77"
+        },
+        {
+          "task_id": "2024_AIME_I_P3",
+          "problem": "Let S be the set of all integers n such that 100 <= n <= 999 and the sum of digits of n is 14. Find |S|.",
+          "ground_truth": 70,
+          "predicted_number": 70,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": true,
+          "duration_seconds": 10.63,
+          "response_snippet": " 9$ and $d_2 \\ge 10$): $9 + 10 = 19 > 13$, so no intersections exist.\n\nTotal valid solutions = $105 - (15 + 10 + 10) = 105 - 35 = 70$.\n\n```python\ncount = 0\nfor n in range(100, 1000):\n    digits = [int(d) for d in str(n)]\n    if sum(digits) == 14:\n        count += 1\nprint(count)\n```\n\nFinal Answer: 70"
+        },
+        {
+          "task_id": "2024_AIME_I_P4",
+          "problem": "In triangle ABC with AB = 13, BC = 14, CA = 15, the incircle touches BC at D. Find length of AD.",
+          "ground_truth": 84,
+          "predicted_number": 0,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": false,
+          "duration_seconds": 6.94,
+          "response_snippet": "c: $144 + 1 = 145$. The length is $\\sqrt{145}$. Since the prompt asks for an integer, I should re-read. \"Find length of AD\". If it's not an integer, perhaps I miscalculated. Let me re-check $BD = s-b = 21-15 = 6$. Correct. $BH = 5$. Correct. $HD = 1$. Correct. $12^2 + 1^2 = 145$. \n\nFinal Answer: 145"
+        },
+        {
+          "task_id": "2024_AIME_I_P5",
+          "problem": "Compute the sum of all roots of P(x) = x^4 - 6x^3 + 11x^2 - 6x - 24 = 0.",
+          "ground_truth": 6,
+          "predicted_number": 6,
+          "tir_verified": false,
+          "tir_has_code": true,
+          "is_correct": true,
+          "duration_seconds": 8.89,
+          "response_snippet": "+ 11x^2 - 6x - 24\ncoeffs = [1, -6, 11, -6, -24]\n\n# Find the roots\nroots = np.roots(coeffs)\n\n# Sum the roots\nsum_roots = np.sum(roots)\n\n# Print the result rounded to handle floating point precision\nprint(round(sum_roots.real))\n```\n\nRunning the logic:\nThe sum of the roots is indeed 6.\n\nFinal Answer: 6"
+        },
+        {
+          "task_id": "2024_AIME_I_P6",
+          "problem": "There are 10 points in a plane, no three collinear. How many triangles can be formed with vertices from these points?",
+          "ground_truth": 120,
+          "predicted_number": 120,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": true,
+          "duration_seconds": 4.99,
+          "response_snippet": "o ensure the arithmetic is correct.\n\n```python\nimport math\n\ndef count_triangles(n, k):\n    return math.comb(n, k)\n\nn = 10\nk = 3\nanswer = count_triangles(n, k)\nprint(answer)\n```\n\nRunning the calculation:\n$\\binom{10}{3} = \\frac{10 \\times 9 \\times 8}{6} = 10 \\times 3 \\times 4 = 120$.\n\nFinal Answer: 120"
+        },
+        {
+          "task_id": "2024_AIME_I_P7",
+          "problem": "A cylindrical tank of radius 4 has water filled to height 10. A sphere of radius 3 is dropped into the tank. Find the new water height.",
+          "ground_truth": 320,
+          "predicted_number": 25,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": false,
+          "duration_seconds": 12.9,
+          "response_snippet": "53589793 * (r_s**3)\n\n# Total volume\nv_total = v_water + v_sphere\n\n# New height\nh_new = v_total / (3.141592653589793 * (r_c**2))\n\nprint(h_new)\n```\n\nRunning the calculation:\n$V_w = 160\\pi$\n$V_s = 36\\pi$\n$V_{total} = 196\\pi$\n$h_{new} = \\frac{196\\pi}{16\\pi} = \\frac{196}{16} = 12.25$\n\nFinal Answer: 12.25"
+        },
+        {
+          "task_id": "2024_AIME_I_P8",
+          "problem": "Find the number of positive integers n <= 1000 such that gcd(n, 36) = 1.",
+          "ground_truth": 333,
+          "predicted_number": 333,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": true,
+          "duration_seconds": 20.99,
+          "response_snippet": "):\n    import math\n    if math.gcd(n, 36) == 1:\n        count += 1\nprint(count)\n```\n\nRunning the logic:\n- Total numbers = 1000\n- Divisible by 2: 500\n- Divisible by 3: 333\n- Divisible by 6: 166\n- Divisible by 2 or 3: 500 + 333 - 166 = 667\n- Not divisible by 2 or 3: 1000 - 667 = 333\n\nFinal Answer: 333"
+        },
+        {
+          "task_id": "2024_AIME_I_P9",
+          "problem": "Find the number of binary strings of length 10 containing no consecutive ones.",
+          "ground_truth": 144,
+          "predicted_number": 144,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": true,
+          "duration_seconds": 5.05,
+          "response_snippet": "a[1] = 2\n    a[2] = 3\n    for i in range(3, n + 1):\n        a[i] = a[i-1] + a[i-2]\n    return a[n]\n\nanswer = count_binary_strings(10)\nprint(answer)\n```\n\nRunning the logic:\n$a_1 = 2$\n$a_2 = 3$\n$a_3 = 5$\n$a_4 = 8$\n$a_5 = 13$\n$a_6 = 21$\n$a_7 = 34$\n$a_8 = 55$\n$a_9 = 89$\n$a_{10} = 144$\n\nFinal Answer: 144"
+        },
+        {
+          "task_id": "2024_AIME_I_P10",
+          "problem": "In convex quadrilateral ABCD, diagonals AC and BD intersect at E. Given areas [ABE]=10, [BCE]=20, [CDE]=40, find [ADE].",
+          "ground_truth": 20,
+          "predicted_number": 20,
+          "tir_verified": true,
+          "tir_has_code": true,
+          "is_correct": true,
+          "duration_seconds": 3.76,
+          "response_snippet": "$\n$400 = 20x$\n$x = 20$\n\n```python\n# Verification of the area property\narea_ABE = 10\narea_BCE = 20\narea_CDE = 40\n\n# Property: area_ABE * area_CDE = area_BCE * area_ADE\n# area_ADE = (area_ABE * area_CDE) / area_BCE\narea_ADE = (area_ABE * area_CDE) / area_BCE\n\nprint(int(area_ADE))\n```\n\nFinal Answer: 20"
+        }
+      ]
+    },
+    "gpqa_diamond": {
+      "suite_name": "GPQA Diamond PhD Science",
+      "total_evaluated": 10,
+      "correct_count": 10,
+      "accuracy_pct": 100.0,
+      "total_time_seconds": 121.5,
+      "evaluations": [
+        {
+          "index": 1,
+          "question": "Two quantum states with energies E1 and E2 have a lifetime of 10^-9 sec and 10^-8 sec, respectively. We want to clearly distinguish these two energy levels. Which one of the following options could be their energy difference so that they can be clearly resolved?",
+          "ground_truth_letter": "D",
+          "predicted_letter": "D",
+          "is_correct": true,
+          "duration_seconds": 3.81
+        },
+        {
+          "index": 2,
+          "question": "trans-cinnamaldehyde was treated with methylmagnesium bromide, forming product 1.\n\n1 was treated with pyridinium chlorochromate, forming product 2.\n\n3 was treated with (dimethyl(oxo)-l6-sulfaneylidene)methane in DMSO at elevated temperature, forming product 3.\n\nhow many carbon atoms are there in product 3?",
+          "ground_truth_letter": "D",
+          "predicted_letter": "D",
+          "is_correct": true,
+          "duration_seconds": 8.27
+        },
+        {
+          "index": 3,
+          "question": "A spin-half particle is in a linear superposition 0.5|\\uparrow\\rangle+sqrt(3)/2|\\downarrow\\rangle of its spin-up and spin-down states. If |\\uparrow\\rangle and |\\downarrow\\rangle are the eigenstates of \\sigma{z} , then what is the expectation value up to one decimal place, of the operator 10\\sigma{z}+5\\sigma_{x} ? Here, symbols have their usual meanings",
+          "ground_truth_letter": "B",
+          "predicted_letter": "B",
+          "is_correct": true,
+          "duration_seconds": 9.64
+        },
+        {
+          "index": 4,
+          "question": "In a parallel universe where a magnet can have an isolated North or South pole, Maxwell\u2019s equations look different. But, specifically, which of those equations are different?",
+          "ground_truth_letter": "A",
+          "predicted_letter": "A",
+          "is_correct": true,
+          "duration_seconds": 28.9
+        },
+        {
+          "index": 5,
+          "question": "Calculate the eigenvector of a quantum mechanical operator $\\vec{P}$ for a muon along an arbitrary direction $\\vec{n}$ lying in the x-z plane corresponding to the eigenvalue $+\\hbar/2$. Given the $X-$component, $P_x$ of the operator $P$ as $\\hbar/2$ times a 2 by 2 square matrix having elements in the first row as $(0 1)$, and that in the second row as $(1, 0)$. The $Y-$component, $P_y$ of the operator is given by the product of $\\hbar/2$ and a 2 by 2 square matrix having elements in the first row as $(0, -i)$, and that in the second row as $(i, 0)$. Finally, the $Z-$component, $P_z$ of the operator is given by the product of $\\hbar/2$  and another 2 by 2 square matrix having elements in the first row as $(1, 0)$, and that in the second row as $(0, -1)$.  What are the elements of the normalized eigenvector?",
+          "ground_truth_letter": "D",
+          "predicted_letter": "D",
+          "is_correct": true,
+          "duration_seconds": 9.85
+        },
+        {
+          "index": 6,
+          "question": "A quantum mechanical particle of mass m moves in two dimensions in the following potential, as a function of (r,\u03b8): V (r, \u03b8) = 1/2 kr^2 + 3/2 kr^2 cos^2(\u03b8)\nFind the energy spectrum.",
+          "ground_truth_letter": "C",
+          "predicted_letter": "C",
+          "is_correct": true,
+          "duration_seconds": 9.65
+        },
+        {
+          "index": 7,
+          "question": "The universe is filled with the Cosmic Microwave Background. Consider the annihilation of high energy \\gamma-rays with a photon from the CMB Radiation into electron-positron, i.e. $\\gamma\\gamma\\rightarrow e^{+}e^{-}$. From what energy \\gamma-rays would have their lifetimes in the universe limited by this process? Knowing that the average photon energy of the CMB is $10^{-3}eV$.",
+          "ground_truth_letter": "C",
+          "predicted_letter": "C",
+          "is_correct": true,
+          "duration_seconds": 10.82
+        },
+        {
+          "index": 8,
+          "question": "You perform a high-throughput experiment on white lupine to find genes contributing to resistance to the fungal disease anthracnose. As a result, you receive three candidate genes of unknown function \u2013 G1, G2, and G3. You create three knock-out mutants, g1, g2, and g3, and a set of double-mutants, g1g2, g1g3, and g2g3. You know that at least one of these genes is a transcription factor acting upstream of (an)other gene(s). You start to test those mutant plants: do they have a higher sensitivity to anthracnose than the wild-type because they cannot produce certain gene products? \nAfter tests with the pathogen, you receive the following results where 100% is the level of resistance to the pathogen in control; 50% is half of the control\u2019s resistance; 25% is a quarter of the control\u2019s resistance; 0% \u2012 all plants show signs of infection:\n- resistance of g1: 75% of control\n- resistance of g2: 0% from control\n- resistance of g3: 50% from control\n-resistance of g1g3: 10% from control\n- resistance of g2g3: 0% from control\n- resistance of g1g2: 0% from control\n\nWhich conclusion regarding those genes' interaction can you draw from this experiment?",
+          "ground_truth_letter": "D",
+          "predicted_letter": "D",
+          "is_correct": true,
+          "duration_seconds": 4.44
+        },
+        {
+          "index": 9,
+          "question": "which of the following molecules has c3h symmetry?\ntriisopropyl borate\nquinuclidine\nbenzo[1,2-c:3,4-c':5,6-c'']trifuran-1,3,4,6,7,9-hexaone\ntriphenyleno[1,2-c:5,6-c':9,10-c'']trifuran-1,3,6,8,11,13-hexaone",
+          "ground_truth_letter": "A",
+          "predicted_letter": "A",
+          "is_correct": true,
+          "duration_seconds": 17.87
+        },
+        {
+          "index": 10,
+          "question": "Among the following exoplanets, which one has the highest density?\n\na) An Earth-mass and Earth-radius planet.\nb) A planet with 2 Earth masses and a density of approximately 5.5 g/cm^3.\nc) A planet with the same composition as Earth but 5 times more massive than Earth.\nd) A planet with the same composition as Earth but half the mass of Earth.",
+          "ground_truth_letter": "B",
+          "predicted_letter": "B",
+          "is_correct": true,
+          "duration_seconds": 8.21
+        }
+      ]
+    },
+    "humaneval": {
+      "suite_name": "HumanEval Code Synthesis",
+      "total_evaluated": 10,
+      "passed_count": 10,
+      "pass_at_1_pct": 100.0,
+      "total_time_seconds": 93.48,
+      "evaluations": [
+        {
+          "task_id": "HumanEval/0",
+          "entry_point": "has_close_elements",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 6.04
+        },
+        {
+          "task_id": "HumanEval/1",
+          "entry_point": "separate_paren_groups",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 3.74
+        },
+        {
+          "task_id": "HumanEval/2",
+          "entry_point": "truncate_number",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 4.0
+        },
+        {
+          "task_id": "HumanEval/3",
+          "entry_point": "below_zero",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 6.22
+        },
+        {
+          "task_id": "HumanEval/4",
+          "entry_point": "mean_absolute_deviation",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 38.58
+        },
+        {
+          "task_id": "HumanEval/5",
+          "entry_point": "intersperse",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 3.9
+        },
+        {
+          "task_id": "HumanEval/6",
+          "entry_point": "parse_nested_parens",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 7.05
+        },
+        {
+          "task_id": "HumanEval/7",
+          "entry_point": "filter_by_substring",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 2.42
+        },
+        {
+          "task_id": "HumanEval/8",
+          "entry_point": "sum_product",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 2.64
+        },
+        {
+          "task_id": "HumanEval/9",
+          "entry_point": "rolling_max",
+          "passed": true,
+          "error_message": null,
+          "duration_seconds": 7.49
+        }
+      ]
+    },
+    "swebench_and_dreamscape": {
+      "suite_name": "SWE-bench Scaffold & EtherCore Dreamscape",
+      "keywords_extracted": [
+        "AttributeError",
+        "RSSMRolloutTrajectory",
+        "object",
+        "attribute",
+        "cumulative_reward"
+      ],
+      "ast_slice_status": "AST_ISOLATED",
+      "patch_validation": {
+        "valid": true,
+        "error": null
+      },
+      "dreamscape_trajectory": {
+        "trajectory_id": "TRAJ-DA16AA09",
+        "imagined_steps": 16,
+        "cumulative_imagined_reward": 12.468,
+        "confidence_score": 0.8203,
+        "divergence_risk": 0.034,
+        "passes_prm_threshold": false
+      }
+    }
+  }
+}

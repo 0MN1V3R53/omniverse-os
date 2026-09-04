@@ -106,6 +106,25 @@ class DreamerV3RSSMRolloutRunner:
             divergence_risk_score=0.034
         )
 
+    def evaluate_reasoning_confidence(self, prompt: str, steps: int = 16) -> Dict[str, Any]:
+        """
+        Evaluates a reasoning prompt via latent RSSM counterfactual rollout
+        and returns a confidence score (0.0 - 1.0) and divergence risk.
+        """
+        traj = self.execute_imaginary_rollout(prompt, horizon=steps)
+        # Average reward per step normalized to [0, 1]
+        avg_reward = traj.cumulative_imagined_reward / max(1, traj.imagined_steps)
+        confidence = min(1.0, max(0.0, avg_reward / 0.95))
+        return {
+            "trajectory_id": traj.trajectory_id,
+            "imagined_steps": traj.imagined_steps,
+            "cumulative_imagined_reward": traj.cumulative_imagined_reward,
+            "confidence_score": round(confidence, 4),
+            "divergence_risk": traj.divergence_risk_score,
+            "passes_prm_threshold": bool(confidence >= 0.95)
+        }
+
+
 
 class WanVideoDiffusionHook:
     """
