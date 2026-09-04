@@ -41,3 +41,4 @@ scripts/official_simple_evals/
 *.app/
 *.log
 dist/dmg_staging/
+apps/omniverse_os/src/OmniverseOS

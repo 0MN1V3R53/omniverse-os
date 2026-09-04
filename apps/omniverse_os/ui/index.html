@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omniverse OS - Apex Workstation Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Desktop Workspace Area -->
+  <div id="desktop" class="desktop">
+    <!-- Desktop Background & Particle Canvas -->
+    <canvas id="bgCanvas" class="bg-canvas"></canvas>
+
+    <!-- Desktop Icons Grid -->
+    <div class="desktop-icons">
+      <div class="desktop-icon" onclick="openWindow('taskmgr')">
+        <div class="icon-img taskmgr-icon"></div>
+        <span>Task Manager</span>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('devmgmt')">
+        <div class="icon-img devmgmt-icon"></div>
+        <span>Device Manager</span>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('bench')">
+        <div class="icon-img bench-icon"></div>
+        <span>Core Diagnostics</span>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('terminal')">
+        <div class="icon-img terminal-icon"></div>
+        <span>PowerShell 7.5</span>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('explorer')">
+        <div class="icon-img explorer-icon"></div>
+        <span>File Explorer</span>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('directstorage')">
+        <div class="icon-img directstorage-icon"></div>
+        <span>DirectStorage</span>
+      </div>
+    </div>
+
+    <!-- WINDOW 1: Task Manager -->
+    <div id="win-taskmgr" class="window" style="top: 40px; left: 60px; width: 940px; height: 680px;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-taskmgr')">
+        <div class="window-title">
+          <span class="win-icon taskmgr-small"></span>
+          <span>Task Manager — Omniverse OS (192 Logical Processors)</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('taskmgr')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('taskmgr')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('taskmgr')">✕</button>
+        </div>
+      </div>
+      <div class="window-nav">
+        <button class="nav-tab active" onclick="switchTaskmgrTab('perf')">Performance</button>
+        <button class="nav-tab" onclick="switchTaskmgrTab('procs')">Processes</button>
+        <button class="nav-tab" onclick="switchTaskmgrTab('numa')">NUMA & Topology</button>
+      </div>
+      <div class="window-body">
+        <!-- Performance Tab -->
+        <div id="taskmgr-tab-perf" class="tab-pane active">
+          <div class="perf-layout">
+            <div class="perf-sidebar">
+              <div class="perf-card active" onclick="selectPerfMetric('cpu')">
+                <div class="perf-card-title">CPU</div>
+                <div class="perf-card-val" id="sb-cpu-pct">4.2%</div>
+                <div class="perf-card-sub" id="sb-cpu-freq">5.40 GHz</div>
+              </div>
+              <div class="perf-card" onclick="selectPerfMetric('memory')">
+                <div class="perf-card-title">Memory</div>
+                <div class="perf-card-val" id="sb-mem-pct">18.4 GB</div>
+                <div class="perf-card-sub">512 GB DDR5-6400</div>
+              </div>
+              <div class="perf-card" onclick="selectPerfMetric('disk')">
+                <div class="perf-card-title">Disk 0 (NVMe RAID)</div>
+                <div class="perf-card-val" id="sb-disk-val">0%</div>
+                <div class="perf-card-sub">16.0 TB PCIe 5.0</div>
+              </div>
+              <div class="perf-card" onclick="selectPerfMetric('gpu')">
+                <div class="perf-card-title">GPU 0 (RTX 5090)</div>
+                <div class="perf-card-val" id="sb-gpu-val">5%</div>
+                <div class="perf-card-sub">32 GB GDDR7</div>
+              </div>
+            </div>
+            <div class="perf-main">
+              <div class="perf-header-info">
+                <div class="perf-head-title" id="perf-title-text">AMD Ryzen Threadripper PRO 9995WX 96-Core Processor</div>
+                <div class="perf-head-sub" id="perf-sub-text">192 Logical Processors | 12 CCDs | 384MB L3 Cache</div>
+              </div>
+              <!-- CPU Heatmap View -->
+              <div id="perf-view-cpu" class="perf-metric-view">
+                <div class="cpu-cores-header">
+                  <span>192-Thread Core Utilization Heatmap</span>
+                  <span id="active-util-label">Overall: 4.2%</span>
+                </div>
+                <div id="cpuCoresGrid" class="cpu-cores-grid"></div>
+                <div class="cpu-specs-row">
+                  <div class="spec-col">
+                    <span class="spec-lbl">Utilization</span>
+                    <span class="spec-val" id="cpu-stat-util">4.2%</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Speed</span>
+                    <span class="spec-val" id="cpu-stat-speed">5.40 GHz</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Processes</span>
+                    <span class="spec-val" id="cpu-stat-procs">12</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Threads</span>
+                    <span class="spec-val" id="cpu-stat-threads">254</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Up time</span>
+                    <span class="spec-val" id="cpu-stat-uptime">00:05:12</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Memory View -->
+              <div id="perf-view-memory" class="perf-metric-view" style="display:none;">
+                <canvas id="memChart" width="600" height="180"></canvas>
+                <div class="cpu-specs-row" style="margin-top:16px;">
+                  <div class="spec-col">
+                    <span class="spec-lbl">In use</span>
+                    <span class="spec-val" id="mem-stat-used">18.4 GB</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Available</span>
+                    <span class="spec-val" id="mem-stat-avail">493.6 GB</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Speed</span>
+                    <span class="spec-val">6400 MT/s</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Channels</span>
+                    <span class="spec-val">8 (Octa-Channel)</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Hardware ECC</span>
+                    <span class="spec-val" style="color:var(--accent-green);">SEC-DED Active</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Disk View -->
+              <div id="perf-view-disk" class="perf-metric-view" style="display:none;">
+                <canvas id="diskChart" width="600" height="180"></canvas>
+                <div class="cpu-specs-row" style="margin-top:16px;">
+                  <div class="spec-col">
+                    <span class="spec-lbl">Active time</span>
+                    <span class="spec-val" id="disk-stat-act">1.2%</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Read speed</span>
+                    <span class="spec-val" id="disk-stat-read">120 MB/s</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Write speed</span>
+                    <span class="spec-val" id="disk-stat-write">45 MB/s</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Array Capacity</span>
+                    <span class="spec-val">16.0 TB (RAID 0)</span>
+                  </div>
+                </div>
+              </div>
+              <!-- GPU View -->
+              <div id="perf-view-gpu" class="perf-metric-view" style="display:none;">
+                <canvas id="gpuChart" width="600" height="180"></canvas>
+                <div class="cpu-specs-row" style="margin-top:16px;">
+                  <div class="spec-col">
+                    <span class="spec-lbl">GPU Utilization</span>
+                    <span class="spec-val" id="gpu-stat-util">5.0%</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Dedicated VRAM</span>
+                    <span class="spec-val" id="gpu-stat-vram">2.1 / 32.0 GB</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">Tensor Cores</span>
+                    <span class="spec-val">680 (5th-Gen)</span>
+                  </div>
+                  <div class="spec-col">
+                    <span class="spec-lbl">AI Inference</span>
+                    <span class="spec-val">3,320 TFLOPS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Processes Tab -->
+        <div id="taskmgr-tab-procs" class="tab-pane">
+          <div class="table-container">
+            <table class="procs-table">
+              <thead>
+                <tr>
+                  <th>Process Name</th>
+                  <th>PID</th>
+                  <th>Status</th>
+                  <th>CPU</th>
+                  <th>Memory</th>
+                  <th>Disk</th>
+                  <th>GPU</th>
+                  <th>Threads</th>
+                </tr>
+              </thead>
+              <tbody id="procsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- NUMA Tab -->
+        <div id="taskmgr-tab-numa" class="tab-pane">
+          <div class="numa-container">
+            <div class="numa-header">4-Node Non-Uniform Memory Access (NUMA) Topology</div>
+            <div class="numa-grid" id="numaGrid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW 2: Device Manager -->
+    <div id="win-devmgmt" class="window" style="top: 80px; left: 160px; width: 780px; height: 580px;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-devmgmt')">
+        <div class="window-title">
+          <span class="win-icon devmgmt-small"></span>
+          <span>Device Manager — Substrate Hardware Tree</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('devmgmt')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('devmgmt')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('devmgmt')">✕</button>
+        </div>
+      </div>
+      <div class="window-body devmgmt-body">
+        <div class="tree-root">
+          <div class="tree-node expanded">
+            <span class="tree-toggle" onclick="toggleTreeNode(this)">▼</span>
+            <span class="tree-icon comp-icon"></span>
+            <strong>OMNIVERSE-WORKSTATION-PRO (sTR5 WRX90 Substrate Platform)</strong>
+          </div>
+          <div class="tree-children">
+            <div class="tree-node">
+              <span class="tree-toggle" onclick="toggleTreeNode(this)">▶</span>
+              <span class="tree-icon cpu-icon"></span>
+              <span>Processors (192 Logical Processors / 96 Physical Cores)</span>
+              <div class="tree-children nested" style="display:none;" id="tree-cpu-list"></div>
+            </div>
+            <div class="tree-node">
+              <span class="tree-toggle" onclick="toggleTreeNode(this)">▶</span>
+              <span class="tree-icon gpu-icon"></span>
+              <span>Display Adapters</span>
+              <div class="tree-children nested" style="display:none;">
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>NVIDIA GeForce RTX 5090 (32GB GDDR7, WDDM 3.3, 21,760 CUDA Cores)</div>
+              </div>
+            </div>
+            <div class="tree-node">
+              <span class="tree-toggle" onclick="toggleTreeNode(this)">▶</span>
+              <span class="tree-icon disk-icon"></span>
+              <span>Storage Controllers & NVMe Drives</span>
+              <div class="tree-children nested" style="display:none;">
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Phison PS5026-E26 Enterprise Dual Cortex-R5 NVMe Controller</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Crucial T705 4TB PCIe 5.0 x4 NVMe SSD (Drive 0)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Crucial T705 4TB PCIe 5.0 x4 NVMe SSD (Drive 1)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Crucial T705 4TB PCIe 5.0 x4 NVMe SSD (Drive 2)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Crucial T705 4TB PCIe 5.0 x4 NVMe SSD (Drive 3)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>16TB Aggregate Striped RAID 0 Volume (58,000 MB/s Peak)</div>
+              </div>
+            </div>
+            <div class="tree-node">
+              <span class="tree-toggle" onclick="toggleTreeNode(this)">▶</span>
+              <span class="tree-icon ram-icon"></span>
+              <span>Memory Subsystem</span>
+              <div class="tree-children nested" style="display:none;">
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>8x 64GB DDR5-6400 ECC Registered RDIMM (512GB Total)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Octa-Channel Memory Controller (409.6 GB/s Bus Bandwidth)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>On-Die & Sideband ECC Engine (SEC-DED Active)</div>
+              </div>
+            </div>
+            <div class="tree-node">
+              <span class="tree-toggle" onclick="toggleTreeNode(this)">▶</span>
+              <span class="tree-icon sys-icon"></span>
+              <span>System & Motherboard Devices</span>
+              <div class="tree-children nested" style="display:none;">
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>ASUS Pro WS WRX90E-SAGE SE (AMD WRX90 Chipset)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>128 PCIe 5.0 Lanes Root Complex (504.06 GB/s)</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>32+3+3+3 Monolithic VRM Thermal Governor</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>ASPEED AST2600 BMC IPMI 2.0 Management Controller</div>
+                <div class="tree-leaf"><span class="tree-icon leaf-icon"></span>Intel X710-AT2 Dual 10GbE LAN Controller</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW 3: Core Diagnostics & Hardware Benchmark Studio -->
+    <div id="win-bench" class="window" style="top: 60px; left: 240px; width: 880px; height: 640px;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-bench')">
+        <div class="window-title">
+          <span class="win-icon bench-small"></span>
+          <span>Core Diagnostics & Hardware Benchmark Studio</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('bench')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('bench')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('bench')">✕</button>
+        </div>
+      </div>
+      <div class="window-body bench-body">
+        <div class="bench-hero">
+          <div class="bench-hero-left">
+            <h2>Hardware Stress & Subsystem Verification Suite</h2>
+            <p>Direct zero-drift execution across Zen 5 AVX-512, Octa-Channel DDR5, PCIe 5.0 RAID 0, and RTX 5090 Blackwell Tensor Cores.</p>
+          </div>
+          <button class="btn-primary" id="btn-run-all-bench" onclick="triggerBenchmark('all')">
+            ▶ Run Full 5-Tier Stress Benchmark
+          </button>
+        </div>
+
+        <div class="bench-cards-grid">
+          <!-- CPU Card -->
+          <div class="bench-card">
+            <div class="bench-card-header">
+              <span class="badge badge-cpu">CPU</span>
+              <h3>AVX-512 Parallel GEMM</h3>
+            </div>
+            <p>Dispatches 2.15 Billion floating point operations across all 192 Zen 5 hardware threads.</p>
+            <div class="bench-metric-row">
+              <span>Throughput:</span>
+              <strong id="bm-cpu-tflops">29.62 TFLOPS</strong>
+            </div>
+            <div class="bench-metric-row">
+              <span>Cache State:</span>
+              <strong id="bm-cpu-cache">98.4% (384MB L3)</strong>
+            </div>
+            <button class="btn-card" onclick="triggerBenchmark('cpu')">Run CPU Test</button>
+          </div>
+
+          <!-- RAM Card -->
+          <div class="bench-card">
+            <div class="bench-card-header">
+              <span class="badge badge-ram">RAM</span>
+              <h3>Octa-Channel Memory STREAM</h3>
+            </div>
+            <p>Streams 64GB across 8 discrete 64-bit channels at 6400 MT/s with hardware ECC verification.</p>
+            <div class="bench-metric-row">
+              <span>Sustained Bandwidth:</span>
+              <strong id="bm-ram-bw">374.78 GB/s</strong>
+            </div>
+            <div class="bench-metric-row">
+              <span>CAS Latency:</span>
+              <strong>10.0 ns (CL32)</strong>
+            </div>
+            <button class="btn-card" onclick="triggerBenchmark('ram')">Run Memory Test</button>
+          </div>
+
+          <!-- Storage Card -->
+          <div class="bench-card">
+            <div class="bench-card-header">
+              <span class="badge badge-storage">NVMe</span>
+              <h3>DirectStorage PCIe 5.0 Burst</h3>
+            </div>
+            <p>Triggers a 20GB block burst across 4x Crucial T705 SSDs via Phison E26 controller.</p>
+            <div class="bench-metric-row">
+              <span>Sequential Write:</span>
+              <strong id="bm-disk-write">48,768 MB/s</strong>
+            </div>
+            <div class="bench-metric-row">
+              <span>Random 4K IOPS:</span>
+              <strong id="bm-disk-iops">6.2M IOPS</strong>
+            </div>
+            <button class="btn-card" onclick="triggerBenchmark('storage')">Run NVMe Test</button>
+          </div>
+
+          <!-- GPU Card -->
+          <div class="bench-card">
+            <div class="bench-card-header">
+              <span class="badge badge-gpu">GPU</span>
+              <h3>Blackwell RTX 5090 AI Tensor</h3>
+            </div>
+            <p>Executes FP8/FP4 transformer inference on 680 5th-Gen Blackwell Tensor Cores.</p>
+            <div class="bench-metric-row">
+              <span>AI Throughput:</span>
+              <strong id="bm-gpu-speed">54.4 tokens/s</strong>
+            </div>
+            <div class="bench-metric-row">
+              <span>Peak Tensor FP8:</span>
+              <strong>3,320 TFLOPS</strong>
+            </div>
+            <button class="btn-card" onclick="triggerBenchmark('gpu')">Run Tensor AI Test</button>
+          </div>
+        </div>
+
+        <!-- Live Benchmark Output Terminal -->
+        <div class="bench-terminal">
+          <div class="bench-terminal-title">REAL-TIME EXECUTION LOG & VERIFICATION PROOF:</div>
+          <pre id="benchConsoleLog">[*] Omniverse Hardware Benchmark Engine Ready. Select a test or run all.</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW 4: PowerShell 7.5 -->
+    <div id="win-terminal" class="window" style="top: 100px; left: 320px; width: 820px; height: 500px;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-terminal')">
+        <div class="window-title">
+          <span class="win-icon terminal-small"></span>
+          <span>Administrator: Omniverse PowerShell 7.5</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('terminal')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('terminal')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('terminal')">✕</button>
+        </div>
+      </div>
+      <div class="window-body terminal-body" onclick="document.getElementById('termInput').focus()">
+        <div id="termOutput" class="term-output">
+Omniverse OS [Version 12.0.2026.9995]
+(c) 2026 Omniverse Corporation. All rights reserved.
+Sovereign Substrate Architecture | Zen 5 96C/192T | WRX90 | DDR5-6400 | RTX 5090
+
+Type 'help' for available core directives.
+        </div>
+        <div class="term-input-line">
+          <span class="term-prompt">PS C:\Omniverse&gt;</span>
+          <input type="text" id="termInput" class="term-input" autocomplete="off" autofocus onkeydown="handleTermKey(event)">
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW 5: File Explorer -->
+    <div id="win-explorer" class="window" style="top: 120px; left: 180px; width: 800px; height: 520px;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-explorer')">
+        <div class="window-title">
+          <span class="win-icon explorer-small"></span>
+          <span>File Explorer — This PC</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('explorer')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('explorer')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('explorer')">✕</button>
+        </div>
+      </div>
+      <div class="window-body explorer-body">
+        <div class="explorer-address-bar">
+          <button class="exp-nav-btn">←</button>
+          <button class="exp-nav-btn">→</button>
+          <input type="text" class="exp-path-input" value="This PC" readonly>
+        </div>
+        <div class="explorer-content">
+          <div class="explorer-section-title">Devices and drives (3)</div>
+          <div class="drives-grid">
+            <div class="drive-card">
+              <div class="drive-icon sys-drive"></div>
+              <div class="drive-info">
+                <div class="drive-name">Local Disk (C:)</div>
+                <div class="drive-bar"><div class="drive-fill" style="width: 14%;"></div></div>
+                <div class="drive-space">880 GB free of 1.0 TB</div>
+              </div>
+            </div>
+            <div class="drive-card">
+              <div class="drive-icon nvme-drive"></div>
+              <div class="drive-info">
+                <div class="drive-name">NVMe RAID 0 (D:)</div>
+                <div class="drive-bar"><div class="drive-fill" style="width: 8%;"></div></div>
+                <div class="drive-space">14.8 TB free of 16.0 TB (58 GB/s)</div>
+              </div>
+            </div>
+            <div class="drive-card">
+              <div class="drive-icon substrate-drive"></div>
+              <div class="drive-info">
+                <div class="drive-name">Substrate Vault (E:)</div>
+                <div class="drive-bar"><div class="drive-fill" style="width: 1%;"></div></div>
+                <div class="drive-space">256 TB Quantum Virtual Space</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW 6: DirectStorage Monitor -->
+    <div id="win-directstorage" class="window" style="top: 140px; left: 220px; width: 760px; height: 500px;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-directstorage')">
+        <div class="window-title">
+          <span class="win-icon directstorage-small"></span>
+          <span>DirectStorage 1.2 & BypassIO Hardware Monitor</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('directstorage')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('directstorage')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('directstorage')">✕</button>
+        </div>
+      </div>
+      <div class="window-body directstorage-body">
+        <div class="ds-flow-diagram">
+          <div class="ds-node">
+            <div class="ds-node-title">16TB NVMe RAID 0</div>
+            <div class="ds-node-val">4x Crucial T705</div>
+            <div class="ds-node-rate">55,680 MB/s Read</div>
+          </div>
+          <div class="ds-arrow">➔ <span>PCIe 5.0 x16 (BypassIO DMA)</span> ➔</div>
+          <div class="ds-node active-flow">
+            <div class="ds-node-title">Omniverse StorPort</div>
+            <div class="ds-node-val">Zero-Copy Filter Bypass</div>
+            <div class="ds-node-rate">&lt; 1.0 µs Latency</div>
+          </div>
+          <div class="ds-arrow">➔ <span>BAR Memory Direct Map</span> ➔</div>
+          <div class="ds-node">
+            <div class="ds-node-title">RTX 5090 GDDR7</div>
+            <div class="ds-node-val">32GB VRAM Buffer</div>
+            <div class="ds-node-rate">1,792 GB/s Bandwidth</div>
+          </div>
+        </div>
+        <div class="ds-stats-table">
+          <div class="ds-stat-row">
+            <span>DirectStorage Driver Status:</span>
+            <strong style="color:var(--accent-green);">ONLINE (WDDM 3.3 Hardware Accelerated)</strong>
+          </div>
+          <div class="ds-stat-row">
+            <span>BypassIO Compatibility:</span>
+            <strong>Supported on all 4x NVMe Volumes</strong>
+          </div>
+          <div class="ds-stat-row">
+            <span>GDeflate GPU Decompression:</span>
+            <strong>Offloaded to 21,760 CUDA Cores</strong>
+          </div>
+          <div class="ds-stat-row">
+            <span>Queue Depth:</span>
+            <strong>128 Concurrent Request Rings</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Menu Popover -->
+    <div id="startMenu" class="start-menu">
+      <div class="start-search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Type here to search apps, settings, and hardware..." class="start-search-input">
+      </div>
+      <div class="start-section-title">Pinned Applications</div>
+      <div class="start-pinned-grid">
+        <div class="start-item" onclick="openWindow('taskmgr'); toggleStartMenu();">
+          <div class="icon-img taskmgr-icon"></div>
+          <span>Task Manager</span>
+        </div>
+        <div class="start-item" onclick="openWindow('devmgmt'); toggleStartMenu();">
+          <div class="icon-img devmgmt-icon"></div>
+          <span>Device Manager</span>
+        </div>
+        <div class="start-item" onclick="openWindow('bench'); toggleStartMenu();">
+          <div class="icon-img bench-icon"></div>
+          <span>Core Diagnostics</span>
+        </div>
+        <div class="start-item" onclick="openWindow('terminal'); toggleStartMenu();">
+          <div class="icon-img terminal-icon"></div>
+          <span>PowerShell</span>
+        </div>
+        <div class="start-item" onclick="openWindow('explorer'); toggleStartMenu();">
+          <div class="icon-img explorer-icon"></div>
+          <span>File Explorer</span>
+        </div>
+        <div class="start-item" onclick="openWindow('directstorage'); toggleStartMenu();">
+          <div class="icon-img directstorage-icon"></div>
+          <span>DirectStorage</span>
+        </div>
+      </div>
+      <div class="start-footer">
+        <div class="user-profile">
+          <div class="user-avatar"></div>
+          <div class="user-info">
+            <div class="user-name">Dr. Alexander Vance</div>
+            <div class="user-role">Omniverse Administrator (0MN1V3R53)</div>
+          </div>
+        </div>
+        <div class="power-btn" onclick="alert('Omniverse OS is operating in continuous sovereign substrate mode.')">⏻</div>
+      </div>
+    </div>
+
+    <!-- Centered Windows Taskbar -->
+    <div class="taskbar">
+      <div class="taskbar-center">
+        <button class="taskbar-btn start-btn" onclick="toggleStartMenu()" title="Start">
+          <span class="start-logo"></span>
+        </button>
+        <button class="taskbar-btn search-btn" onclick="toggleStartMenu()" title="Search">
+          <span class="tb-search-icon">🔍</span>
+        </button>
+        <button class="taskbar-btn" onclick="openWindow('taskmgr')" title="Task Manager">
+          <span class="icon-img taskmgr-small"></span>
+        </button>
+        <button class="taskbar-btn" onclick="openWindow('devmgmt')" title="Device Manager">
+          <span class="icon-img devmgmt-small"></span>
+        </button>
+        <button class="taskbar-btn" onclick="openWindow('bench')" title="Core Diagnostics">
+          <span class="icon-img bench-small"></span>
+        </button>
+        <button class="taskbar-btn" onclick="openWindow('terminal')" title="PowerShell 7.5">
+          <span class="icon-img terminal-small"></span>
+        </button>
+        <button class="taskbar-btn" onclick="openWindow('explorer')" title="File Explorer">
+          <span class="icon-img explorer-small"></span>
+        </button>
+      </div>
+      <div class="taskbar-tray">
+        <div class="tray-icon" title="10GbE Network Active">🌐</div>
+        <div class="tray-icon" title="High Definition Audio">🔊</div>
+        <div class="tray-icon" title="Continuous Substrate Power">⚡</div>
+        <div class="tray-clock" id="trayClock">
+          <div class="clock-time" id="clockTime">12:00 PM</div>
+          <div class="clock-date" id="clockDate">09/04/2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="desktop.js"></script>
+</body>
+</html>
