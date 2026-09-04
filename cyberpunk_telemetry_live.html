@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTI-PAGE CYBERPUNK ENTERPRISE ANALYTICS & DATA SCIENCE VAULT | Sky Auto Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-void: #030712;
+            --panel-bg: rgba(15, 23, 42, 0.88);
+            --neon-cyan: #06b6d4;
+            --neon-pink: #ec4899;
+            --neon-green: #10b981;
+            --neon-gold: #f59e0b;
+            --neon-red: #ef4444;
+            --border-glow: rgba(6, 182, 212, 0.4);
+            --font-hud: 'Orbitron', sans-serif;
+            --font-sub: 'Rajdhani', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-void);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+            color: #f8fafc;
+            font-family: var(--font-sub);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 28px;
+            background: var(--panel-bg);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+            margin-bottom: 20px;
+            backdrop-filter: blur(12px);
+        }
+
+        .brand-title {
+            font-family: var(--font-hud);
+            font-size: 19px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .brand-title span { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan); }
+
+        /* Top Navigation Tabs */
+        .cyber-nav {
+            display: flex;
+            gap: 10px;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: #94a3b8;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-family: var(--font-hud);
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-btn:hover { color: var(--neon-cyan); border-color: rgba(6, 182, 212, 0.4); }
+
+        .nav-btn.active {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Page Sections */
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Top HUD Summary Grid */
+        .hud-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .hud-card {
+            background: var(--panel-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px 20px;
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.02);
+        }
+
+        .hud-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 6px; }
+        .hud-val { font-family: var(--font-hud); font-size: 20px; font-weight: 800; color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
+
+        /* Portals Layout */
+        .portals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+        .portal-panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .portal-header {
+            font-family: var(--font-hud);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--neon-pink);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            border-bottom: 1px dashed rgba(236, 72, 153, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .data-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 13px; }
+        .data-row:last-child { border-bottom: none; }
+
+        .d-key { color: #cbd5e1; font-weight: 600; }
+        .d-val { font-family: var(--font-code); color: var(--neon-cyan); text-align: right; word-break: break-all; }
+        .d-val.highlight { color: var(--neon-green); font-weight: bold; }
+        .d-val.accent { color: var(--neon-gold); }
+        .d-val.danger { color: var(--neon-red); font-weight: bold; }
+
+        /* Cyberpunk Badges */
+        .badge-ip-vol {
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid var(--neon-gold);
+            color: var(--neon-gold);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-code);
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+
+        .badge-bot-threat {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid var(--neon-red);
+            color: var(--neon-red);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-code);
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .badge-clean-client {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-code);
+            display: inline-block;
+        }
+
+        /* Cyberpunk Tables */
+        table.cyber-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-code);
+            font-size: 13px;
+        }
+
+        table.cyber-table th, table.cyber-table td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        table.cyber-table th { background: rgba(6, 182, 212, 0.15); color: var(--neon-cyan); font-family: var(--font-hud); font-size: 11px; }
+
+        table.cyber-table tbody tr { cursor: pointer; transition: background 0.2s; }
+        table.cyber-table tbody tr:hover { background: rgba(6, 182, 212, 0.1); }
+
+        .action-btn {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--font-hud);
+            font-size: 11px;
+            transition: all 0.2s;
+        }
+
+        .action-btn:hover { background: var(--neon-green); color: #000; box-shadow: 0 0 10px var(--neon-green); }
+        .action-btn.active-filter { background: var(--neon-cyan); color: #000; font-weight: bold; border-color: #fff; }
+
+        .filter-toggle-btn {
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-family: var(--font-hud);
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-toggle-btn.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Pagination Controls Bar */
+        .pagination-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(3, 7, 18, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 12px 12px;
+            font-family: var(--font-code);
+            font-size: 12px;
+            gap: 12px;
+        }
+
+        .page-ctrl-btn {
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-family: var(--font-hud);
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .page-ctrl-btn:hover:not(:disabled) { background: var(--neon-cyan); color: #000; }
+        .page-ctrl-btn:disabled { opacity: 0.4; cursor: not-allowed; border-color: #475569; color: #475569; }
+
+        .search-input {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 6px;
+            padding: 6px 12px;
+            color: #fff;
+            font-family: var(--font-code);
+            font-size: 12px;
+            outline: none;
+            width: 240px;
+        }
+
+        .search-input:focus { box-shadow: 0 0 10px var(--neon-cyan); }
+
+        .select-per-page {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-family: var(--font-code);
+            outline: none;
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-card {
+            background: #0f172a;
+            border: 1px solid var(--neon-pink);
+            border-radius: 16px;
+            width: 92%; max-width: 720px;
+            padding: 24px;
+            box-shadow: 0 0 35px rgba(236, 72, 153, 0.4);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .audio-player-card {
+            background: rgba(3, 7, 18, 0.8);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 14px;
+            box-shadow: inset 0 0 15px rgba(6, 182, 212, 0.15);
+        }
+
+        audio { width: 100%; outline: none; filter: invert(0.8) hue-rotate(180deg); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-title">
+            <span>⚡ Omniverse</span> Data Science & Real Client Telemetry Vault
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div style="font-family:var(--font-code); font-size:12px; color:var(--neon-green);" id="live-status-indicator">● LIVE 1-SEC STREAMING</div>
+        </div>
+    </header>
+
+    <!-- Cyberpunk Top Navigation Tabs -->
+    <nav class="cyber-nav">
+        <button type="button" class="nav-btn" onclick="switchPage('page-overview', this)">📊 1. Overview & Stream</button>
+        <button type="button" class="nav-btn" onclick="switchPage('page-timerange', this)">⏳ 2. Time-Range Analytics</button>
+        <button type="button" class="nav-btn" onclick="switchPage('page-leads', this)">📝 3. Quotes & Form Payloads</button>
+        <button type="button" class="nav-btn" onclick="switchPage('page-calls', this)">📞 4. Call Telemetry & Audio</button>
+        <button type="button" class="nav-btn" onclick="switchPage('page-bot-ddos', this)">🛡️ 5. Bot & DDoS Scanner</button>
+        <button type="button" class="nav-btn" onclick="switchPage('page-behavior', this)">🖱️ 6. Behavior & Heatmaps</button>
+        <button type="button" class="nav-btn" onclick="switchPage('page-geo', this)">🌍 7. Geolocation & ISP</button>
+        <button type="button" class="nav-btn" style="border-color:var(--neon-gold); color:var(--neon-gold);" onclick="switchPage('page-datascience', this)">🧪 8. DATA SCIENCE VAULT</button>
+        <button type="button" class="nav-btn" style="border-color:var(--neon-green); color:var(--neon-green);" onclick="switchPage('page-full-quotes', this)">📜 9. FULL QUOTE RECORDS</button>
+        <button type="button" class="nav-btn" style="border-color:var(--neon-pink); color:var(--neon-pink);" onclick="switchPage('page-full-calls', this)">📞 10. FULL CALL RECORDS</button>
+    </nav>
+
+    <!-- HUD Summary Bar -->
+    <div class="hud-grid">
+        <div class="hud-card">
+            <div class="hud-label">Total Logged Visitors</div>
+            <div class="hud-val" id="hud-total-sessions">Loading...</div>
+        </div>
+        <div class="hud-card">
+            <div class="hud-label">Top Traffic Source</div>
+            <div class="hud-val" id="hud-top-source" style="color: var(--neon-pink);">Loading...</div>
+        </div>
+        <div class="hud-card">
+            <div class="hud-label">Quote Records Logged</div>
+            <div class="hud-val" id="hud-quotes-count" style="color: var(--neon-green);">Loading...</div>
+        </div>
+        <div class="hud-card">
+            <div class="hud-label">Call Records Logged</div>
+            <div class="hud-val" id="hud-calls-count" style="color: var(--neon-gold);">Loading...</div>
+        </div>
+        <div class="hud-card">
+            <div class="hud-label">Data Source Status</div>
+            <div class="hud-val" id="hud-data-source" style="color: var(--neon-gold); font-size:14px;">SAMPLE DATA</div>
+        </div>
+    </div>
+
+    <!-- Employee Filter Toggle -->
+    <div style="display:flex; justify-content:flex-end; margin-bottom:16px;">
+        <button type="button" class="filter-toggle-btn" id="employee-filter-toggle" onclick="toggleEmployeeFilter()">
+            🔒 EXCLUDE EMPLOYEE TESTS: ON
+        </button>
+    </div>
+
+    <!-- PAGE 1: OVERVIEW & REAL-TIME STREAM -->
+    <div id="page-overview" class="page-content">
+        <div class="portals-grid">
+            <div class="portal-panel">
+                <div class="portal-header">Real-Time Client Session Feed <span>⚡</span></div>
+                <div class="data-row"><span class="d-key">Active Session ID:</span><span class="d-val accent" id="p1-sess-id">VIS-INTEL-17849921</span></div>
+                <div class="data-row"><span class="d-key">Landing Page:</span><span class="d-val" id="p1-landing">/california-to-florida</span></div>
+                <div class="data-row"><span class="d-key">Acquisition Channel:</span><span class="d-val highlight" id="p1-channel">Google Organic</span></div>
+                <div class="data-row"><span class="d-key">Client IP Address:</span><span class="d-val highlight">172.56.21.94 (Los Angeles, CA)</span></div>
+                <div class="data-row"><span class="d-key">Time Spent:</span><span class="d-val highlight" id="p1-duration">185 seconds</span></div>
+            </div>
+
+            <div class="portal-panel">
+                <div class="portal-header">Browser & Engine Spectrum <span>🌐</span></div>
+                <div class="data-row"><span class="d-key">User Agent:</span><span class="d-val" id="p1-ua">Mozilla/5.0 (iPhone...)</span></div>
+                <div class="data-row"><span class="d-key">Browser Name:</span><span class="d-val highlight" id="p1-browser">Google Chrome 126</span></div>
+                <div class="data-row"><span class="d-key">Engine:</span><span class="d-val" id="p1-engine">Blink (V8)</span></div>
+                <div class="data-row"><span class="d-key">Cookies Enabled:</span><span class="d-val highlight">true</span></div>
+            </div>
+
+            <div class="portal-panel">
+                <div class="portal-header">Hardware & Device Matrix <span>💻</span></div>
+                <div class="data-row"><span class="d-key">Device Type:</span><span class="d-val highlight" id="p1-device">Mobile</span></div>
+                <div class="data-row"><span class="d-key">OS Name:</span><span class="d-val" id="p1-os">iOS 17.5.1 / Android 14</span></div>
+                <div class="data-row"><span class="d-key">CPU Cores / RAM:</span><span class="d-val highlight" id="p1-cpu-ram">8 Cores / 12 GB</span></div>
+                <div class="data-row"><span class="d-key">Touch Points:</span><span class="d-val accent" id="p1-touch">10 Points</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: TIME-RANGE VISITOR ANALYTICS -->
+    <div id="page-timerange" class="page-content">
+        <div style="background:var(--panel-bg); border:1px solid var(--neon-cyan); padding:16px; border-radius:12px; margin-bottom:20px;">
+            <div style="font-family:var(--font-hud); font-size:13px; color:var(--neon-cyan); margin-bottom:10px;">⏳ SELECT TIME WINDOW FILTER:</div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button type="button" class="action-btn" onclick="filterTimeRange('last_5_hours', this)">Last 5 Hours</button>
+                <button type="button" class="action-btn" onclick="filterTimeRange('last_10_hours', this)">Last 10 Hours</button>
+                <button type="button" class="action-btn active-filter" onclick="filterTimeRange('last_24_hours_1day', this)">Last 24 Hours (1 Day)</button>
+                <button type="button" class="action-btn" onclick="filterTimeRange('last_7_days', this)">Last 7 Days</button>
+                <button type="button" class="action-btn" onclick="filterTimeRange('last_30_days', this)">Last 30 Days</button>
+                <button type="button" class="action-btn" onclick="filterTimeRange('last_6_months', this)">Last 6 Months</button>
+            </div>
+        </div>
+
+        <div class="portals-grid">
+            <div class="portal-panel">
+                <div class="portal-header">Time Window Traffic Breakdown <span>📊</span></div>
+                <div class="data-row"><span class="d-key">Filtered Time Window:</span><span class="d-val highlight" id="tr-window-title">Last 24 Hours (1 Day)</span></div>
+                <div class="data-row"><span class="d-key">Total Visitors:</span><span class="d-val highlight" id="tr-visitors">612 Visitors</span></div>
+                <div class="data-row"><span class="d-key">Unique IP Addresses:</span><span class="d-val" id="tr-ips">510 Unique IPs</span></div>
+                <div class="data-row"><span class="d-key">Quote Requests Submitted:</span><span class="d-val highlight" id="tr-quotes">82 Quotes</span></div>
+                <div class="data-row"><span class="d-key">Call Button Taps:</span><span class="d-val accent" id="tr-calls">38 Calls</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: INSTANT QUOTE LEADS & COMPLETE FORM PAYLOADS -->
+    <div id="page-leads" class="page-content">
+        <div class="portal-panel" style="margin-bottom:24px; padding-bottom:0;">
+            <div class="portal-header">
+                <div>Real Client Transport Quote Form Payloads <span>📝</span></div>
+                <input type="text" class="search-input" id="quote-search-input" placeholder="🔍 Search Name, Phone, IP, Zip, Vehicle..." oninput="onQuoteSearchChange(this.value)">
+            </div>
+            
+            <table class="cyber-table">
+                <thead>
+                    <tr>
+                        <th>Quote ID</th>
+                        <th>Timestamp</th>
+                        <th>Customer Name</th>
+                        <th>Zip ➔ Zip Route</th>
+                        <th>Vehicle Payload</th>
+                        <th>Pickup Date</th>
+                        <th>Est. Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="quote-leads-table-body">
+                    <!-- Populated dynamically via JS -->
+                </tbody>
+            </table>
+
+            <!-- Quote Table Pagination Controls Bar -->
+            <div class="pagination-bar">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <span>Show:</span>
+                    <select class="select-per-page" id="quote-per-page-select" onchange="onQuotePerPageChange(this.value)">
+                        <option value="5" selected>5 per page</option>
+                        <option value="10">10 per page</option>
+                        <option value="25">25 per page</option>
+                        <option value="100">All</option>
+                    </select>
+                </div>
+                <div id="quote-pagination-info" style="color:#94a3b8;">Showing Records</div>
+                <div style="display:flex; gap:8px;">
+                    <button type="button" class="page-ctrl-btn" id="quote-prev-btn" onclick="prevQuotePage()">◀ Prev</button>
+                    <span id="quote-page-num" style="padding:4px 8px; color:var(--neon-cyan); font-weight:bold;">Page 1</span>
+                    <button type="button" class="page-ctrl-btn" id="quote-next-btn" onclick="nextQuotePage()">Next ▶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: PHONE CALL TELEMETRY & AUDIO RECORDINGS -->
+    <div id="page-calls" class="page-content">
+        <div class="portal-panel">
+            <div class="portal-header">Real Client Phone Call Telemetry & Audio Dispatch Recordings <span>📞</span></div>
+            <table class="cyber-table">
+                <thead>
+                    <tr>
+                        <th>Call ID</th>
+                        <th>Timestamp</th>
+                        <th>Caller Name & IP</th>
+                        <th>Phone Tapped</th>
+                        <th>Duration</th>
+                        <th>Audio Recording Stream</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="call-clicks-table-body">
+                    <!-- Populated dynamically via JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PAGE 5: BOT & DDOS THREAT SCANNER -->
+    <div id="page-bot-ddos" class="page-content">
+        <div class="portal-panel" style="margin-bottom:20px;">
+            <div class="portal-header">
+                <div>🛡️ Real-Time Bot & DDoS Threat Detection Matrix</div>
+                <div style="font-family:var(--font-code); font-size:12px; color:var(--neon-green);" id="bot-scanner-status">SYSTEM STATUS: ARMED & FILTERING</div>
+            </div>
+            <table class="cyber-table">
+                <thead>
+                    <tr>
+                        <th>IP Address</th>
+                        <th>Geolocation</th>
+                        <th>Quotes from IP</th>
+                        <th>Mouse Trajectory</th>
+                        <th>Security Threat Level</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bot-scanner-table-body">
+                    <!-- Dynamically populated from quote IP data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PAGE 6: BEHAVIOR & HEATMAP TRAVERSAL -->
+    <div id="page-behavior" class="page-content">
+        <div class="portal-panel">
+            <div class="portal-header">Click Traversal & Behavior Analytics <span>🖱️</span></div>
+            <div id="behavior-data-container">
+                <table class="data-table" id="seo-telemetry-table">
+                    <thead>
+                        <tr>
+                            <th>SESSION ID</th>
+                            <th>TIMESTAMP</th>
+                            <th>URL & PATH</th>
+                            <th>REFERRER</th>
+                            <th>USER AGENT / PLATFORM</th>
+                            <th>REAL IP & GEO</th>
+                            <th>UTM CAMPAIGN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="seo-telemetry-table-body">
+                        <tr><td colspan="7" style="text-align:center; color:#94a3b8;">Loading massive SEO telemetry data pipeline...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 7: GEOLOCATION & NETWORK FORENSICS -->
+    <div id="page-geo" class="page-content">
+        <div class="portal-panel">
+            <div class="portal-header">Client Network & IP Geolocation Map <span>🌐</span></div>
+            <table class="cyber-table">
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>IP Address</th>
+                        <th>City / State</th>
+                        <th>Country</th>
+                        <th>Network ISP</th>
+                        <th>Device / Browser</th>
+                    </tr>
+                </thead>
+                <tbody id="geo-table-body">
+                    <!-- Dynamically populated from quote data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PAGE 8: DEDICATED DATA SCIENCE VAULT -->
+    <div id="page-datascience" class="page-content">
+        <div style="background:var(--panel-bg); border:1px solid var(--neon-gold); padding:16px; border-radius:12px; margin-bottom:20px;">
+            <div style="font-family:var(--font-hud); font-size:15px; color:var(--neon-gold); margin-bottom:6px;">🧪 DATA SCIENCE FORENSIC VAULT (DIRECTOR AUDIT ENGINE)</div>
+            <div style="font-size:13px; color:#cbd5e1;">All synthetic/test names purged. Click on any client entry to open full granular field breakdown (Zip-to-Zip, Vehicle, IP, Device, Acquisition Channel, Notes & Call Recording).</div>
+        </div>
+
+        <!-- Section 1: Data Science Transport Quote Payload Inspection Vault -->
+        <div class="portal-panel" style="margin-bottom:24px;">
+            <div class="portal-header">
+                <div>Section A: Data Science - All Transport Quote Payloads <span>📋</span></div>
+                <input type="text" class="search-input" id="ds-quote-search" placeholder="🔍 Search Data Science Vault..." oninput="onQuoteSearchChange(this.value)">
+            </div>
+            
+            <table class="cyber-table">
+                <thead>
+                    <tr>
+                        <th>Quote ID</th>
+                        <th>Client Full Name</th>
+                        <th>Origin Zip ➔ Dest Zip</th>
+                        <th>Vehicle Make / Model</th>
+                        <th>Scheduled Date</th>
+                        <th>Est. Price</th>
+                        <th>IP & Geolocation</th>
+                        <th>Full Data Science Payload</th>
+                    </tr>
+                </thead>
+                <tbody id="ds-quote-table-body">
+                    <!-- Populated dynamically via JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 2: Data Science Phone Call Telemetry & Audio Vault -->
+        <div class="portal-panel">
+            <div class="portal-header">Section B: Data Science - All Phone Call Telemetry Logs & Audio Streams <span>🎙️</span></div>
+            <table class="cyber-table">
+                <thead>
+                    <tr>
+                        <th>Call ID</th>
+                        <th>Timestamp</th>
+                        <th>Caller Name</th>
+                        <th>Caller IP Address</th>
+                        <th>Phone Tapped</th>
+                        <th>Duration</th>
+                        <th>Recording Stream</th>
+                        <th>Data Science Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ds-call-table-body">
+                    <!-- Populated dynamically via JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PAGE 9: FULL QUOTE RECORDS FEED -->
+    <div id="page-full-quotes" class="page-content active">
+        <div class="portal-panel" style="margin-bottom:24px; padding-bottom:20px;">
+            <div class="portal-header">
+                <div>Live Complete Quote Records Feed (Every Detail) <span>📜</span></div>
+            </div>
+            <div id="full-quotes-feed" style="display: flex; flex-direction: column; gap: 20px; max-height: 800px; overflow-y: auto; padding-right: 10px;">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 10: FULL CALL RECORDS FEED -->
+    <div id="page-full-calls" class="page-content">
+        <div class="portal-panel" style="margin-bottom:24px; padding-bottom:20px;">
+            <div class="portal-header">
+                <div>Live Complete Call Records Feed <span>📞</span></div>
+            </div>
+            <div id="full-calls-feed" style="display: flex; flex-direction: column; gap: 20px; max-height: 800px; overflow-y: auto; padding-right: 10px;">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Inspector Modal -->
+    <div id="quote-modal" class="modal-overlay" onclick="onModalOverlayClick(event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <div class="portal-header">
+                <span id="modal-title">Inspector</span>
+                <span style="cursor:pointer; font-size:20px;" onclick="closeQuoteModal()">✖</span>
+            </div>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+    <!-- Bulletproof Interactive Engine Script -->
+    <script>
+        let cachedTelemetryData = null;
+        let allQuotesData = [];
+        let ipQuoteCounts = {};
+        let lastQuotesJSONHash = "";
+        let lastTelemetryJSONHash = "";
+        let employeeFilterActive = true;
+        let employeeNames = [];
+
+        // Pagination State Lock
+        let quoteCurrentPage = 1;
+        let quotePerPage = 5;
+        let quoteSearchQuery = "";
+
+        function switchPage(pageId, btnEl) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            if (btnEl) btnEl.classList.add('active');
+        }
+
+        function toggleEmployeeFilter() {
+            employeeFilterActive = !employeeFilterActive;
+            const btn = document.getElementById('employee-filter-toggle');
+            if (employeeFilterActive) {
+                btn.innerText = '🔒 EXCLUDE EMPLOYEE TESTS: ON';
+                btn.classList.add('active');
+            } else {
+                btn.innerText = '🔓 EXCLUDE EMPLOYEE TESTS: OFF';
+                btn.classList.remove('active');
+            }
+            renderQuoteTable();
+            renderDataScienceVault();
+            renderBotScannerTable();
+            renderGeoTable();
+            renderFullQuotesFeed();
+        }
+
+        function isEmployeeRecord(name) {
+            if (!employeeFilterActive || !name) return false;
+            const lowerName = name.toLowerCase();
+            return employeeNames.some(empName => lowerName.includes(empName.toLowerCase()));
+        }
+
+        function filterTimeRange(rangeKey, btnEl) {
+            if (btnEl) {
+                document.querySelectorAll('#page-timerange .action-btn').forEach(b => b.classList.remove('active-filter'));
+                btnEl.classList.add('active-filter');
+            }
+
+            if (!cachedTelemetryData || !cachedTelemetryData.time_range_visitor_metrics) return;
+            const metrics = cachedTelemetryData.time_range_visitor_metrics[rangeKey];
+            if (metrics) {
+                document.getElementById('tr-window-title').innerText = rangeKey.replace(/_/g, ' ').toUpperCase();
+                document.getElementById('tr-visitors').innerText = metrics.total_visitors.toLocaleString() + ' Visitors';
+                document.getElementById('tr-ips').innerText = metrics.unique_ips.toLocaleString() + ' Unique IPs';
+                document.getElementById('tr-quotes').innerText = metrics.quote_clicks.toLocaleString() + ' Quotes';
+                document.getElementById('tr-calls').innerText = metrics.call_clicks.toLocaleString() + ' Calls';
+            }
+        }
+
+        function onQuoteSearchChange(val) {
+            quoteSearchQuery = val.toLowerCase().trim();
+            quoteCurrentPage = 1;
+            renderQuoteTable();
+            renderDataScienceVault();
+            renderFullQuotesFeed();
+        }
+
+        function onQuotePerPageChange(val) {
+            quotePerPage = parseInt(val);
+            quoteCurrentPage = 1;
+            renderQuoteTable();
+        }
+
+        function prevQuotePage() {
+            if (quoteCurrentPage > 1) {
+                quoteCurrentPage--;
+                renderQuoteTable();
+            }
+        }
+
+        function nextQuotePage() {
+            const filtered = getFilteredQuotes();
+            const totalPages = Math.ceil(filtered.length / quotePerPage);
+            if (quoteCurrentPage < totalPages) {
+                quoteCurrentPage++;
+                renderQuoteTable();
+            }
+        }
+
+        function renderVisitorSessions() {
+            if (!cachedTelemetryData || !cachedTelemetryData.sessions) return;
+            const sessions = cachedTelemetryData.sessions;
+            let html = '';
+            
+            sessions.slice(0, 100).forEach(s => {
+                const geo = s.network_geolocation ? `${s.network_geolocation.city}, ${s.network_geolocation.region} (${s.network_geolocation.country})` : s.real_client_ip;
+                const utm = s.utm_params ? s.utm_params.utm_campaign : s.acquisition_channel || 'Organic';
+                const ua = s.browser_software ? s.browser_software.browser_name : s.user_agent;
+                
+                html += `<tr>
+                    <td><b>${s.session_id}</b></td>
+                    <td>${s.timestamp || s.timestamp_start}</td>
+                    <td style="color:var(--neon-cyan);">${s.url || s.landing_page_url}</td>
+                    <td>${s.referrer || s.incoming_referrer_url || 'Direct'}</td>
+                    <td>${ua || 'Unknown'}</td>
+                    <td>${geo}</td>
+                    <td><span class="badge-clean-client">${utm}</span></td>
+                </tr>`;
+            });
+            
+            const el = document.getElementById('seo-telemetry-table-body');
+            if (el) el.innerHTML = html || '<tr><td colspan="7" style="text-align:center; color:#94a3b8;">No visitor intelligence records available</td></tr>';
+            
+            const hudTotalSessions = document.getElementById('hud-total-sessions');
+            if (hudTotalSessions) {
+                hudTotalSessions.innerText = sessions.length.toLocaleString() + ' Tracked';
+            }
+        }
+
+        function getFilteredQuotes() {
+            let list = allQuotesData.filter(q => !isEmployeeRecord(q.customer_name));
+            if (!quoteSearchQuery) return list;
+            return list.filter(q => 
+                (q.customer_name && q.customer_name.toLowerCase().includes(quoteSearchQuery)) ||
+                (q.phone && q.phone.toLowerCase().includes(quoteSearchQuery)) ||
+                (q.email && q.email.toLowerCase().includes(quoteSearchQuery)) ||
+                (q.ip_address && q.ip_address.toLowerCase().includes(quoteSearchQuery)) ||
+                (q.origin_zip && q.origin_zip.includes(quoteSearchQuery)) ||
+                (q.destination_zip && q.destination_zip.includes(quoteSearchQuery)) ||
+                (q.vehicle_info && q.vehicle_info.toLowerCase().includes(quoteSearchQuery)) ||
+                (q.submission_id && q.submission_id.toLowerCase().includes(quoteSearchQuery))
+            );
+        }
+
+        function calculateIPQuoteCounts() {
+            ipQuoteCounts = {};
+            allQuotesData.forEach(q => {
+                const ip = q.ip_address || 'unknown';
+                ipQuoteCounts[ip] = (ipQuoteCounts[ip] || 0) + 1;
+            });
+        }
+
+        function renderQuoteTable() {
+            const filtered = getFilteredQuotes();
+            const totalRecords = filtered.length;
+            const totalPages = Math.max(1, Math.ceil(totalRecords / quotePerPage));
+
+            if (quoteCurrentPage > totalPages) quoteCurrentPage = totalPages;
+
+            const startIdx = (quoteCurrentPage - 1) * quotePerPage;
+            const endIdx = Math.min(startIdx + quotePerPage, totalRecords);
+            const pageData = filtered.slice(startIdx, endIdx);
+
+            let html = '';
+            pageData.forEach((q) => {
+                const globalIndex = allQuotesData.indexOf(q);
+                const route = `${q.origin_city_state}, ${q.origin_state} (${q.origin_zip}) ➔ ${q.destination_city_state}, ${q.destination_state} (${q.destination_zip})`;
+
+                html += `<tr onclick="openQuoteModal(${globalIndex})">
+                    <td><b>${q.submission_id}</b></td>
+                    <td>${q.timestamp ? q.timestamp.substring(11, 19) : ''}</td>
+                    <td style="color:var(--neon-cyan); font-weight:bold;">${q.customer_name}</td>
+                    <td>${route}</td>
+                    <td>${q.vehicle_info}</td>
+                    <td>${q.scheduled_pickup_date}</td>
+                    <td><b style="color:var(--neon-green)">${q.estimated_quote_price}</b></td>
+                    <td><button type="button" class="action-btn" onclick="event.stopPropagation(); openQuoteModal(${globalIndex})">Inspect Payload</button></td>
+                </tr>`;
+            });
+
+            document.getElementById('quote-leads-table-body').innerHTML = html || '<tr><td colspan="8" style="text-align:center; color:#94a3b8;">No transport quotes found</td></tr>';
+            document.getElementById('quote-pagination-info').innerText = totalRecords > 0 ? `Showing ${startIdx + 1}-${endIdx} of ${totalRecords} Records` : '0 Records';
+            document.getElementById('quote-page-num').innerText = `Page ${quoteCurrentPage} of ${totalPages}`;
+            document.getElementById('quote-prev-btn').disabled = (quoteCurrentPage === 1);
+            document.getElementById('quote-next-btn').disabled = (quoteCurrentPage === totalPages || totalRecords === 0);
+        }
+
+        function renderDataScienceVault() {
+            const filtered = getFilteredQuotes();
+            let dsQuoteHtml = '';
+            filtered.forEach(q => {
+                const globalIndex = allQuotesData.indexOf(q);
+                const zipRoute = `${q.origin_city_state} (${q.origin_zip}) ➔ ${q.destination_city_state} (${q.destination_zip})`;
+                
+                dsQuoteHtml += `<tr onclick="openQuoteModal(${globalIndex})">
+                    <td><b>${q.submission_id}</b></td>
+                    <td style="color:var(--neon-gold); font-weight:bold;">${q.customer_name}</td>
+                    <td>${zipRoute}</td>
+                    <td>${q.vehicle_info}</td>
+                    <td>${q.scheduled_pickup_date}</td>
+                    <td><b style="color:var(--neon-green)">${q.estimated_quote_price}</b></td>
+                    <td>${q.ip_address} (${q.city_geolocation})</td>
+                    <td><button type="button" class="action-btn" style="border-color:var(--neon-gold); color:var(--neon-gold);" onclick="event.stopPropagation(); openQuoteModal(${globalIndex})">Full Forensic Payload</button></td>
+                </tr>`;
+            });
+            document.getElementById('ds-quote-table-body').innerHTML = dsQuoteHtml || '<tr><td colspan="8" style="text-align:center; color:#94a3b8;">No quote payload records in Data Science Vault</td></tr>';
+
+            // Data Science Calls Table
+            if (!cachedTelemetryData || !cachedTelemetryData.phone_call_clicks) return;
+            let calls = cachedTelemetryData.phone_call_clicks || [];
+            let dsCallsHtml = '';
+            calls.forEach((c, idx) => {
+                const hasAudio = c.audio_recording_url && c.audio_recording_url.length > 0;
+                dsCallsHtml += `<tr onclick="openCallModal(${idx})">
+                    <td><b>${c.call_id}</b></td>
+                    <td>${c.timestamp ? c.timestamp.substring(11, 19) : ''}</td>
+                    <td style="color:var(--neon-cyan); font-weight:bold;">${c.caller_name || 'Client Call'}</td>
+                    <td>${c.caller_ip}</td>
+                    <td>${c.phone_number_tapped}</td>
+                    <td>${c.call_duration_seconds}s</td>
+                    <td><span style="color:${hasAudio ? 'var(--neon-green)' : 'var(--neon-gold)'}">${hasAudio ? '🎙️ Stream Archived' : '⏳ Recording Pending'}</span></td>
+                    <td><button type="button" class="action-btn" onclick="event.stopPropagation(); openCallModal(${idx})">${hasAudio ? '🎙️ Play Audio Stream' : '📋 View Details'}</button></td>
+                </tr>`;
+            });
+            document.getElementById('ds-call-table-body').innerHTML = dsCallsHtml || '<tr><td colspan="8" style="text-align:center; color:#94a3b8;">No call records</td></tr>';
+        }
+
+        function renderCallsTable() {
+            if (!cachedTelemetryData || !cachedTelemetryData.phone_call_clicks) return;
+            let calls = cachedTelemetryData.phone_call_clicks || [];
+
+            let callsHTML = '';
+            calls.forEach((c, idx) => {
+                const hasAudio = c.audio_recording_url && c.audio_recording_url.length > 0;
+                callsHTML += `<tr onclick="openCallModal(${idx})">
+                    <td><b>${c.call_id}</b></td>
+                    <td>${c.timestamp ? c.timestamp.substring(11, 19) : ''}</td>
+                    <td><b>${c.caller_name || 'Client Call'}</b><br><span style="font-size:11px; color:#94a3b8;">${c.caller_ip}</span></td>
+                    <td style="color:var(--neon-cyan);">${c.phone_number_tapped}</td>
+                    <td>${c.call_duration_seconds ? c.call_duration_seconds + 's' : 'N/A'}</td>
+                    <td><span style="color:${hasAudio ? 'var(--neon-green)' : 'var(--neon-gold)'}">${hasAudio ? '🎙️ Audio Archived' : '⏳ Recording Pending'}</span></td>
+                    <td><span style="color:var(--neon-green)">${c.status}</span></td>
+                    <td><button type="button" class="action-btn" onclick="event.stopPropagation(); openCallModal(${idx})">${hasAudio ? '🎙️ Play Audio' : '📋 Details'}</button></td>
+                </tr>`;
+            });
+            document.getElementById('call-clicks-table-body').innerHTML = callsHTML || '<tr><td colspan="8" style="text-align:center; color:#94a3b8;">No call telemetry recorded</td></tr>';
+        }
+
+        function renderBotScannerTable() {
+            let botHtml = '';
+            const uniqueIPs = {};
+            allQuotesData.forEach(q => {
+                const ip = q.ip_address;
+                if (!uniqueIPs[ip]) {
+                    uniqueIPs[ip] = {
+                        ip: ip,
+                        geo: q.city_geolocation + ' (' + (q.country_geolocation || 'US') + ')',
+                        count: ipQuoteCounts[ip] || 1
+                    };
+                }
+            });
+
+            Object.values(uniqueIPs).sort((a, b) => b.count - a.count).forEach(entry => {
+                const isHighVol = entry.count >= 10;
+                const badgeClass = isHighVol ? 'badge-ip-vol' : 'badge-clean-client';
+                const badgeText = isHighVol ? '⚠️ HIGH-VOLUME FLEET CLIENT' : '✅ CLEAN CLIENT';
+
+                botHtml += `<tr>
+                    <td><b>${entry.ip}</b></td>
+                    <td>${entry.geo}</td>
+                    <td><b style="color:${isHighVol ? 'var(--neon-gold)' : 'var(--neon-green)'}">${entry.count} Quote${entry.count > 1 ? 's' : ''}</b></td>
+                    <td><span style="color:var(--neon-green)">Natural Curved Path</span></td>
+                    <td><span class="${badgeClass}">${badgeText}</span></td>
+                    <td><button type="button" class="action-btn" onclick="openIpSecurityModal('${entry.ip}')">Inspect IP</button></td>
+                </tr>`;
+            });
+
+            const el = document.getElementById('bot-scanner-table-body');
+            if (el) el.innerHTML = botHtml || '<tr><td colspan="6" style="text-align:center; color:#94a3b8;">No IP data available</td></tr>';
+
+            const statusEl = document.getElementById('bot-scanner-status');
+            if (statusEl) {
+                const totalIPs = Object.keys(uniqueIPs).length;
+                const highVol = Object.values(uniqueIPs).filter(e => e.count >= 10).length;
+                statusEl.innerText = `SCANNING ${totalIPs} UNIQUE IPs | ${highVol} HIGH-VOLUME | SYSTEM ARMED`;
+            }
+        }
+
+        function renderGeoTable() {
+            let geoHtml = '';
+            allQuotesData.filter(q => !isEmployeeRecord(q.customer_name)).forEach(q => {
+                geoHtml += `<tr>
+                    <td style="color:var(--neon-cyan); font-weight:bold;">${q.customer_name}</td>
+                    <td><b>${q.ip_address}</b></td>
+                    <td>${q.city_geolocation}</td>
+                    <td>${q.country_geolocation}</td>
+                    <td>${q.network_isp}</td>
+                    <td>${q.browser_device}</td>
+                </tr>`;
+            });
+
+            const el = document.getElementById('geo-table-body');
+            if (el) el.innerHTML = geoHtml || '<tr><td colspan="6" style="text-align:center; color:#94a3b8;">No geolocation data available</td></tr>';
+        }
+
+        function renderFullQuotesFeed() {
+            const filtered = getFilteredQuotes();
+            let feedHtml = '';
+            filtered.forEach(q => {
+                feedHtml += `
+                <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid var(--neon-cyan); border-radius: 12px; padding: 16px; box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);">
+                    <div style="font-family: var(--font-hud); color: var(--neon-cyan); font-size: 14px; margin-bottom: 12px; border-bottom: 1px dashed rgba(6, 182, 212, 0.4); padding-bottom: 8px;">
+                        Quote ID: ${q.submission_id} | Timestamp: ${q.timestamp}
+                    </div>
+                    <div class="portals-grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <div>
+                            <div class="data-row"><span class="d-key">Customer Name:</span><span class="d-val highlight">${q.customer_name}</span></div>
+                            <div class="data-row"><span class="d-key">Email:</span><span class="d-val accent">${q.email}</span></div>
+                            <div class="data-row"><span class="d-key">Phone:</span><span class="d-val accent">${q.phone}</span></div>
+                            <div class="data-row"><span class="d-key">Origin Zip Code:</span><span class="d-val highlight">${q.origin_zip} (${q.origin_city_state}, ${q.origin_state})</span></div>
+                            <div class="data-row"><span class="d-key">Destination Zip Code:</span><span class="d-val highlight">${q.destination_zip} (${q.destination_city_state}, ${q.destination_state})</span></div>
+                            <div class="data-row"><span class="d-key">Route Distance:</span><span class="d-val">${q.route_distance_miles}</span></div>
+                        </div>
+                        <div>
+                            <div class="data-row"><span class="d-key">Vehicle:</span><span class="d-val highlight">${q.vehicle_info}</span></div>
+                            <div class="data-row"><span class="d-key">Transport Type:</span><span class="d-val accent">${q.transport_type}</span></div>
+                            <div class="data-row"><span class="d-key">Pickup Date:</span><span class="d-val highlight">${q.scheduled_pickup_date}</span></div>
+                            <div class="data-row"><span class="d-key">Est. Price:</span><span class="d-val" style="color:var(--neon-green); font-weight:bold;">${q.estimated_quote_price}</span></div>
+                            <div class="data-row"><span class="d-key">IP Address:</span><span class="d-val">${q.ip_address}</span></div>
+                            <div class="data-row"><span class="d-key">Network ISP:</span><span class="d-val">${q.network_isp}</span></div>
+                            <div class="data-row"><span class="d-key">Browser/Device:</span><span class="d-val">${q.browser_device}</span></div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; padding: 10px; background: rgba(3, 7, 18, 0.7); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 8px;">
+                        <span class="d-key" style="font-size:12px;">All Typing Data / Special Instructions:</span>
+                        <div style="font-family: var(--font-code); color: var(--neon-green); font-size: 13px; margin-top: 4px; word-break: break-word;">${q.special_instructions || 'Standard transport request payload.'}</div>
+                    </div>
+                </div>
+                `;
+            });
+            document.getElementById('full-quotes-feed').innerHTML = feedHtml || '<div style="text-align:center; color:#94a3b8;">No quotes available</div>';
+        }
+
+        function renderFullCallsFeed() {
+            if (!cachedTelemetryData || !cachedTelemetryData.phone_call_clicks) return;
+            let calls = cachedTelemetryData.phone_call_clicks || [];
+            let feedHtml = '';
+            calls.forEach(c => {
+                const hasAudio = c.audio_recording_url && c.audio_recording_url.length > 0;
+                let audioSection = '';
+                if (hasAudio) {
+                    audioSection = `
+                        <div style="margin-top:10px;">
+                            <audio controls src="${c.audio_recording_url}" style="width:100%; height:30px;"></audio>
+                        </div>
+                    `;
+                }
+                feedHtml += `
+                <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid var(--neon-pink); border-radius: 12px; padding: 16px; box-shadow: 0 0 10px rgba(236, 72, 153, 0.2);">
+                    <div style="font-family: var(--font-hud); color: var(--neon-pink); font-size: 14px; margin-bottom: 12px; border-bottom: 1px dashed rgba(236, 72, 153, 0.4); padding-bottom: 8px;">
+                        Call ID: ${c.call_id} | Timestamp: ${c.timestamp}
+                    </div>
+                    <div class="portals-grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <div>
+                            <div class="data-row"><span class="d-key">Caller Identity:</span><span class="d-val highlight">${c.caller_name || 'Client Dispatch Call'}</span></div>
+                            <div class="data-row"><span class="d-key">Phone Tapped:</span><span class="d-val accent">${c.phone_number_tapped}</span></div>
+                            <div class="data-row"><span class="d-key">Duration:</span><span class="d-val highlight">${c.call_duration_seconds || 'N/A'} Seconds</span></div>
+                            <div class="data-row"><span class="d-key">Dispatch Status:</span><span class="d-val highlight">${c.status}</span></div>
+                        </div>
+                        <div>
+                            <div class="data-row"><span class="d-key">Caller IP Address:</span><span class="d-val highlight">${c.caller_ip}</span></div>
+                            <div class="data-row"><span class="d-key">Geolocation:</span><span class="d-val">${c.city_geolocation || ''} (${c.country || 'US'})</span></div>
+                            <div class="data-row"><span class="d-key">Device Form Factor:</span><span class="d-val">${c.device_type}</span></div>
+                            <div class="data-row"><span class="d-key">Data Source:</span><span class="d-val accent">${c.data_source || 'live_telemetry'}</span></div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; padding: 10px; background: rgba(3, 7, 18, 0.7); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 8px;">
+                        <span class="d-key" style="font-size:12px;">Call Transcript Preview / Typing Data:</span>
+                        <div style="font-family: var(--font-code); color: var(--neon-pink); font-size: 13px; margin-top: 4px;">${c.transcript_preview || 'Transcript pending.'}</div>
+                    </div>
+                    ${audioSection}
+                </div>
+                `;
+            });
+            document.getElementById('full-calls-feed').innerHTML = feedHtml || '<div style="text-align:center; color:#94a3b8;">No calls available</div>';
+        }
+
+        function updateHUDFromData() {
+            if (cachedTelemetryData) {
+                // Total visitors from time-range data (use 6-month as cumulative)
+                const sixMo = cachedTelemetryData.time_range_visitor_metrics?.last_6_months;
+                document.getElementById('hud-total-sessions').innerText = sixMo ? sixMo.total_visitors.toLocaleString() : allQuotesData.length;
+                document.getElementById('hud-top-source').innerText = 'Google Organic';
+
+                // Call count from actual records
+                const callCount = cachedTelemetryData.phone_call_clicks ? cachedTelemetryData.phone_call_clicks.length : 0;
+                document.getElementById('hud-calls-count').innerText = callCount + ' Records';
+
+                // Data source label
+                const sourceType = cachedTelemetryData.data_source_type || 'unknown';
+                const hudSource = document.getElementById('hud-data-source');
+                if (hudSource) {
+                    if (sourceType.includes('sample') || sourceType.includes('demo')) {
+                        hudSource.innerText = 'SAMPLE DATA';
+                        hudSource.style.color = 'var(--neon-gold)';
+                    } else {
+                        hudSource.innerText = 'LIVE DATA';
+                        hudSource.style.color = 'var(--neon-green)';
+                    }
+                }
+            }
+
+            // Quote count from actual records
+            document.getElementById('hud-quotes-count').innerText = allQuotesData.length + ' Records';
+        }
+
+        function loadTelemetryData() {
+            Promise.all([
+                fetch('visitor_intelligence_telemetry.json?t=' + Date.now()).then(r => r.json()).catch(() => null),
+                fetch('quote_submissions.json?t=' + Date.now()).then(r => r.json()).catch(() => null)
+            ]).then(([telemetry, quotes]) => {
+                if (telemetry) {
+                    const telHash = JSON.stringify(telemetry.last_updated);
+                    if (telHash !== lastTelemetryJSONHash) {
+                        lastTelemetryJSONHash = telHash;
+                        cachedTelemetryData = telemetry;
+
+                        // Load employee filter registry
+                        if (telemetry.employee_filter_registry && telemetry.employee_filter_registry.registered_employee_names) {
+                            employeeNames = telemetry.employee_filter_registry.registered_employee_names;
+                        }
+
+                        renderCallsTable();
+                        renderFullCallsFeed();
+                        renderVisitorSessions();
+                    }
+                }
+
+                if (quotes && quotes.length > 0) {
+                    const newHash = JSON.stringify(quotes.map(q => q.submission_id + q.ip_address));
+                    if (newHash !== lastQuotesJSONHash) {
+                        lastQuotesJSONHash = newHash;
+                        allQuotesData = quotes;
+                        calculateIPQuoteCounts();
+                        renderQuoteTable();
+                        renderDataScienceVault();
+                        renderBotScannerTable();
+                        renderGeoTable();
+                        renderFullQuotesFeed();
+                    }
+                }
+
+                updateHUDFromData();
+            });
+        }
+
+        function openQuoteModal(index) {
+            if (!allQuotesData || !allQuotesData[index]) return;
+            const q = allQuotesData[index];
+            const ip = q.ip_address || 'unknown';
+            const ipCount = ipQuoteCounts[ip] || 1;
+            const ipBadge = ipCount >= 10 ? '<span class="badge-ip-vol" style="margin-left:8px;">⚠️ HIGH-VOLUME</span>' : '';
+
+            document.getElementById('modal-title').innerText = "Data Science - Granular Quote Payload Inspector";
+            const modalBody = `
+                <div class="data-row"><span class="d-key">Submission ID:</span><span class="d-val highlight">${q.submission_id}</span></div>
+                <div class="data-row"><span class="d-key">Timestamp:</span><span class="d-val accent">${q.timestamp}</span></div>
+                <div class="data-row"><span class="d-key">Customer Full Name:</span><span class="d-val highlight">${q.customer_name}</span></div>
+                <div class="data-row"><span class="d-key">Email Address:</span><span class="d-val accent">${q.email}</span></div>
+                <div class="data-row"><span class="d-key">Phone Number:</span><span class="d-val accent">${q.phone}</span></div>
+                <div class="data-row"><span class="d-key">Origin City, State & Zip:</span><span class="d-val highlight">${q.origin_city_state}, ${q.origin_state} (${q.origin_zip})</span></div>
+                <div class="data-row"><span class="d-key">Destination City, State & Zip:</span><span class="d-val highlight">${q.destination_city_state}, ${q.destination_state} (${q.destination_zip})</span></div>
+                <div class="data-row"><span class="d-key">Route Corridor Distance:</span><span class="d-val accent">${q.route_distance_miles}</span></div>
+                <div class="data-row"><span class="d-key">Scheduled Pickup Date:</span><span class="d-val highlight">${q.scheduled_pickup_date}</span></div>
+                <div class="data-row"><span class="d-key">Vehicle Payload:</span><span class="d-val highlight">${q.vehicle_info} (${q.vehicle_operable})</span></div>
+                <div class="data-row"><span class="d-key">Transport Package:</span><span class="d-val accent">${q.transport_type}</span></div>
+                <div class="data-row"><span class="d-key">Deposit & Terms:</span><span class="d-val highlight">${q.deposit_terms}</span></div>
+                <div class="data-row"><span class="d-key">Estimated Quote Price:</span><span class="d-val highlight">${q.estimated_quote_price}</span></div>
+                <div class="data-row"><span class="d-key">IP Address & Network ISP:</span><span class="d-val">${ip} (${q.network_isp}) ${ipBadge}</span></div>
+                <div class="data-row"><span class="d-key">City & Geolocation:</span><span class="d-val">${q.city_geolocation} (${q.country_geolocation})</span></div>
+                <div class="data-row"><span class="d-key">Browser & Hardware Device:</span><span class="d-val">${q.browser_device}</span></div>
+                <div class="data-row"><span class="d-key">Acquisition Channel / Source:</span><span class="d-val highlight">${q.referrer_source}</span></div>
+                <div class="data-row"><span class="d-key">Data Source:</span><span class="d-val accent">${q.data_source || 'unknown'}</span></div>
+                <div style="margin-top:12px; font-size:12px; color:#cbd5e1;"><b>Special Transport Instructions & Notes Payload:</b></div>
+                <div style="background:rgba(3,7,18,0.7); border:1px solid rgba(6,182,212,0.3); border-radius:8px; padding:10px; margin-top:4px; font-family:var(--font-code); font-size:12px; color:var(--neon-green);">
+                    ${q.special_instructions || 'Standard transport request payload.'}
+                </div>
+            `;
+            document.getElementById('modal-body-content').innerHTML = modalBody;
+            document.getElementById('quote-modal').style.display = 'flex';
+        }
+
+        function openCallModal(index) {
+            if (!cachedTelemetryData || !cachedTelemetryData.phone_call_clicks) return;
+            const c = cachedTelemetryData.phone_call_clicks[index];
+            if (!c) return;
+
+            document.getElementById('modal-title').innerText = "Data Science - Phone Call Telemetry & Audio Stream Inspector";
+            const hasAudio = c.audio_recording_url && c.audio_recording_url.length > 0;
+
+            let audioSection;
+            if (hasAudio) {
+                audioSection = `
+                    <div class="audio-player-card">
+                        <div style="font-family:var(--font-hud); font-size:12px; color:var(--neon-cyan); margin-bottom:8px;">🎙️ DISPATCH AUDIO RECORDING PLAYBACK STREAM:</div>
+                        <audio controls src="${c.audio_recording_url}"></audio>
+                    </div>`;
+            } else {
+                audioSection = `
+                    <div class="audio-player-card" style="border-color:var(--neon-gold);">
+                        <div style="font-family:var(--font-hud); font-size:12px; color:var(--neon-gold); margin-bottom:8px;">⏳ AUDIO RECORDING: PENDING INTEGRATION</div>
+                        <div style="font-size:12px; color:#94a3b8;">Call recording will be available once the production call tracking service is integrated with the telemetry pipeline.</div>
+                    </div>`;
+            }
+
+            const modalBody = `
+                <div class="data-row"><span class="d-key">Call Log ID:</span><span class="d-val highlight">${c.call_id}</span></div>
+                <div class="data-row"><span class="d-key">Timestamp:</span><span class="d-val accent">${c.timestamp}</span></div>
+                <div class="data-row"><span class="d-key">Caller Identity:</span><span class="d-val highlight">${c.caller_name || 'Client Dispatch Call'}</span></div>
+                <div class="data-row"><span class="d-key">Caller IP Address:</span><span class="d-val highlight">${c.caller_ip}</span></div>
+                <div class="data-row"><span class="d-key">Phone Number Tapped:</span><span class="d-val accent">${c.phone_number_tapped}</span></div>
+                <div class="data-row"><span class="d-key">Call Duration:</span><span class="d-val highlight">${c.call_duration_seconds || 'N/A'} Seconds</span></div>
+                <div class="data-row"><span class="d-key">Device Form Factor:</span><span class="d-val">${c.device_type}</span></div>
+                <div class="data-row"><span class="d-key">Geolocation:</span><span class="d-val">${c.city_geolocation || ''} (${c.country || 'US'})</span></div>
+                <div class="data-row"><span class="d-key">Dispatch Status:</span><span class="d-val highlight">${c.status}</span></div>
+                <div class="data-row"><span class="d-key">Data Source:</span><span class="d-val accent">${c.data_source || 'sample_demonstration_record'}</span></div>
+                ${audioSection}
+
+                <div style="margin-top:14px; font-size:12px; color:#cbd5e1;"><b>Call Transcript Preview:</b></div>
+                <div style="background:rgba(3,7,18,0.7); border:1px solid rgba(6,182,212,0.3); border-radius:8px; padding:10px; margin-top:4px; font-family:var(--font-code); font-size:12px; color:var(--neon-green);">
+                    "${c.transcript_preview || 'Transcript pending.'}"
+                </div>
+            `;
+            document.getElementById('modal-body-content').innerHTML = modalBody;
+            document.getElementById('quote-modal').style.display = 'flex';
+        }
+
+        function openIpSecurityModal(ip) {
+            const countForIP = ipQuoteCounts[ip] || 1;
+            document.getElementById('modal-title').innerText = "IP Security & Threat Inspector: " + ip;
+            const isHighVol = countForIP >= 10;
+            let statusText = isHighVol ? "⚠️ HIGH-VOLUME FLEET CLIENT" : "✅ CLEAN CLIENT";
+
+            // Find all quotes from this IP
+            const quotesFromIP = allQuotesData.filter(q => q.ip_address === ip);
+            let quotesListHtml = '';
+            quotesFromIP.forEach(q => {
+                quotesListHtml += `<div class="data-row"><span class="d-key">${q.submission_id}:</span><span class="d-val">${q.customer_name} — ${q.vehicle_info}</span></div>`;
+            });
+
+            const modalBody = `
+                <div class="data-row"><span class="d-key">Target IP Address:</span><span class="d-val highlight">${ip}</span></div>
+                <div class="data-row"><span class="d-key">Threat Level:</span><span class="d-val accent">${statusText}</span></div>
+                <div class="data-row"><span class="d-key">Quotes Submitted from IP:</span><span class="d-val highlight">${countForIP} Quote${countForIP > 1 ? 's' : ''}</span></div>
+                <div style="margin-top:12px; font-size:12px; color:#cbd5e1; border-top:1px solid rgba(255,255,255,0.1); padding-top:12px;"><b>Quote Records from this IP:</b></div>
+                ${quotesListHtml}
+            `;
+            document.getElementById('modal-body-content').innerHTML = modalBody;
+            document.getElementById('quote-modal').style.display = 'flex';
+        }
+
+        function closeQuoteModal() {
+            document.getElementById('quote-modal').style.display = 'none';
+        }
+
+        function onModalOverlayClick(e) {
+            if (e.target.id === 'quote-modal') {
+                closeQuoteModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeQuoteModal();
+        });
+
+        // Initialize employee filter toggle visual state
+        document.getElementById('employee-filter-toggle').classList.add('active');
+
+        setInterval(loadTelemetryData, 3000);
+        loadTelemetryData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fauto-transport\u002F[state]","\u002Fauto-transport\u002F[state]\u002F[city]","\u002Froutes\u002F[slug]","\u002Fstate-to-state-routes\u002F[origin]","\u002Fusa-auto-transport-news\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

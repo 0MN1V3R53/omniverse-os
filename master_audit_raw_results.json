@@ -1,0 +1,25 @@
+{
+  "project1_skyautoservices": {
+    "exists": true,
+    "file_size_bytes": 44989,
+    "has_title": true,
+    "title": "Sky Auto Services | #1 Nationwide Auto Transport & Car Shipping",
+    "has_meta_desc": true,
+    "has_shield_logo": true,
+    "logo_height_css": true
+  },
+  "project2_executive_audit": {
+    "file_size_bytes": 117943,
+    "vpn_nodes_count": 0,
+    "has_json_ld": false,
+    "has_aggregate_rating": false
+  },
+  "project3_cyberpunk_console": {},
+  "50_states_verification": {
+    "total_states": 50,
+    "missing_states": [],
+    "all_50_present": true
+  },
+  "schema_validation": {},
+  "performance_indicators": {}
+}

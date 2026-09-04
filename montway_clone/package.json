@@ -1,0 +1,28 @@
+{
+  "name": "sky_next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:https": "next dev --experimental-https --experimental-https-key ../ssl/localhost.key --experimental-https-cert ../ssl/localhost.crt",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "framer-motion": "^12.42.2",
+    "leaflet": "^1.9.4",
+    "next": "14.2.35",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-simple-maps": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "playwright": "^1.62.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}

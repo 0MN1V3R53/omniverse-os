@@ -1,0 +1,14 @@
+{
+  "total_pages_audited": 3604,
+  "total_issues_found": 7298,
+  "issue_breakdown": {
+    "META_DESC_TOO_LONG": 3353,
+    "HOMEPAGE_CANONICAL_OVERRIDE": 428,
+    "MISSING_META_DESC": 1,
+    "MISSING_CANONICAL": 3165,
+    "TITLE_TOO_LONG": 348,
+    "META_DESC_TOO_SHORT": 2,
+    "MISSING_H1": 1
+  },
+  "total_keywords_verified": 31488
+}

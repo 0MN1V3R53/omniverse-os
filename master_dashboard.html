@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMNIVERSE // MASTER BI TERMINAL</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        
+        :root {
+            --bg-dark: #050505;
+            --neon-cyan: #00ffcc;
+            --neon-magenta: #ff00ff;
+            --neon-yellow: #ffe600;
+        }
+
+        body {
+            background-color: var(--bg-dark); 
+            color: var(--neon-cyan);
+            font-family: 'Share Tech Mono', monospace;
+            background-image: linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            overflow-x: hidden;
+        }
+
+        /* Scanlines Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 3px, 6px 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .glass-panel {
+            background: rgba(0, 20, 20, 0.85); 
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.15); 
+            backdrop-filter: blur(8px);
+        }
+
+        .tab-btn { border-bottom: 2px solid transparent; transition: all 0.2s; }
+        .tab-btn.active { border-bottom: 2px solid var(--neon-magenta); color: var(--neon-magenta); text-shadow: 0 0 8px var(--neon-magenta); }
+        .cyber-text { text-shadow: 0 0 8px var(--neon-cyan); }
+        .cyber-magenta { text-shadow: 0 0 8px var(--neon-magenta); color: var(--neon-magenta); }
+        .cyber-yellow { text-shadow: 0 0 8px var(--neon-yellow); color: var(--neon-yellow); }
+        
+        /* Custom Scrollbar for matrix tables */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); border-left: 1px solid var(--neon-cyan); }
+        ::-webkit-scrollbar-thumb { background: var(--neon-cyan); }
+    </style>
+</head>
+<body class="antialiased h-screen flex flex-col" x-data="dashboardController()">
+    
+    <!-- HEADER -->
+    <header class="glass-panel p-4 flex justify-between items-center m-4 rounded z-10 relative">
+        <div>
+            <h1 class="text-2xl font-bold cyber-text">[SYS.OP] // OMNIVERSE MASTER BI TERMINAL</h1>
+            <p class="text-xs text-gray-400 mt-1 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                SYNC STATUS: <span x-text="statusMessage"></span>
+                <span class="ml-4 cyber-magenta">NEXT REFRESH: <span x-text="refreshCountdown"></span>s</span>
+            </p>
+        </div>
+        <div class="flex gap-4">
+            <button @click="activeTab = 'web'" :class="{'active': activeTab === 'web'}" class="tab-btn px-4 py-2 uppercase font-bold hover:text-white">Web Analytics</button>
+            <button @click="activeTab = 'leads'" :class="{'active': activeTab === 'leads'}" class="tab-btn px-4 py-2 uppercase font-bold hover:text-white">Lead Correlation</button>
+            <button @click="activeTab = 'seo'" :class="{'active': activeTab === 'seo'}" class="tab-btn px-4 py-2 uppercase font-bold hover:text-white">SEO Command Center</button>
+            <button @click="activeTab = 'testlive'" :class="{'active': activeTab === 'testlive'}" class="tab-btn px-4 py-2 uppercase font-bold hover:text-white">Test vs Live Matrix</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 overflow-hidden px-4 pb-4 z-10 relative">
+        
+        <!-- TAB 1: WEB ANALYTICS -->
+        <div x-show="activeTab === 'web'" class="h-full flex flex-col gap-4">
+            <div class="grid grid-cols-4 gap-4 h-[20%]">
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Total Active Sessions</h3>
+                    <p class="text-4xl cyber-magenta mt-2" x-text="telemetryData.total_tracked_sessions || 0"></p>
+                </div>
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Unique Devices</h3>
+                    <p class="text-4xl cyber-text mt-2" x-text="metrics.uniqueDevices || 0"></p>
+                </div>
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Top Country</h3>
+                    <p class="text-2xl text-white mt-2" x-text="metrics.topCountry || 'Scanning...'"></p>
+                </div>
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Avg Touch Events</h3>
+                    <p class="text-4xl cyber-yellow mt-2" x-text="metrics.avgTouches || 0"></p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4 h-[80%]">
+                <div class="glass-panel p-4 rounded relative col-span-1 flex flex-col">
+                    <h2 class="cyber-magenta font-bold mb-4 uppercase text-lg border-b border-cyber-magenta pb-2">Device Matrix</h2>
+                    <div class="relative w-full flex-1 min-h-0"><canvas id="deviceChart"></canvas></div>
+                </div>
+                <div class="glass-panel p-4 rounded relative col-span-2 flex flex-col">
+                    <h2 class="cyber-text font-bold mb-4 uppercase text-lg border-b border-cyber-cyan pb-2">Geographic Uplink</h2>
+                    <div class="overflow-y-auto flex-1">
+                        <table class="w-full text-left">
+                            <thead class="sticky top-0 bg-black cyber-text">
+                                <tr>
+                                    <th class="p-2 border-b border-cyber-cyan">Timestamp</th>
+                                    <th class="p-2 border-b border-cyber-cyan">Country</th>
+                                    <th class="p-2 border-b border-cyber-cyan">City</th>
+                                    <th class="p-2 border-b border-cyber-cyan">Session ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template x-for="log in telemetryData.recent_visitor_logs" :key="log.session_id">
+                                    <tr class="hover:bg-cyber-cyan/10 transition border-b border-cyber-cyan/30">
+                                        <td class="p-2 text-xs" x-text="new Date(log.timestamp).toLocaleTimeString()"></td>
+                                        <td class="p-2" x-text="log.country"></td>
+                                        <td class="p-2 cyber-magenta" x-text="log.city"></td>
+                                        <td class="p-2 text-gray-400 text-xs font-mono" x-text="log.session_id"></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: LEAD CORRELATION -->
+        <div x-show="activeTab === 'leads'" class="h-full flex flex-col gap-4" style="display: none;">
+            <div class="grid grid-cols-3 gap-4 h-[20%]">
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded border-cyber-yellow">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Total Quotes Captured</h3>
+                    <p class="text-4xl cyber-yellow mt-2" x-text="quotesData.length || 0"></p>
+                </div>
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Total Quote Form Starts</h3>
+                    <p class="text-4xl cyber-text mt-2" x-text="metrics.quoteStarts || 0"></p>
+                </div>
+                <div class="glass-panel p-4 flex flex-col justify-center items-center rounded border-cyber-magenta">
+                    <h3 class="text-gray-400 uppercase text-xs tracking-wider">Drop-off Rate</h3>
+                    <p class="text-4xl cyber-magenta mt-2" x-text="metrics.dropOffRate + '%' || '0%'"></p>
+                </div>
+            </div>
+
+            <div class="glass-panel p-4 rounded relative h-[80%] flex flex-col">
+                <h2 class="cyber-text font-bold mb-4 uppercase text-lg border-b border-cyber-cyan pb-2">Quote Submissions Matrix</h2>
+                <div class="overflow-y-auto flex-1">
+                    <table class="w-full text-left">
+                        <thead class="sticky top-0 bg-black cyber-magenta">
+                            <tr>
+                                <th class="p-2 border-b border-cyber-cyan">Timestamp</th>
+                                <th class="p-2 border-b border-cyber-cyan">Name</th>
+                                <th class="p-2 border-b border-cyber-cyan">Route</th>
+                                <th class="p-2 border-b border-cyber-cyan">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template x-if="quotesData.length === 0">
+                                <tr><td colspan="4" class="p-4 text-center text-gray-500">NO QUOTES DETECTED IN DATABANK</td></tr>
+                            </template>
+                            <template x-for="quote in quotesData" :key="quote.timestamp">
+                                <tr class="hover:bg-cyber-cyan/10 transition border-b border-cyber-cyan/30 cursor-pointer" @click="openModal(quote, 'QUOTE')">
+                                    <td class="p-2 text-xs" x-text="new Date(quote.timestamp).toLocaleString()"></td>
+                                    <td class="p-2 font-bold" x-text="quote.name"></td>
+                                    <td class="p-2 cyber-cyan" x-text="quote.ship_from + ' -> ' + quote.ship_to"></td>
+                                    <td class="p-2 text-cyber-yellow text-xs font-bold uppercase hover:text-white">DECRYPT PAYLOAD >></td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: SEO COMMAND CENTER -->
+        <div x-show="activeTab === 'seo'" class="h-full flex flex-col gap-4" style="display: none;">
+            <div class="glass-panel p-4 rounded relative h-full flex flex-col border-cyber-magenta">
+                <h2 class="cyber-magenta font-bold mb-4 uppercase text-lg border-b border-cyber-magenta pb-2">SERP Local Rankings (Rank Proof Data)</h2>
+                <div class="overflow-y-auto flex-1">
+                    <table class="w-full text-left">
+                        <thead class="sticky top-0 bg-black text-white">
+                            <tr>
+                                <th class="p-2 border-b border-cyber-magenta">Keyword Target</th>
+                                <th class="p-2 border-b border-cyber-magenta">Location Segment</th>
+                                <th class="p-2 border-b border-cyber-magenta">Current Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template x-for="(rank, idx) in rankData" :key="idx">
+                                <tr class="hover:bg-cyber-magenta/10 transition border-b border-cyber-magenta/30">
+                                    <td class="p-3 font-bold cyber-text" x-text="rank.keyword"></td>
+                                    <td class="p-3 text-gray-300" x-text="rank.location"></td>
+                                    <td class="p-3 font-bold text-xl" 
+                                        :class="rank.rank !== 'Not in Top 100' ? 'text-green-400' : 'text-red-500'" 
+                                        x-text="rank.rank"></td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: TEST VS LIVE MATRIX -->
+        <div x-show="activeTab === 'testlive'" class="h-full flex flex-col gap-4" style="display: none;">
+            <div class="grid grid-cols-2 gap-4 h-[30%]">
+                <div class="glass-panel p-6 flex flex-col justify-center items-center rounded border-green-500 shadow-[0_0_15px_rgba(0,255,0,0.2)]">
+                    <h3 class="text-green-500 uppercase font-bold tracking-widest">Organic / Live Sessions</h3>
+                    <p class="text-6xl text-white mt-4 font-bold" x-text="metrics.liveSessions || 0"></p>
+                </div>
+                <div class="glass-panel p-6 flex flex-col justify-center items-center rounded border-red-500 shadow-[0_0_15px_rgba(255,0,0,0.2)]">
+                    <h3 class="text-red-500 uppercase font-bold tracking-widest">Synthetic / Test Sessions</h3>
+                    <p class="text-6xl text-white mt-4 font-bold" x-text="metrics.testSessions || 0"></p>
+                </div>
+            </div>
+            
+            <div class="glass-panel p-4 rounded relative h-[70%] flex flex-col">
+                <h2 class="text-white font-bold mb-4 uppercase text-lg border-b border-gray-600 pb-2">Session Origin Segregation</h2>
+                <div class="overflow-y-auto flex-1">
+                    <table class="w-full text-left text-sm">
+                        <thead class="sticky top-0 bg-black text-gray-400">
+                            <tr>
+                                <th class="p-2 border-b border-gray-600">Timestamp</th>
+                                <th class="p-2 border-b border-gray-600">Type</th>
+                                <th class="p-2 border-b border-gray-600">Session ID</th>
+                                <th class="p-2 border-b border-gray-600">Device Signature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template x-for="log in telemetryData.recent_visitor_logs" :key="log.session_id">
+                                <tr class="border-b border-gray-800 hover:bg-gray-900 transition">
+                                    <td class="p-2 text-gray-500" x-text="new Date(log.timestamp).toLocaleTimeString()"></td>
+                                    <td class="p-2 font-bold" 
+                                        :class="isTestSession(log) ? 'text-red-500' : 'text-green-500'" 
+                                        x-text="isTestSession(log) ? '[SYNTHETIC]' : '[ORGANIC]'"></td>
+                                    <td class="p-2 text-gray-300 font-mono" x-text="log.session_id"></td>
+                                    <td class="p-2 text-gray-500" x-text="log.device_type"></td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- DECRYPTION MODAL -->
+    <div x-show="modalOpen" class="fixed inset-0 bg-black/95 flex items-center justify-center z-50" style="display: none;">
+        <div class="glass-panel w-full max-w-3xl h-3/4 flex flex-col rounded shadow-[0_0_40px_rgba(255,0,255,0.4)] border-cyber-magenta" @click.away="modalOpen = false">
+            <div class="border-b border-cyber-magenta p-4 flex justify-between items-center bg-cyber-magenta/10">
+                <h2 class="text-2xl cyber-magenta font-bold">[DECRYPTED PAYLOAD]</h2>
+                <button @click="modalOpen = false" class="text-white hover:text-cyber-magenta text-3xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 overflow-auto flex-1 flex flex-col gap-6">
+                <div>
+                    <h3 class="cyber-text border-b border-cyber-cyan inline-block mb-3 uppercase tracking-widest text-sm">Raw JSON Databank</h3>
+                    <pre class="bg-black p-4 rounded text-sm text-green-400 border border-cyber-cyan/30 overflow-auto whitespace-pre-wrap font-mono" x-text="selectedPayload ? JSON.stringify(selectedPayload, null, 2) : ''"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- APP LOGIC -->
+    <script>
+        function dashboardController() {
+            return {
+                activeTab: 'web',
+                statusMessage: 'INITIALIZING UPLINK...',
+                refreshCountdown: 10,
+                telemetryData: {},
+                quotesData: [],
+                rankData: [],
+                metrics: {
+                    uniqueDevices: 0,
+                    topCountry: '',
+                    avgTouches: 0,
+                    quoteStarts: 0,
+                    dropOffRate: 0,
+                    liveSessions: 0,
+                    testSessions: 0
+                },
+                modalOpen: false,
+                selectedPayload: null,
+                charts: {},
+
+                init() {
+                    this.fetchData();
+                    
+                    // Countdown timer
+                    setInterval(() => {
+                        this.refreshCountdown--;
+                        if (this.refreshCountdown <= 0) {
+                            this.refreshCountdown = 10;
+                            this.fetchData();
+                        }
+                    }, 1000);
+                    
+                    this.$watch('activeTab', (value) => {
+                        if (value === 'web') setTimeout(() => this.renderCharts(), 100);
+                    });
+                },
+
+                async fetchData() {
+                    try {
+                        this.statusMessage = 'FETCHING DATA...';
+                        
+                        // 1. Fetch Visitor Telemetry
+                        try {
+                            const resTelemetry = await fetch('visitor_telemetry.json?nocache=' + new Date().getTime());
+                            if(resTelemetry.ok) {
+                                this.telemetryData = await resTelemetry.json();
+                                this.processTelemetry();
+                            }
+                        } catch(e) { console.error("Failed telemetry", e); }
+
+                        // 2. Fetch Quote Submissions
+                        try {
+                            const resQuotes = await fetch('quote_submissions.json?nocache=' + new Date().getTime());
+                            if(resQuotes.ok) {
+                                this.quotesData = await resQuotes.json();
+                            }
+                        } catch(e) { console.error("Failed quotes", e); }
+
+                        // 3. Fetch Rankings
+                        try {
+                            const resRanks = await fetch('rankings_report.json?nocache=' + new Date().getTime());
+                            if(resRanks.ok) {
+                                this.rankData = await resRanks.json();
+                            }
+                        } catch(e) { console.error("Failed ranks", e); }
+
+                        this.calculateCrossMetrics();
+                        this.statusMessage = 'ONLINE // SYNCED';
+
+                        if (this.activeTab === 'web') {
+                            this.renderCharts();
+                        }
+                    } catch (e) {
+                        this.statusMessage = 'CONNECTION ERROR';
+                        console.error(e);
+                    }
+                },
+
+                isTestSession(log) {
+                    // Logic to define test vs live. If local or bot
+                    const str = JSON.stringify(log).toLowerCase();
+                    if(str.includes('test') || str.includes('puppeteer') || str.includes('headless') || str.includes('bot') || str.includes('127.0.0.1')) return true;
+                    // Additional check based on specific country or ip if applicable
+                    return false;
+                },
+
+                processTelemetry() {
+                    if(!this.telemetryData.recent_visitor_logs) return;
+                    
+                    let devices = new Set();
+                    let countryCounts = {};
+                    let totalTouches = 0;
+                    let testCount = 0;
+                    let liveCount = 0;
+                    let quoteClicks = 0;
+
+                    this.telemetryData.recent_visitor_logs.forEach(log => {
+                        if(log.device_type) {
+                            devices.add(log.device_type);
+                        }
+                        
+                        if(log.country) {
+                            countryCounts[log.country] = (countryCounts[log.country] || 0) + 1;
+                        }
+
+                        if(log.touch_events_count) totalTouches += log.touch_events_count;
+                        if(log.mouse_movement_count) totalTouches += log.mouse_movement_count;
+
+                        if(this.isTestSession(log)) {
+                            testCount++;
+                        } else {
+                            liveCount++;
+                        }
+
+                        if(log.clicked_elements && (log.clicked_elements.includes('#get-quote-btn') || log.clicked_elements.includes('#instant-quote-form'))) {
+                            quoteClicks++;
+                        }
+                    });
+
+                    this.metrics.uniqueDevices = devices.size;
+                    
+                    // Find top country
+                    let maxC = 0; let topC = 'N/A';
+                    for(let c in countryCounts) {
+                        if(countryCounts[c] > maxC) { maxC = countryCounts[c]; topC = c; }
+                    }
+                    this.metrics.topCountry = topC;
+                    
+                    this.metrics.avgTouches = this.telemetryData.recent_visitor_logs.length ? Math.floor(totalTouches / this.telemetryData.recent_visitor_logs.length) : 0;
+                    this.metrics.liveSessions = liveCount;
+                    this.metrics.testSessions = testCount;
+                    this.metrics.quoteStarts = quoteClicks;
+                },
+
+                calculateCrossMetrics() {
+                    if(this.metrics.quoteStarts > 0) {
+                        const submitted = this.quotesData.length;
+                        const dropOff = this.metrics.quoteStarts - submitted;
+                        this.metrics.dropOffRate = Math.max(0, Math.round((dropOff / this.metrics.quoteStarts) * 100));
+                    } else {
+                        this.metrics.dropOffRate = 0;
+                    }
+                },
+
+                openModal(payload, type) {
+                    this.selectedPayload = payload;
+                    this.modalOpen = true;
+                },
+
+                renderCharts() {
+                    if (!this.telemetryData.recent_visitor_logs) return;
+
+                    Chart.defaults.color = '#00ffcc';
+                    Chart.defaults.font.family = '"Share Tech Mono", monospace';
+
+                    // Process Device Data
+                    const devData = {};
+                    this.telemetryData.recent_visitor_logs.forEach(log => {
+                        if(log.device_type) {
+                            const devType = log.device_type.split(' ')[0] || 'Unknown'; // Desktop or Mobile
+                            devData[devType] = (devData[devType] || 0) + 1;
+                        }
+                    });
+
+                    const ctxDev = document.getElementById('deviceChart');
+                    if (ctxDev) {
+                        if (this.charts.device) this.charts.device.destroy();
+                        this.charts.device = new Chart(ctxDev, {
+                            type: 'doughnut',
+                            data: {
+                                labels: Object.keys(devData),
+                                datasets: [{
+                                    data: Object.values(devData),
+                                    backgroundColor: ['#00ffcc', '#ff00ff', '#ffffff'],
+                                    borderColor: '#050505',
+                                    borderWidth: 2
+                                }]
+                            },
+                            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+                        });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

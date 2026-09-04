@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "skills": [
+    {
+      "skill_id": "SKILL-E99895",
+      "name": "Cognitive AST Verifier",
+      "domain": "tooling",
+      "description": "Verifies AST structural nodes and class declarations in cognitive models.",
+      "author_agent_id": "web_frontend_julian_thorne",
+      "executable_path": "core/skills/tooling/cognitive_ast_verifier.py",
+      "cli_command_template": "python3 core/skills/tooling/cognitive_ast_verifier.py",
+      "input_parameters": {
+        "target_file": "Path to Python source file"
+      },
+      "output_schema": {
+        "ast_summary": "Colon-delimited node and class count metrics"
+      },
+      "invocations_count": 43,
+      "created_at": "2026-08-17 16:31:26.233096"
+    }
+  ],
+  "updated_at": "2026-08-25 10:00:31.040881"
+}

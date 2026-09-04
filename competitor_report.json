@@ -1,0 +1,30 @@
+{
+    "https://www.montway.com": {
+        "url": "https://www.montway.com",
+        "status": "Success",
+        "h1_count": 0,
+        "h2_count": 0,
+        "schemas_found": [],
+        "internal_links": 0
+    },
+    "https://www.autostartransport.com": {
+        "url": "https://www.autostartransport.com",
+        "status": "Success",
+        "h1_count": 1,
+        "h2_count": 16,
+        "schemas_found": [
+            "Organization",
+            "WebSite",
+            "ImageObject",
+            "ImageObject",
+            "Organization",
+            "Service",
+            "FAQPage"
+        ],
+        "internal_links": 30
+    },
+    "https://www.uship.com": {
+        "url": "https://www.uship.com",
+        "status": "Error: 403 Client Error: Forbidden for url: https://www.uship.com/"
+    }
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "page": "Home",
+    "url": "https://www.skyautoservices.com/",
+    "issues": []
+  },
+  {
+    "page": "Services",
+    "url": "https://www.skyautoservices.com/services",
+    "issues": []
+  },
+  {
+    "page": "About",
+    "url": "https://www.skyautoservices.com/about",
+    "issues": []
+  },
+  {
+    "page": "Contact",
+    "url": "https://www.skyautoservices.com/contact",
+    "issues": []
+  },
+  {
+    "page": "Routes Directory Hub",
+    "url": "https://www.skyautoservices.com/routes-directory/",
+    "issues": [
+      {
+        "viewport": "iPad Portrait (768px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 114px) overlaps H1 heading (top: 96px): 'Complete Auto Transport Routes Directory'"
+      },
+      {
+        "viewport": "iPad Landscape / Small Laptop (1024px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Complete Auto Transport Routes Directory'"
+      },
+      {
+        "viewport": "Desktop Standard (1280px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Complete Auto Transport Routes Directory'"
+      },
+      {
+        "viewport": "Desktop FHD (1920px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Complete Auto Transport Routes Directory'"
+      },
+      {
+        "viewport": "Desktop 2K QHD (2560px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Complete Auto Transport Routes Directory'"
+      }
+    ]
+  },
+  {
+    "page": "State-to-State Hub",
+    "url": "https://www.skyautoservices.com/state-to-state-routes/",
+    "issues": [
+      {
+        "viewport": "iPad Portrait (768px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 114px) overlaps H1 heading (top: 96px): 'State-to-State Auto Transport'"
+      },
+      {
+        "viewport": "iPad Landscape / Small Laptop (1024px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'State-to-State Auto Transport'"
+      },
+      {
+        "viewport": "Desktop Standard (1280px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'State-to-State Auto Transport'"
+      },
+      {
+        "viewport": "Desktop FHD (1920px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'State-to-State Auto Transport'"
+      },
+      {
+        "viewport": "Desktop 2K QHD (2560px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'State-to-State Auto Transport'"
+      }
+    ]
+  },
+  {
+    "page": "State Origin Hub (Illinois)",
+    "url": "https://www.skyautoservices.com/state-to-state-routes/illinois/",
+    "issues": []
+  },
+  {
+    "page": "State Origin Hub (California)",
+    "url": "https://www.skyautoservices.com/state-to-state-routes/california/",
+    "issues": []
+  },
+  {
+    "page": "Route Page (IL to FL)",
+    "url": "https://www.skyautoservices.com/routes/illinois-to-florida-auto-transport",
+    "issues": []
+  },
+  {
+    "page": "Route Page (CA to TX)",
+    "url": "https://www.skyautoservices.com/routes/california-to-texas-auto-transport",
+    "issues": []
+  },
+  {
+    "page": "City Page (Chicago)",
+    "url": "https://www.skyautoservices.com/auto-transport/illinois/chicago",
+    "issues": [
+      {
+        "viewport": "iPad Portrait (768px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 114px) overlaps H1 heading (top: 96px): 'Top-Rated Chicago Auto Transport'"
+      },
+      {
+        "viewport": "iPad Landscape / Small Laptop (1024px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Chicago Auto Transport'"
+      },
+      {
+        "viewport": "Desktop Standard (1280px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Chicago Auto Transport'"
+      },
+      {
+        "viewport": "Desktop FHD (1920px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Chicago Auto Transport'"
+      },
+      {
+        "viewport": "Desktop 2K QHD (2560px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Chicago Auto Transport'"
+      }
+    ]
+  },
+  {
+    "page": "City Page (Los Angeles)",
+    "url": "https://www.skyautoservices.com/auto-transport/california/los-angeles",
+    "issues": [
+      {
+        "viewport": "iPad Portrait (768px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 114px) overlaps H1 heading (top: 96px): 'Top-Rated Los Angeles Auto Transport'"
+      },
+      {
+        "viewport": "iPad Landscape / Small Laptop (1024px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Los Angeles Auto Transport'"
+      },
+      {
+        "viewport": "Desktop Standard (1280px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Los Angeles Auto Transport'"
+      },
+      {
+        "viewport": "Desktop FHD (1920px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Los Angeles Auto Transport'"
+      },
+      {
+        "viewport": "Desktop 2K QHD (2560px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated Los Angeles Auto Transport'"
+      }
+    ]
+  },
+  {
+    "page": "City Page (New York)",
+    "url": "https://www.skyautoservices.com/auto-transport/new-york/new-york",
+    "issues": [
+      {
+        "viewport": "iPad Portrait (768px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 114px) overlaps H1 heading (top: 96px): 'Top-Rated New York Auto Transport'"
+      },
+      {
+        "viewport": "iPad Landscape / Small Laptop (1024px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated New York Auto Transport'"
+      },
+      {
+        "viewport": "Desktop Standard (1280px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated New York Auto Transport'"
+      },
+      {
+        "viewport": "Desktop FHD (1920px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated New York Auto Transport'"
+      },
+      {
+        "viewport": "Desktop 2K QHD (2560px)",
+        "type": "NAV_OVERLAP",
+        "details": "Fixed nav (height: 116px) overlaps H1 heading (top: 96px): 'Top-Rated New York Auto Transport'"
+      }
+    ]
+  },
+  {
+    "page": "News Hub",
+    "url": "https://www.skyautoservices.com/usa-auto-transport-news",
+    "issues": []
+  },
+  {
+    "page": "News Article (Snowbird)",
+    "url": "https://www.skyautoservices.com/usa-auto-transport-news/2026-snowbird-auto-transport-season-predictions",
+    "issues": []
+  },
+  {
+    "page": "Privacy Policy",
+    "url": "https://www.skyautoservices.com/privacy",
+    "issues": []
+  },
+  {
+    "page": "Terms of Service",
+    "url": "https://www.skyautoservices.com/terms",
+    "issues": []
+  },
+  {
+    "page": "404 Page",
+    "url": "https://www.skyautoservices.com/404",
+    "issues": []
+  }
+]

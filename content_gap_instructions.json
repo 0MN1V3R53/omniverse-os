@@ -1,0 +1,98 @@
+[
+    {
+        "target_keyword": "auto transport",
+        "target_location": "New York, United States",
+        "recommended_actions": [
+            {
+                "type": "add_schema",
+                "schema": "FAQPage",
+                "topic": "auto transport"
+            },
+            {
+                "type": "ensure_keyword_density",
+                "keyword": "auto transport",
+                "target_h2_count": 8
+            }
+        ]
+    },
+    {
+        "target_keyword": "car shipping services",
+        "target_location": "New York, United States",
+        "recommended_actions": [
+            {
+                "type": "add_schema",
+                "schema": "FAQPage",
+                "topic": "car shipping services"
+            },
+            {
+                "type": "ensure_keyword_density",
+                "keyword": "car shipping services",
+                "target_h2_count": 8
+            }
+        ]
+    },
+    {
+        "target_keyword": "auto transport",
+        "target_location": "California, United States",
+        "recommended_actions": [
+            {
+                "type": "add_schema",
+                "schema": "FAQPage",
+                "topic": "auto transport"
+            },
+            {
+                "type": "ensure_keyword_density",
+                "keyword": "auto transport",
+                "target_h2_count": 8
+            }
+        ]
+    },
+    {
+        "target_keyword": "car shipping services",
+        "target_location": "California, United States",
+        "recommended_actions": [
+            {
+                "type": "add_schema",
+                "schema": "FAQPage",
+                "topic": "car shipping services"
+            },
+            {
+                "type": "ensure_keyword_density",
+                "keyword": "car shipping services",
+                "target_h2_count": 8
+            }
+        ]
+    },
+    {
+        "target_keyword": "auto transport",
+        "target_location": "Texas, United States",
+        "recommended_actions": [
+            {
+                "type": "add_schema",
+                "schema": "FAQPage",
+                "topic": "auto transport"
+            },
+            {
+                "type": "ensure_keyword_density",
+                "keyword": "auto transport",
+                "target_h2_count": 8
+            }
+        ]
+    },
+    {
+        "target_keyword": "car shipping services",
+        "target_location": "Texas, United States",
+        "recommended_actions": [
+            {
+                "type": "add_schema",
+                "schema": "FAQPage",
+                "topic": "car shipping services"
+            },
+            {
+                "type": "ensure_keyword_density",
+                "keyword": "car shipping services",
+                "target_h2_count": 8
+            }
+        ]
+    }
+]

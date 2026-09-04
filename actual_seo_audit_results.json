@@ -1,0 +1,306 @@
+{
+    "results": [
+        {
+            "state": "Alabama (AL)",
+            "query": "Alabama to Florida auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:17:38"
+        },
+        {
+            "state": "Alaska (AK)",
+            "query": "Alaska enclosed car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:17:47"
+        },
+        {
+            "state": "Arizona (AZ)",
+            "query": "Phoenix to Dallas car transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:17:53"
+        },
+        {
+            "state": "Arkansas (AR)",
+            "query": "Arkansas exotic auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:17:59"
+        },
+        {
+            "state": "California (CA)",
+            "query": "California to Florida car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:04"
+        },
+        {
+            "state": "Colorado (CO)",
+            "query": "Denver to Austin auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:11"
+        },
+        {
+            "state": "Connecticut (CT)",
+            "query": "Connecticut enclosed car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:17"
+        },
+        {
+            "state": "Delaware (DE)",
+            "query": "Delaware auto transport services",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:22"
+        },
+        {
+            "state": "Florida (FL)",
+            "query": "Miami to Los Angeles luxury car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:30"
+        },
+        {
+            "state": "Georgia (GA)",
+            "query": "Atlanta to New York auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:36"
+        },
+        {
+            "state": "Hawaii (HI)",
+            "query": "Hawaii car shipping enclosed",
+            "rank": "Error",
+            "error": "Page.query_selector_all: Execution context was destroyed, most likely because of a navigation",
+            "timestamp": "2026-08-13 06:18:41"
+        },
+        {
+            "state": "Idaho (ID)",
+            "query": "Boise to Salt Lake City auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:45"
+        },
+        {
+            "state": "Illinois (IL)",
+            "query": "Chicago to Los Angeles car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:50"
+        },
+        {
+            "state": "Indiana (IN)",
+            "query": "Indiana to Texas auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:18:56"
+        },
+        {
+            "state": "Iowa (IA)",
+            "query": "Iowa to Arizona car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:01"
+        },
+        {
+            "state": "Kansas (KS)",
+            "query": "Kansas to Texas auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:09"
+        },
+        {
+            "state": "Kentucky (KY)",
+            "query": "Kentucky to Florida auto shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:15"
+        },
+        {
+            "state": "Louisiana (LA)",
+            "query": "Louisiana to Texas car transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:19"
+        },
+        {
+            "state": "Maine (ME)",
+            "query": "Maine to Florida snowbird shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:26"
+        },
+        {
+            "state": "Maryland (MD)",
+            "query": "Baltimore to Miami auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:35"
+        },
+        {
+            "state": "Massachusetts (MA)",
+            "query": "Boston to Florida enclosed car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:42"
+        },
+        {
+            "state": "Michigan (MI)",
+            "query": "Detroit to Phoenix car transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:48"
+        },
+        {
+            "state": "Minnesota (MN)",
+            "query": "Minnesota to Arizona car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:52"
+        },
+        {
+            "state": "Mississippi (MS)",
+            "query": "Mississippi to Texas auto shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:19:59"
+        },
+        {
+            "state": "Missouri (MO)",
+            "query": "Missouri to California auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:04"
+        },
+        {
+            "state": "Montana (MT)",
+            "query": "Montana enclosed vehicle transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:11"
+        },
+        {
+            "state": "Nebraska (NE)",
+            "query": "Nebraska to Texas auto shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:14"
+        },
+        {
+            "state": "Nevada (NV)",
+            "query": "Las Vegas to Miami exotic car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:18"
+        },
+        {
+            "state": "New Hampshire (NH)",
+            "query": "New Hampshire to Florida car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:24"
+        },
+        {
+            "state": "New Jersey (NJ)",
+            "query": "New Jersey to Florida auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:31"
+        },
+        {
+            "state": "New Mexico (NM)",
+            "query": "Albuquerque to Dallas car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:38"
+        },
+        {
+            "state": "New York (NY)",
+            "query": "New York to Florida car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:41"
+        },
+        {
+            "state": "North Carolina (NC)",
+            "query": "Charlotte to Miami car transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:45"
+        },
+        {
+            "state": "North Dakota (ND)",
+            "query": "North Dakota enclosed car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:51"
+        },
+        {
+            "state": "Ohio (OH)",
+            "query": "Columbus to Tampa auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:20:55"
+        },
+        {
+            "state": "Oklahoma (OK)",
+            "query": "Oklahoma to Texas car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:01"
+        },
+        {
+            "state": "Oregon (OR)",
+            "query": "Portland to Los Angeles car transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:08"
+        },
+        {
+            "state": "Pennsylvania (PA)",
+            "query": "Philadelphia to Miami car transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:14"
+        },
+        {
+            "state": "Rhode Island (RI)",
+            "query": "Rhode Island to Florida shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:20"
+        },
+        {
+            "state": "South Carolina (SC)",
+            "query": "South Carolina to New York shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:26"
+        },
+        {
+            "state": "South Dakota (SD)",
+            "query": "South Dakota auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:33"
+        },
+        {
+            "state": "Tennessee (TN)",
+            "query": "Nashville to Miami car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:39"
+        },
+        {
+            "state": "Texas (TX)",
+            "query": "Texas to California car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:43"
+        },
+        {
+            "state": "Utah (UT)",
+            "query": "Salt Lake City to Los Angeles transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:50"
+        },
+        {
+            "state": "Vermont (VT)",
+            "query": "Vermont to Florida car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:55"
+        },
+        {
+            "state": "Virginia (VA)",
+            "query": "Virginia to Florida auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:21:58"
+        },
+        {
+            "state": "Washington (WA)",
+            "query": "Seattle to Los Angeles car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:22:03"
+        },
+        {
+            "state": "West Virginia (WV)",
+            "query": "West Virginia auto transport",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:22:09"
+        },
+        {
+            "state": "Wisconsin (WI)",
+            "query": "Milwaukee to Phoenix car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:22:13"
+        },
+        {
+            "state": "Wyoming (WY)",
+            "query": "Wyoming enclosed car shipping",
+            "rank": "Not in top 20",
+            "timestamp": "2026-08-13 06:22:17"
+        }
+    ],
+    "last_updated": "2026-08-13 06:22:18"
+}

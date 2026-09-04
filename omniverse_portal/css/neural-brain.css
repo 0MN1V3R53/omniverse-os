@@ -1,0 +1,736 @@
+/* ==========================================================================
+   OMNIVERSE TECH — 3D NEURAL BRAIN & CORTEX OBSERVATORY STYLES
+   Cyberpunk Luxe / Obsidian Glassmorphism / High-DPI UI
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #04060a;
+  color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Canvas Container */
+#webgl-brain-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  outline: none;
+  cursor: grab;
+}
+
+#webgl-brain-canvas:active {
+  cursor: grabbing;
+}
+
+/* Fullscreen App Wrapper */
+.cortex-app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Allow pointer events on interactive UI components */
+.interactive-ui {
+  pointer-events: auto;
+}
+
+/* Glassmorphic Panel Base */
+.glass-panel {
+  background: rgba(10, 15, 26, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6), inset 0 0 16px rgba(0, 240, 255, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 240, 255, 0.08);
+}
+
+/* Header Bar */
+.cortex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  margin: 14px 20px 8px 20px;
+  border-radius: 14px;
+  background: rgba(7, 11, 20, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-icon-hex {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid #00f0ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.brand-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #ffffff 0%, #00f0ff 60%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #10b981;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Header Center: View Mode Switcher */
+.view-modes {
+  display: flex;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 4px;
+}
+
+.mode-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 6px 14px;
+  border-radius: 7px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.mode-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(168, 85, 247, 0.25));
+  color: #00f0ff;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+/* Header Right: Audio & Nav actions */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-btn {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.header-btn:hover {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.audio-btn.active {
+  border-color: #10b981;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+/* Main Observatory Layout */
+.observatory-body {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Left Sidebar: Telemetry & Lobe Quick-Selector */
+.sidebar-left {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.sidebar-left::-webkit-scrollbar {
+  display: none;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel-title svg {
+  color: #00f0ff;
+}
+
+/* Telemetry Grid */
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.telemetry-stat {
+  background: rgba(7, 12, 22, 0.6);
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-value.cyan { color: #00f0ff; text-shadow: 0 0 10px rgba(0, 240, 255, 0.4); }
+.stat-value.purple { color: #a855f7; text-shadow: 0 0 10px rgba(168, 85, 247, 0.4); }
+.stat-value.emerald { color: #10b981; text-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+.stat-value.amber { color: #f59e0b; text-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
+
+/* Lobe Selector List */
+.lobe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lobe-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(11, 18, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lobe-item:hover {
+  background: rgba(20, 32, 58, 0.7);
+  border-color: rgba(0, 240, 255, 0.4);
+  transform: translateX(4px);
+}
+
+.lobe-item.active {
+  border-color: #00f0ff;
+  background: rgba(0, 240, 255, 0.12);
+  box-shadow: inset 0 0 12px rgba(0, 240, 255, 0.15);
+}
+
+.lobe-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lobe-color-tag {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.lobe-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.lobe-function {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.lobe-activity-bar-bg {
+  width: 40px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.lobe-activity-bar-fill {
+  height: 100%;
+  width: 65%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Simulation Controls Panel */
+.sim-controls-panel {
+  padding: 12px 14px;
+}
+
+.control-group {
+  margin-bottom: 10px;
+}
+
+.control-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.slider-custom {
+  width: 100%;
+  height: 5px;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  outline: none;
+}
+
+.slider-custom::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.slider-custom::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+
+.btn-row {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-small {
+  flex: 1;
+  padding: 6px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: #f8fafc;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.btn-small:hover {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: #00f0ff;
+}
+
+.btn-small.primary {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(168, 85, 247, 0.25));
+  border-color: rgba(0, 240, 255, 0.4);
+  color: #00f0ff;
+}
+
+/* Right Sidebar: Deep Neural Probe Inspector HUD */
+.sidebar-right {
+  width: 360px;
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-right::-webkit-scrollbar {
+  display: none;
+}
+
+.probe-panel {
+  padding: 14px 16px;
+  position: relative;
+}
+
+.probe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #c084fc;
+  margin-bottom: 6px;
+}
+
+.neuron-id-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.neuron-domain-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #00f0ff;
+  margin-bottom: 10px;
+}
+
+/* Live Oscilloscope Waveform Canvas */
+.oscilloscope-wrapper {
+  background: rgba(4, 7, 14, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.osc-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+#osc-canvas {
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+
+/* Token & Thought Activity Card */
+.thought-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.thought-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thought-content {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #38bdf8;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.synapse-matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.synapse-stat-box {
+  background: rgba(7, 12, 22, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.probe-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.probe-action-btn {
+  width: 100%;
+  padding: 9px;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.15), rgba(168, 85, 247, 0.15));
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+.probe-action-btn:hover {
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.35), rgba(168, 85, 247, 0.35));
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.secondary-probe-btn {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  box-shadow: none;
+}
+
+.secondary-probe-btn:hover {
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+/* Bottom Bar: Live Streaming Prompt & Stimulus Injector */
+.cortex-bottom-bar {
+  margin: 0 20px 14px 20px;
+  padding: 10px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 14px;
+  background: rgba(7, 11, 20, 0.9);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+}
+
+.ticker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.ticker-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #00f0ff;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ticker-scroll {
+  flex: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  color: #cbd5e1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prompt-injection-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.preset-dropdown {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #e2e8f0;
+  padding: 8px 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.prompt-input {
+  flex: 1;
+  background: rgba(11, 18, 32, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 8px;
+  color: #f8fafc;
+  padding: 8px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.prompt-input:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.inject-btn {
+  background: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
+  border: none;
+  border-radius: 8px;
+  color: #04060a;
+  padding: 8px 18px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.inject-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+}
+
+/* Floating 3D Tooltip for Hovered Neuron */
+#neuron-hover-tooltip {
+  position: absolute;
+  z-index: 100;
+  background: rgba(10, 15, 26, 0.92);
+  border: 1px solid #00f0ff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #f8fafc;
+  pointer-events: none;
+  display: none;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  transform: translate(-50%, -120%);
+}

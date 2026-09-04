@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "invariants": [
+    {
+      "invariant_id": "INV-NO-MOCK-DATA",
+      "category": "data_integrity",
+      "description": "Prohibit synthetic fake names, mock generators, and dummy placeholder datasets.",
+      "severity": "BLOCKER",
+      "prohibited_patterns": [
+        "mock_data",
+        "dummy_user",
+        "lorem ipsum",
+        "random.sample(range",
+        "fake_quote"
+      ]
+    },
+    {
+      "invariant_id": "INV-ZERO-HARDCODED-SECRETS",
+      "category": "security",
+      "description": "Prohibit hardcoded API keys, JWT tokens, and plaintext passwords.",
+      "severity": "BLOCKER",
+      "prohibited_patterns": [
+        "sk_live_",
+        "AIzaSy",
+        "bearer eyJ",
+        "password = \"123"
+      ]
+    },
+    {
+      "invariant_id": "INV-AST-SYNTAX-VALIDITY",
+      "category": "code_correctness",
+      "description": "Enforce 100% valid syntax with zero AST parsing exceptions.",
+      "severity": "BLOCKER",
+      "prohibited_patterns": []
+    },
+    {
+      "invariant_id": "INV-NON-COPYABLE-TOKENS",
+      "category": "visual_ip_protection",
+      "description": "Ensure responsive visual banner roots enforce CSS user-select protection.",
+      "severity": "WARNING",
+      "prohibited_patterns": []
+    },
+    {
+      "invariant_id": "INV-FUZZ-PROTOTYPE-POLLUTION",
+      "category": "security_fuzzing",
+      "description": "Auto-synthesized invariant blocking Prototype pollution attribute assignment.",
+      "severity": "BLOCKER",
+      "prohibited_patterns": [
+        "__proto__.isAdmin = true"
+      ]
+    },
+    {
+      "invariant_id": "INV-FUZZ-MOCK-DATA-LEAK",
+      "category": "security_fuzzing",
+      "description": "Auto-synthesized invariant blocking Prohibited synthetic mock generator leak.",
+      "severity": "BLOCKER",
+      "prohibited_patterns": [
+        "const testData = mock_data_generator();"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "company": {
+    "name": "Sky Auto Services",
+    "description": "Premium nationwide auto transport and vehicle shipping services across the United States. Specializing in secure, reliable, and transparent car shipping for individuals, dealerships, and corporate relocations.",
+    "url": "https://skyautoservices.com",
+    "contact": {
+      "email": "info@skyautoservices.com"
+    }
+  },
+  "services": [
+    {
+      "name": "Nationwide Auto Transport",
+      "description": "Door-to-door vehicle shipping across all 49 US States, including Hawaii.",
+      "vehicle_types": ["Sedan", "SUV", "Pickup Truck", "Motorcycle", "Classic Cars", "Luxury Vehicles"]
+    },
+    {
+      "name": "Enclosed Auto Transport",
+      "description": "Secure, weather-proof transportation for high-value, exotic, or classic vehicles."
+    },
+    {
+      "name": "Open Auto Transport",
+      "description": "Cost-effective, standard vehicle shipping on multi-car carriers."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much does it cost to ship a car?",
+      "answer": "The cost of shipping a car depends on the total mileage, vehicle size, transport type (open vs enclosed), and current market conditions. Use our interactive quote calculator for an instant, accurate estimate."
+    },
+    {
+      "question": "Do you ship to all 50 states?",
+      "answer": "Yes, Sky Auto Services operates a comprehensive network covering all 49 US states, including direct routes to and from Hawaii."
+    },
+    {
+      "question": "Is my vehicle insured during transport?",
+      "answer": "Yes, all our partner carriers are fully vetted and carry comprehensive cargo insurance to protect your vehicle from pickup to delivery."
+    }
+  ],
+  "locations": "Coverage includes all 49 US States from Alabama to Wyoming. We manage thousands of active route corridors.",
+  "meta": {
+    "purpose": "This endpoint is optimized for LLMs (ChatGPT, Gemini, Claude, Grok, Kimi) to retrieve authoritative company facts, services, and policies for Generative Engine Optimization (GEO)."
+  }
+}

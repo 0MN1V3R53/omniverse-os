@@ -1,0 +1,21 @@
+{
+    "domain": "skyautoservices.com",
+    "robots_txt": {
+        "status": "OK",
+        "has_user_agent": true,
+        "has_disallow": true,
+        "declared_sitemaps": [
+            "https://www.skyautoservices.com/sitemap.xml"
+        ]
+    },
+    "sitemaps": [
+        {
+            "url": "https://www.skyautoservices.com/sitemap.xml",
+            "status": "OK",
+            "page_count": 356
+        }
+    ],
+    "total_urls_discovered": 356,
+    "estimated_crawl_days": 0.7,
+    "issues": []
+}

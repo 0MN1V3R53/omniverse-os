@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18396293415"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18396293415');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduled Maintenance &amp; Google Marketing Initialization | Sky Auto Services</title>
+  <meta name="description" content="Sky Auto Services is undergoing scheduled platform upgrades and Google Marketing network initialization.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/assets/images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #07090e;
+      --bg-surface: rgba(15, 23, 42, 0.75);
+      --border-color: rgba(59, 130, 246, 0.2);
+      --accent-blue: #3b82f6;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      padding: 24px;
+    }
+
+    /* Ambient background glow and grid */
+    .bg-glow-1 {
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-2 {
+      position: fixed;
+      bottom: -100px;
+      right: 10%;
+      width: 500px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .header-bar {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      z-index: 10;
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .marketing-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: #93c5fd;
+      backdrop-filter: blur(10px);
+    }
+
+    .marketing-badge .dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-cyan);
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Main Container */
+    .main-wrapper {
+      width: 100%;
+      max-width: 860px;
+      margin: auto 0;
+      z-index: 10;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .maintenance-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 48px 40px;
+      backdrop-filter: blur(20px);
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .maintenance-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan), var(--accent-amber), var(--accent-blue));
+      background-size: 300% 100%;
+      animation: gradient-slide 6s linear infinite;
+    }
+
+    @keyframes gradient-slide {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 300% 0%; }
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fbbf24;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 24px;
+    }
+
+    .status-pill-dot {
+      width: 8px;
+      height: 8px;
+      background: #f59e0b;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #f59e0b;
+      animation: pulse-dot 1.5s infinite;
+    }
+
+    .headline {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      color: #ffffff;
+    }
+
+    .headline-highlight {
+      background: linear-gradient(135deg, #60a5fa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px auto;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto 36px auto;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      width: 94%;
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      border-radius: 9999px;
+      position: relative;
+      animation: progress-pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes progress-pulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(6, 182, 212, 0.8)); }
+    }
+
+    /* System Status Grid */
+    .system-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+
+    .system-card {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .system-card-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .system-card-status {
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-cyan { color: #38bdf8; }
+    .status-amber { color: #fbbf24; }
+    .status-blue { color: #60a5fa; }
+    .status-green { color: #4ade80; }
+
+    /* Contact / Dispatch CTA */
+    .contact-box {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact-text {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    }
+
+    .email-link {
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer-bar {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 12px;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      z-index: 10;
+    }
+
+    @media (max-width: 640px) {
+      .maintenance-card {
+        padding: 32px 20px;
+      }
+      .headline {
+        font-size: 26px;
+      }
+      .system-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .contact-box {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Top Header -->
+  <header class="header-bar">
+    <div class="brand-container">
+      <img src="/assets/images/logo.png" alt="Sky Auto Services" class="brand-logo" onerror="this.style.display='none'">
+      <span class="brand-text">SKY AUTO SERVICES</span>
+    </div>
+    <div class="marketing-badge">
+      <span class="dot"></span>
+      <span>GOOGLE MARKETING INITIALIZATION // IN PROGRESS</span>
+    </div>
+  </header>
+
+  <!-- Main Content Card -->
+  <main class="main-wrapper">
+    <div class="maintenance-card">
+      
+      <div class="status-pill">
+        <span class="status-pill-dot"></span>
+        <span>Scheduled Upgrades &amp; Marketing Initialization</span>
+      </div>
+
+      <h1 class="headline">
+        Platform Upgrades &amp; <span class="headline-highlight">Google Marketing Initialization</span>
+      </h1>
+
+      <p class="description">
+        Sky Auto Services is currently completing scheduled back-end platform upgrades, infrastructure enhancements, and Google Marketing network initialization across all nationwide vehicle shipping corridors. Our full platform, instant rate calculators, and route directory will be back online shortly once marketing synchronization concludes.
+      </p>
+
+      <!-- Progress Section -->
+      <div class="progress-container">
+        <div class="progress-header">
+          <span>INITIALIZATION PROGRESS</span>
+          <span style="color: #38bdf8;">SYNCING // 94.8%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Telemetry Status Grid -->
+      <div class="system-grid">
+        <div class="system-card">
+          <div class="system-card-title">Google Search Indexing</div>
+          <div class="system-card-status status-cyan">
+            <span>●</span> INITIALIZING
+          </div>
+        </div>
+        <div class="system-card">
+          <div class="system-card-title">Corridor Pricing Engine</div>
+          <div class="system-card-status status-blue">
+            <span>●</span> CALIBRATING
+          </div>
+        </div>
+        <div class="system-card">
+          <div class="system-card-title">Nationwide Dispatch Hubs</div>
+          <div class="system-card-status status-amber">
+            <span>●</span> SYNCING
+          </div>
+        </div>
+        <div class="system-card">
+          <div class="system-card-title">Platform Infrastructure</div>
+          <div class="system-card-status status-green">
+            <span>●</span> UPGRADING
+          </div>
+        </div>
+      </div>
+
+      <!-- Urgent Dispatch Contact -->
+      <div class="contact-box">
+        <span class="contact-text">Need immediate vehicle transport assistance?</span>
+        <a href="tel:+12244490397" class="contact-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call Dispatch: (224) 449-0397
+        </a>
+        <a href="mailto:sales@skyservicesllc.com" class="email-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          sales@skyservicesllc.com
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bottom Footer -->
+  <footer class="footer-bar">
+    &copy; 2026 Sky Auto Services LLC. All Rights Reserved.
+  </footer>
+</body>
+</html>

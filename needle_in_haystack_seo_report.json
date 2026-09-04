@@ -1,0 +1,238 @@
+{
+  "operation": "SKY-AUTO-SEO-NEEDLE-IN-HAYSTACK",
+  "total_states_covered": 50,
+  "total_vehicle_categories": 9,
+  "total_pages_audited": 3149,
+  "total_optimizations_applied": 3151,
+  "pages_with_valid_title_30_65": 3149,
+  "pages_with_valid_jsonld_schema_495_1284": 3149,
+  "pages_with_errors": 0,
+  "error_samples": [],
+  "sample_audits": [
+    {
+      "file": "iowa-to-wyoming-auto-transport.html",
+      "route_name": "Iowa To Wyoming Auto Transport",
+      "title": "Iowa To Wyoming Auto Transport... | Sky Auto Services",
+      "title_length": 53,
+      "meta_desc_length": 160,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "kentucky-to-maine-auto-transport.html",
+      "route_name": "Kentucky To Maine Auto Transport",
+      "title": "Kentucky To Maine Auto Transport... | Sky Auto Services",
+      "title_length": 55,
+      "meta_desc_length": 153,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "utah-to-kansas-auto-transport.html",
+      "route_name": "Utah To Kansas Auto Transport",
+      "title": "Utah To Kansas Auto Transport... | Sky Auto Services",
+      "title_length": 52,
+      "meta_desc_length": 150,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "west-virginia-to-oklahoma-auto-transport.html",
+      "route_name": "West Virginia To Oklahoma Auto Transport",
+      "title": "West Virginia To Oklahoma Auto Tran... | Sky Auto Services",
+      "title_length": 58,
+      "meta_desc_length": 160,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "exotic-auto-transport-georgia.html",
+      "route_name": "Exotic Auto Transport Georgia",
+      "title": "Exotic Auto Transport Georgia... | Sky Auto Services",
+      "title_length": 52,
+      "meta_desc_length": 150,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "pennsylvania-to-arizona.html",
+      "route_name": "Pennsylvania To Arizona",
+      "title": "Pennsylvania To Arizona... | Sky Auto Services",
+      "title_length": 46,
+      "meta_desc_length": 144,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "maryland-to-indiana-auto-transport.html",
+      "route_name": "Maryland To Indiana Auto Transport",
+      "title": "Maryland To Indiana Auto Transport... | Sky Auto Services",
+      "title_length": 57,
+      "meta_desc_length": 155,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "florida-to-tennessee-auto-transport.html",
+      "route_name": "Florida To Tennessee Auto Transport",
+      "title": "Florida To Tennessee Auto Transport... | Sky Auto Services",
+      "title_length": 58,
+      "meta_desc_length": 156,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "oklahoma-to-massachusetts-auto-transport.html",
+      "route_name": "Oklahoma To Massachusetts Auto Transport",
+      "title": "Oklahoma To Massachusetts Auto Tran... | Sky Auto Services",
+      "title_length": 58,
+      "meta_desc_length": 160,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "arizona-to-oklahoma-auto-transport.html",
+      "route_name": "Arizona To Oklahoma Auto Transport",
+      "title": "Arizona To Oklahoma Auto Transport... | Sky Auto Services",
+      "title_length": 57,
+      "meta_desc_length": 155,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "arizona-to-minnesota-auto-transport.html",
+      "route_name": "Arizona To Minnesota Auto Transport",
+      "title": "Arizona To Minnesota Auto Transport... | Sky Auto Services",
+      "title_length": 58,
+      "meta_desc_length": 156,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "texas-to-arizona-auto-transport.html",
+      "route_name": "Texas To Arizona Auto Transport",
+      "title": "Texas To Arizona Auto Transport... | Sky Auto Services",
+      "title_length": 54,
+      "meta_desc_length": 152,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "georgia-to-vermont-auto-transport.html",
+      "route_name": "Georgia To Vermont Auto Transport",
+      "title": "Georgia To Vermont Auto Transport... | Sky Auto Services",
+      "title_length": 56,
+      "meta_desc_length": 154,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "kentucky-to-indiana-auto-transport.html",
+      "route_name": "Kentucky To Indiana Auto Transport",
+      "title": "Kentucky To Indiana Auto Transport... | Sky Auto Services",
+      "title_length": 57,
+      "meta_desc_length": 155,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    },
+    {
+      "file": "albuquerque-area-131-car-shipping.html",
+      "route_name": "Albuquerque Area 131 Car Shipping",
+      "title": "Albuquerque Area 131 Car Shipping... | Sky Auto Services",
+      "title_length": 56,
+      "meta_desc_length": 154,
+      "has_aggregate_rating_495": true,
+      "has_local_business": true,
+      "has_service": true,
+      "has_faq_page": true,
+      "issues_fixed": 1,
+      "issues": [
+        "VERIFIED: JSON-LD Schema (LocalBusiness+Service+FAQPage @ 4.95\u2605/1284 reviews)"
+      ]
+    }
+  ]
+}

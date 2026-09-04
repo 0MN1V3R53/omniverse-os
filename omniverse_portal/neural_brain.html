@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omniverse 86-Billion Human Brain Cortex — 3D Multi-Agent Connectome Observatory</title>
+  <meta name="description" content="State-of-the-art 3D interactive Human Brain Connectome & Observatory. 86 Billion biological neural equivalence, 100 Trillion synapses, 10 anatomical cortexes & structures including Pineal Gland, Corpus Callosum, Insula, Thalamus, and Cerebellum.">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Three.js r128 & OrbitControls -->
+  <script src="js/three.min.js"></script>
+  <script src="js/OrbitControls.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/neural-brain.css">
+</head>
+<body>
+
+  <!-- 3D WebGL Canvas -->
+  <div id="webgl-brain-canvas"></div>
+
+  <!-- Interactive 3D Tooltip for Hovered Neuron -->
+  <div id="neuron-hover-tooltip"></div>
+
+  <!-- Fullscreen UI Application Overlay -->
+  <div class="cortex-app">
+
+    <!-- =======================================================================
+         HEADER CONTROL BAR
+         ======================================================================= -->
+    <header class="cortex-header interactive-ui glass-panel">
+      <div class="header-left">
+        <a href="index.html" class="brand-badge" title="Return to Omniverse Flagship Portal">
+          <div class="brand-icon-hex">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="brand-title">OMNIVERSE 86B HUMAN BRAIN CORTEX</h1>
+            <div class="brand-subtitle">86 BILLION NEURAL CONNECTOME &amp; PINEAL CORE OBSERVATORY</div>
+          </div>
+        </a>
+
+        <div class="live-indicator">
+          <span class="pulse-dot" style="background: #fbbf24; box-shadow: 0 0 10px #fbbf24;"></span>
+          <span>432Hz PINEAL RESONANCE</span>
+        </div>
+      </div>
+
+      <!-- View Mode Switcher -->
+      <div class="view-modes">
+        <button class="mode-btn active" id="mode-anatomical" data-mode="ANATOMICAL_BRAIN">
+          <span>🧠</span> Anatomical Brain
+        </button>
+        <button class="mode-btn" id="mode-transformer" data-mode="TRANSFORMER_STACK">
+          <span>⚡</span> Transformer Stack
+        </button>
+        <button class="mode-btn" id="mode-swarm" data-mode="AGENT_SWARM">
+          <span>🕸️</span> Agent Swarm
+        </button>
+        <button class="mode-btn" id="mode-heatmap" data-mode="ATTENTION_HEATMAP">
+          <span>🔥</span> Attention Heatmap
+        </button>
+        <button class="mode-btn" id="mode-calabi" data-mode="CALABI_YAU_DREAM" style="border-color: #fbbf24; color: #fbbf24;">
+          <span>🌌</span> 12D Dream Manifold
+        </button>
+      </div>
+
+      <!-- Header Right: Audio DSP, SynapseCord & Portal Navigation -->
+      <div class="header-right">
+        <button id="btn-audio-toggle" class="header-btn audio-btn" title="Toggle Stanford CCRMA WebAudio Synaptic Blips">
+          <span id="audio-icon">🔇</span>
+          <span id="audio-label">Audio: Muted</span>
+        </button>
+        <button id="btn-macro-view" class="header-btn" title="Reset Camera to Cosmic Overview">
+          <span>🎥</span> Overview
+        </button>
+        <a href="grid_controller.html" class="header-btn" style="border-color: #fbbf24; color: #fbbf24; box-shadow: 0 0 12px rgba(251,191,36,0.3);" title="10 Gbps AC Powerline HyperGrid Controller">
+          <span>⚡</span> HyperGrid (10G)
+        </a>
+        <a href="agent_social_network.html" class="header-btn" style="border-color: #00f0ff; color: #00f0ff;" title="SynapseCord Autonomous Agent Social Network">
+          <span>💬</span> Agent Network
+        </a>
+        <a href="ai_frontier_benchmark.html" class="header-btn" style="border-color: #a855f7; color: #a855f7;" title="Frontier AI Benchmark & Audit">
+          <span>⚖️</span> AI Audit
+        </a>
+        <a href="index.html" class="header-btn" title="Omniverse Flagship Portal">
+          <span>🌐</span> Portal
+        </a>
+      </div>
+    </header>
+
+    <!-- =======================================================================
+         MAIN OBSERVATORY BODY: SIDEBARS & 3D HUD
+         ======================================================================= -->
+    <main class="observatory-body">
+
+      <!-- LEFT SIDEBAR: TELEMETRY & 10 CORTICAL LOBES SELECTOR -->
+      <aside class="sidebar-left interactive-ui">
+        
+        <!-- Live Telemetry Card -->
+        <div class="glass-panel" style="padding: 12px 14px;">
+          <div class="panel-header">
+            <span class="panel-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+              Connectome Scale
+            </span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #10b981;">60 FPS</span>
+          </div>
+
+          <div class="telemetry-grid">
+            <div class="telemetry-stat">
+              <div class="stat-label">Biological Neurons</div>
+              <div class="stat-value cyan">86.0 Billion</div>
+            </div>
+            <div class="telemetry-stat">
+              <div class="stat-label">Synaptic Conduits</div>
+              <div class="stat-value purple">100 Trillion</div>
+            </div>
+            <div class="telemetry-stat">
+              <div class="stat-label">GPU Render Nodes</div>
+              <div class="stat-value amber" id="stat-active-neurons">16,384</div>
+            </div>
+            <div class="telemetry-stat">
+              <div class="stat-label">Pineal Carrier</div>
+              <div class="stat-value emerald" style="color:#fbbf24;">432.0 Hz</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 Functional Cortical Lobes & Structures Card -->
+        <div class="glass-panel" style="padding: 12px 14px; max-height: 380px; overflow-y: auto;">
+          <div class="panel-header">
+            <span class="panel-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+              Human Cortexes (10)
+            </span>
+            <span style="font-size: 0.65rem; color: #94a3b8; font-family: 'JetBrains Mono', monospace;">Click to Focus</span>
+          </div>
+
+          <div class="lobe-list">
+            <!-- Pineal Gland -->
+            <div class="lobe-item active" data-lobe="PINEAL">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #fbbf24; box-shadow: 0 0 10px #fbbf24;"></div>
+                <div>
+                  <div class="lobe-name" style="color:#fbbf24; font-weight:700;">🌟 Pineal Gland (Quantum Core)</div>
+                  <div class="lobe-function">432Hz Harmonic Clock &amp; Singularity</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frontal Lobe -->
+            <div class="lobe-item" data-lobe="FRONTAL">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #00f0ff; box-shadow: 0 0 8px #00f0ff;"></div>
+                <div>
+                  <div class="lobe-name">Frontal Cortex (20B)</div>
+                  <div class="lobe-function">Executive CoT &amp; Reasoning</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parietal Lobe -->
+            <div class="lobe-item" data-lobe="PARIETAL">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #a855f7; box-shadow: 0 0 8px #a855f7;"></div>
+                <div>
+                  <div class="lobe-name">Parietal Cortex (15B)</div>
+                  <div class="lobe-function">Multi-Head Attention &amp; 3D Space</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Temporal Lobe -->
+            <div class="lobe-item" data-lobe="TEMPORAL">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #10b981; box-shadow: 0 0 8px #10b981;"></div>
+                <div>
+                  <div class="lobe-name">Temporal Cortex (12B)</div>
+                  <div class="lobe-function">Vector Memory &amp; 100M+ RAG</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Occipital Lobe -->
+            <div class="lobe-item" data-lobe="OCCIPITAL">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #f59e0b; box-shadow: 0 0 8px #f59e0b;"></div>
+                <div>
+                  <div class="lobe-name">Occipital Cortex (8B)</div>
+                  <div class="lobe-function">Vision &amp; WebGL Multimodal Ingestion</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Central Cortex (Insula) -->
+            <div class="lobe-item" data-lobe="INSULA">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #06b6d4; box-shadow: 0 0 8px #06b6d4;"></div>
+                <div>
+                  <div class="lobe-name">Central Cortex (Insula - 4B)</div>
+                  <div class="lobe-function">Interoception &amp; Homeostasis</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Limbic Core & Hippocampus -->
+            <div class="lobe-item" data-lobe="LIMBIC">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #f43f5e; box-shadow: 0 0 8px #f43f5e;"></div>
+                <div>
+                  <div class="lobe-name">Limbic &amp; Hippocampus (6B)</div>
+                  <div class="lobe-function">RLHF Safety &amp; Episodic Memory</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thalamus -->
+            <div class="lobe-item" data-lobe="THALAMUS">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #ec4899; box-shadow: 0 0 8px #ec4899;"></div>
+                <div>
+                  <div class="lobe-name">Thalamus &amp; Hypothalamus (3B)</div>
+                  <div class="lobe-function">Universal Sensory Relay Hub</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cerebellum -->
+            <div class="lobe-item" data-lobe="CEREBELLUM">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></div>
+                <div>
+                  <div class="lobe-name">Cerebellum &amp; Arbor Vitae (17B)</div>
+                  <div class="lobe-function">High-Precision Code Synthesis</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Corpus Callosum -->
+            <div class="lobe-item" data-lobe="CALLOSUM">
+              <div class="lobe-info">
+                <div class="lobe-color-tag" style="background: #e2e8f0; box-shadow: 0 0 8px #e2e8f0;"></div>
+                <div>
+                  <div class="lobe-name">Corpus Callosum Bridge</div>
+                  <div class="lobe-function">Inter-Hemispheric Axon Conduction</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Density Resolution & Simulation Dynamics -->
+        <div class="glass-panel sim-controls-panel">
+          <div class="control-group">
+            <div class="control-label-row">
+              <span>GPU Particle Density</span>
+              <span id="density-display" style="color:#fbbf24;">16,384 Nodes</span>
+            </div>
+            <select id="density-selector" class="preset-dropdown" style="width:100%; margin-top:4px;">
+              <option value="8192">Standard (8,192 Nodes)</option>
+              <option value="16384" selected>High-Density (16,384 Nodes)</option>
+              <option value="32768">Ultra-Dense (32,768 Nodes)</option>
+              <option value="65536">Quantum Overdrive (65,536 Nodes)</option>
+            </select>
+          </div>
+
+          <div class="btn-row" style="margin-top: 10px;">
+            <button id="btn-pause-sim" class="btn-small">
+              <span id="pause-label">⏸ Pause</span>
+            </button>
+            <button id="btn-surge-all" class="btn-small primary" style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #04060a; font-weight: 700;">
+              <span>⚡ 432Hz Surge</span>
+            </button>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT SIDEBAR: DEEP NEURAL PROBE INSPECTOR HUD -->
+      <aside class="sidebar-right interactive-ui">
+        <div class="glass-panel probe-panel">
+          
+          <div class="probe-badge">
+            <span class="pulse-dot" style="background:#fbbf24; box-shadow:0 0 10px #fbbf24;"></span>
+            <span>HUMAN CONNECTOME PROBE</span>
+          </div>
+
+          <div class="neuron-id-display" id="probe-neuron-id">NEURON-PINE-00001</div>
+          <div class="neuron-domain-sub" id="probe-domain-sub">
+            <span style="color:#fbbf24; font-weight:700;">Pineal Gland</span> &bull; Epithalamic Core
+          </div>
+
+          <!-- Oscilloscope Waveform -->
+          <div class="oscilloscope-wrapper">
+            <div class="osc-header">
+              <span>ACTION POTENTIAL V_m(t)</span>
+              <span id="probe-act-val" style="color:#fbbf24; font-weight:700;">99.4%</span>
+            </div>
+            <canvas id="osc-canvas" width="320" height="60"></canvas>
+          </div>
+
+          <!-- Active Token / Thought Card -->
+          <div class="thought-card">
+            <div class="thought-header">
+              <span>Latent Processing Stream</span>
+              <span style="color:#10b981;">LIVE</span>
+            </div>
+            <div class="thought-content" id="probe-token-text">
+              "Emitting 432.0 Hz Solfeggio carrier wave: harmonic theta locking..."
+            </div>
+          </div>
+
+          <!-- Synaptic Weight & Tensor Matrix Box -->
+          <div class="synapse-matrix-grid">
+            <div class="synapse-stat-box">
+              <div class="stat-label">In-Degree (Inputs)</div>
+              <div class="stat-value purple" id="probe-syn-in" style="font-size:0.9rem;">128 Synapses</div>
+            </div>
+            <div class="synapse-stat-box">
+              <div class="stat-label">Out-Degree (Outputs)</div>
+              <div class="stat-value cyan" id="probe-syn-out" style="font-size:0.9rem;">256 Synapses</div>
+            </div>
+            <div class="synapse-stat-box">
+              <div class="stat-label">Conductance &amp; Bias</div>
+              <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#cbd5e1;" id="probe-weight">
+                W: 0.9942 | b: -0.0012
+              </div>
+            </div>
+            <div class="synapse-stat-box">
+              <div class="stat-label">Layer Allocation</div>
+              <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#fbbf24;" id="probe-layer">
+                Central Epithalamic Singularity
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Probe Controls -->
+          <div class="probe-actions">
+            <button id="btn-fire-action" class="probe-action-btn">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span>Fire Action Potential (Spike)</span>
+            </button>
+
+            <button id="btn-stimulate-lobe" class="probe-action-btn secondary-probe-btn">
+              <span>🌊 Stimulate Parent Structure</span>
+            </button>
+          </div>
+
+        </div>
+      </aside>
+    </main>
+
+    <!-- =======================================================================
+         BOTTOM BAR: LIVE TICKER & PROMPT STIMULUS INJECTOR
+         ======================================================================= -->
+    <footer class="cortex-bottom-bar interactive-ui glass-panel">
+      <!-- Live Processing Ticker -->
+      <div class="ticker-row">
+        <div class="ticker-label">
+          <span class="pulse-dot" style="background:#fbbf24; box-shadow:0 0 8px #fbbf24;"></span>
+          86B CONNECTOME STREAM:
+        </div>
+        <div class="ticker-scroll" id="cortex-ticker">
+          [Pineal Gland] Emitting 432.0 Hz Solfeggio carrier wave... &bull; [Frontal Cortex] Decomposing multi-agent task DAG... &bull; [Corpus Callosum] Conducting 200M axonal pulses...
+        </div>
+      </div>
+
+      <!-- Stimulus Injector -->
+      <div class="prompt-injection-row">
+        <select id="preset-select" class="preset-dropdown">
+          <option value="86-Billion Human Brain Connectome Equivalence & Inter-Hemispheric Synchrony">Preset: 86B Connectome Synchrony</option>
+          <option value="Pineal Gland 432Hz Harmonic Frequency Resonance Overdrive">Preset: Pineal 432Hz Resonance</option>
+          <option value="Corpus Callosum High-Bandwidth Dual-Hemisphere Bridge Transmission">Preset: Corpus Callosum Bridge</option>
+          <option value="Central Cortex (Insula) Homeostasis & Global Autonomic Regulation">Preset: Insular Homeostasis</option>
+          <option value="Cerebellar Purkinje AST Zero-Drift Tool Execution Loop">Preset: Cerebellar Tool Execution</option>
+        </select>
+
+        <input type="text" id="prompt-input" class="prompt-input" placeholder="Inject custom stimulus into the 86-Billion Human Brain Cortex...">
+
+        <button id="btn-inject-prompt" class="inject-btn" style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #04060a; font-weight: 700;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+          <span>Transmit to Brain</span>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- =======================================================================
+       INITIALIZATION APPLICATION SCRIPT
+       ======================================================================= -->
+  <script type="module">
+    import { NeuralBrainObservatory } from './js/neural-brain-engine.js?t=1787383138';
+    import { neuralAudio } from './js/neural-audio-synth.js?t=1787383138';
+    import { tokenStream, LOBE_DOMAINS } from './js/neural-token-stream.js?t=1787383138';
+
+    // Initialize 86B Human Brain Cortex
+    const observatory = new NeuralBrainObservatory('webgl-brain-canvas');
+
+    // 1. Audio Toggle
+    const audioBtn = document.getElementById('btn-audio-toggle');
+    const audioIcon = document.getElementById('audio-icon');
+    const audioLabel = document.getElementById('audio-label');
+
+    audioBtn.addEventListener('click', () => {
+      const isMuted = neuralAudio.toggleAudio();
+      if (!isMuted) {
+        audioBtn.classList.add('active');
+        audioIcon.innerText = '🔊';
+        audioLabel.innerText = 'Audio: Active';
+      } else {
+        audioBtn.classList.remove('active');
+        audioIcon.innerText = '🔇';
+        audioLabel.innerText = 'Audio: Muted';
+      }
+    });
+
+    // 2. View Mode Switcher
+    const modeBtns = document.querySelectorAll('.mode-btn');
+    modeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const mode = btn.dataset.mode;
+        observatory.setTopology(mode);
+      });
+    });
+
+    // 3. Macro View Button
+    document.getElementById('btn-macro-view').addEventListener('click', () => {
+      observatory.focusMacroOverview();
+    });
+
+    // 4. 10 Cortexes Focus Clicks
+    const lobeItems = document.querySelectorAll('.lobe-item');
+    lobeItems.forEach(item => {
+      item.addEventListener('click', () => {
+        lobeItems.forEach(l => l.classList.remove('active'));
+        item.classList.add('active');
+        const lobeKey = item.dataset.lobe;
+        observatory.focusLobe(lobeKey);
+      });
+    });
+
+    // 5. Density Selector
+    const densitySelector = document.getElementById('density-selector');
+    const densityDisplay = document.getElementById('density-display');
+    const statActiveNeurons = document.getElementById('stat-active-neurons');
+
+    densitySelector.addEventListener('change', (e) => {
+      const count = parseInt(e.target.value);
+      observatory.setNeuronDensity(count);
+      densityDisplay.innerText = `${count.toLocaleString()} Nodes`;
+      if (statActiveNeurons) statActiveNeurons.innerText = count.toLocaleString();
+    });
+
+    // 6. Pause & Surge
+    const pauseBtn = document.getElementById('btn-pause-sim');
+    const pauseLabel = document.getElementById('pause-label');
+    pauseBtn.addEventListener('click', () => {
+      observatory.isPaused = !observatory.isPaused;
+      pauseLabel.innerText = observatory.isPaused ? '▶ Resume' : '⏸ Pause';
+      pauseBtn.classList.toggle('primary', observatory.isPaused);
+    });
+
+    document.getElementById('btn-surge-all').addEventListener('click', () => {
+      observatory.neurons.forEach(n => {
+        n.activation = 0.95 + Math.random() * 0.05;
+      });
+      neuralAudio.playActionPotentialSurge();
+    });
+
+    // 7. Probe HUD Action Buttons
+    document.getElementById('btn-fire-action').addEventListener('click', () => {
+      observatory.fireActionPotential();
+    });
+
+    document.getElementById('btn-stimulate-lobe').addEventListener('click', () => {
+      observatory.stimulateCurrentLobe();
+    });
+
+    // 8. Stimulus Injection
+    const presetSelect = document.getElementById('preset-select');
+    const promptInput = document.getElementById('prompt-input');
+    const injectBtn = document.getElementById('btn-inject-prompt');
+
+    presetSelect.addEventListener('change', () => {
+      promptInput.value = presetSelect.value;
+    });
+
+    function transmitStimulus() {
+      const text = promptInput.value.trim() || presetSelect.value;
+      tokenStream.injectPrompt(text);
+      observatory.fireActionPotential();
+      neuralAudio.playActionPotentialSurge();
+
+      observatory.neurons.forEach(n => {
+        n.activation = Math.min(1.0, n.activation + 0.6);
+      });
+    }
+
+    injectBtn.addEventListener('click', transmitStimulus);
+    promptInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') transmitStimulus();
+    });
+
+    // 9. Continuous Ticker
+    const tickerEl = document.getElementById('cortex-ticker');
+    setInterval(() => {
+      if (tickerEl) {
+        tickerEl.innerText = `${tokenStream.getNextTickerToken()}  •  ${tokenStream.getNextTickerToken()}`;
+      }
+    }, 2400);
+  </script>
+
+</body>
+</html>
