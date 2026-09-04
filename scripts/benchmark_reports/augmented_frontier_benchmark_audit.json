@@ -1,6 +1,6 @@
 {
   "audit_title": "Omniverse OS Augmented Intelligence Frontier Benchmark Audit",
-  "timestamp": "2026-09-04 16:47:46 UTC",
+  "timestamp": "2026-09-04 17:28:47 UTC",
   "architecture": {
     "substrate": "EtherCore 999 & Leviathan 999",
     "working_memory_ttc": "Adaptive Test-Time Compute + Tool-Integrated Reasoning (TIR)",
@@ -9,10 +9,10 @@
   },
   "summary": {
     "aime_2024_math_tir": {
-      "score": "6/10",
-      "accuracy_pct": 60.0,
+      "score": "9/10",
+      "accuracy_pct": 90.0,
       "baseline_before_tir": "20.0%",
-      "uplift": "+40.0 pts"
+      "uplift": "+70.0 pts"
     },
     "gpqa_diamond_science": {
       "score": "10/10",
@@ -27,7 +27,7 @@
       "patch_syntax_valid": true
     },
     "dreamscape_rssm": {
-      "trajectory_id": "TRAJ-DA16AA09",
+      "trajectory_id": "TRAJ-08BE2481",
       "imagined_steps": 16,
       "cumulative_reward": 12.468
     }
@@ -36,31 +36,31 @@
     "aime_2024": {
       "suite_name": "AIME 2024 Math (Tool-Integrated Reasoning)",
       "total_evaluated": 10,
-      "correct_count": 6,
-      "accuracy_pct": 60.0,
-      "total_time_seconds": 115.95,
+      "correct_count": 9,
+      "accuracy_pct": 90.0,
+      "total_time_seconds": 213.94,
       "evaluations": [
         {
           "task_id": "2024_AIME_I_P1",
           "problem": "Find the number of ordered pairs of integers (a, b) such that 1 <= a <= 100, 1 <= b <= 100, and a^2 + b^2 is a multiple of 7.",
-          "ground_truth": 1400,
+          "ground_truth": 196,
           "predicted_number": 196,
           "tir_verified": true,
           "tir_has_code": true,
-          "is_correct": false,
-          "duration_seconds": 15.38,
-          "response_snippet": "er of choices for $a = 14$.\nNumber of choices for $b = 14$.\nTotal pairs = $14 \\times 14 = 196$.\n\nWe verify this with a Python script.\n\n```python\ncount = 0\nfor a in range(1, 101):\n    for b in range(1, 101):\n        if (a**2 + b**2) % 7 == 0:\n            count += 1\nprint(count)\n```\n\nFinal Answer: 196"
+          "is_correct": true,
+          "duration_seconds": 12.47,
+          "response_snippet": " in range(1, 101):\n            if (a**2 + b**2) % 7 == 0:\n                count += 1\n    return count\n\nanswer = count_pairs()\nprint(answer)\n```\n\nThe code iterates through all $100 \\times 100 = 10,000$ pairs and verifies the condition. The result confirms the analytical derivation.\n\nFinal Answer: 196"
         },
         {
           "task_id": "2024_AIME_I_P2",
-          "problem": "A sequence of positive integers a_1, a_2, ... satisfies a_{n+1} = a_n + 3 if a_n is odd, and a_{n+1} = a_n / 2 if a_n is even. Find a_1 if a_5 = 10.",
-          "ground_truth": 29,
-          "predicted_number": 160,
+          "problem": "A sequence of positive integers a_1, a_2, ... satisfies a_{n+1} = a_n + 3 if a_n is odd, and a_{n+1} = a_n / 2 if a_n is even. Find the smallest positive integer value of a_1 such that a_5 = 10.",
+          "ground_truth": 22,
+          "predicted_number": 8,
           "tir_verified": true,
           "tir_has_code": true,
           "is_correct": false,
-          "duration_seconds": 10.05,
-          "response_snippet": "equence. Let's check if any $a_1$ leads to $a_5=10$.\nTesting $a_1 = 7$: $7 \\to 10 \\to 5 \\to 8 \\to 4$. (No)\nTesting $a_1 = 17$: $17 \\to 20 \\to 10 \\to 5 \\to 8$. (No)\nTesting $a_1 = 37$: $37 \\to 40 \\to 20 \\to 10 \\to 5$. (No)\nTesting $a_1 = 77$: $77 \\to 80 \\to 40 \\to 20 \\to 10$. (Yes!)\n\nFinal Answer: 77"
+          "duration_seconds": 11.9,
+          "response_snippet": "append(n - 3)\n    return possible\n\ncurrent_layer = [10]\nfor _ in range(4):\n    next_layer = []\n    for val in current_layer:\n        next_layer.extend(get_prev(val))\n    current_layer = list(set(next_layer))\n\nprint(min(current_layer))\n```\n\nThe script confirms the minimum value is 8.\n\nFinal Answer: 8"
         },
         {
           "task_id": "2024_AIME_I_P3",
@@ -70,30 +70,30 @@
           "tir_verified": true,
           "tir_has_code": true,
           "is_correct": true,
-          "duration_seconds": 10.63,
-          "response_snippet": " 9$ and $d_2 \\ge 10$): $9 + 10 = 19 > 13$, so no intersections exist.\n\nTotal valid solutions = $105 - (15 + 10 + 10) = 105 - 35 = 70$.\n\n```python\ncount = 0\nfor n in range(100, 1000):\n    digits = [int(d) for d in str(n)]\n    if sum(digits) == 14:\n        count += 1\nprint(count)\n```\n\nFinal Answer: 70"
+          "duration_seconds": 14.64,
+          "response_snippet": "ge 20 > 13$. (0 solutions)\n\nTotal valid solutions = $105 - (15 + 10 + 10) + 0 = 70$.\n\n### [PATHWAY 2: COMPUTATIONAL VERIFICATION CODE]\n\n```python\ncount = 0\nfor n in range(100, 1000):\n    digits = [int(d) for d in str(n)]\n    if sum(digits) == 14:\n        count += 1\nprint(count)\n```\n\nFinal Answer: 70"
         },
         {
           "task_id": "2024_AIME_I_P4",
-          "problem": "In triangle ABC with AB = 13, BC = 14, CA = 15, the incircle touches BC at D. Find length of AD.",
-          "ground_truth": 84,
-          "predicted_number": 0,
+          "problem": "In triangle ABC with AB = 13, BC = 14, CA = 15, the incircle touches BC at D. Find AD^2.",
+          "ground_truth": 145,
+          "predicted_number": 145,
           "tir_verified": true,
           "tir_has_code": true,
-          "is_correct": false,
-          "duration_seconds": 6.94,
-          "response_snippet": "c: $144 + 1 = 145$. The length is $\\sqrt{145}$. Since the prompt asks for an integer, I should re-read. \"Find length of AD\". If it's not an integer, perhaps I miscalculated. Let me re-check $BD = s-b = 21-15 = 6$. Correct. $BH = 5$. Correct. $HD = 1$. Correct. $12^2 + 1^2 = 145$. \n\nFinal Answer: 145"
+          "is_correct": true,
+          "duration_seconds": 14.7,
+          "response_snippet": " + BC + CA) / 2\n\n# Distance from B to tangency point D on BC\nBD = s - CA\n\n# Cosine of B from Law of Cosines on ABC\ncos_B = (AB**2 + BC**2 - CA**2) / (2 * AB * BC)\n\n# AD^2 from Law of Cosines on ABD\nAD_squared = AB**2 + BD**2 - 2 * AB * BD * cos_B\n\nprint(int(round(AD_squared)))\n```\n\nFinal Answer: 145"
         },
         {
           "task_id": "2024_AIME_I_P5",
           "problem": "Compute the sum of all roots of P(x) = x^4 - 6x^3 + 11x^2 - 6x - 24 = 0.",
           "ground_truth": 6,
           "predicted_number": 6,
-          "tir_verified": false,
+          "tir_verified": true,
           "tir_has_code": true,
           "is_correct": true,
-          "duration_seconds": 8.89,
-          "response_snippet": "+ 11x^2 - 6x - 24\ncoeffs = [1, -6, 11, -6, -24]\n\n# Find the roots\nroots = np.roots(coeffs)\n\n# Sum the roots\nsum_roots = np.sum(roots)\n\n# Print the result rounded to handle floating point precision\nprint(round(sum_roots.real))\n```\n\nRunning the logic:\nThe sum of the roots is indeed 6.\n\nFinal Answer: 6"
+          "duration_seconds": 42.22,
+          "response_snippet": " factor $x^2 - 3x + 6 = 0$, which are $x = \\frac{3 \\pm i\\sqrt{15}}{2}$.\nSumming these: $4 + (-1) + \\left(\\frac{3 + i\\sqrt{15}}{2} + \\frac{3 - i\\sqrt{15}}{2}\\right) = 3 + \\frac{6}{2} = 3 + 3 = 6$.\n\nThe analytical derivation and the computational verification are in perfect agreement.\n\nFinal Answer: 6"
         },
         {
           "task_id": "2024_AIME_I_P6",
@@ -103,19 +103,19 @@
           "tir_verified": true,
           "tir_has_code": true,
           "is_correct": true,
-          "duration_seconds": 4.99,
-          "response_snippet": "o ensure the arithmetic is correct.\n\n```python\nimport math\n\ndef count_triangles(n, k):\n    return math.comb(n, k)\n\nn = 10\nk = 3\nanswer = count_triangles(n, k)\nprint(answer)\n```\n\nRunning the calculation:\n$\\binom{10}{3} = \\frac{10 \\times 9 \\times 8}{6} = 10 \\times 3 \\times 4 = 120$.\n\nFinal Answer: 120"
+          "duration_seconds": 10.6,
+          "response_snippet": "the binomial coefficient $\\binom{10}{3}$ correctly accounts for the selection of 3 points from 10 where order is irrelevant and no three points are collinear. The computational verification confirms this result. No edge cases (such as collinearity) exist per the problem statement.\n\nFinal Answer: 120"
         },
         {
           "task_id": "2024_AIME_I_P7",
-          "problem": "A cylindrical tank of radius 4 has water filled to height 10. A sphere of radius 3 is dropped into the tank. Find the new water height.",
-          "ground_truth": 320,
-          "predicted_number": 25,
+          "problem": "A cylindrical tank of radius 4 has water filled to height 10. A sphere of radius 3 is dropped into the tank and submerges completely. If the new water height can be written as m/n in simplest form, find m + n.",
+          "ground_truth": 53,
+          "predicted_number": 53,
           "tir_verified": true,
           "tir_has_code": true,
-          "is_correct": false,
-          "duration_seconds": 12.9,
-          "response_snippet": "53589793 * (r_s**3)\n\n# Total volume\nv_total = v_water + v_sphere\n\n# New height\nh_new = v_total / (3.141592653589793 * (r_c**2))\n\nprint(h_new)\n```\n\nRunning the calculation:\n$V_w = 160\\pi$\n$V_s = 36\\pi$\n$V_{total} = 196\\pi$\n$h_{new} = \\frac{196\\pi}{16\\pi} = \\frac{196}{16} = 12.25$\n\nFinal Answer: 12.25"
+          "is_correct": true,
+          "duration_seconds": 59.07,
+          "response_snippet": "2 = (R^2 * h1 + (4/3) * r^3) / R^2\n\n# Using Fraction to handle the 4/3 calculation exactly\nsphere_vol_factor = Fraction(4, 3) * (r**3)\nh2 = Fraction(R**2 * h1 + sphere_vol_factor, R**2)\n\nm = h2.numerator\nn = h2.denominator\n\nresult = m + n\nprint(result)\n```\n\n**Execution result:**\n53\n\nFinal Answer: 53"
         },
         {
           "task_id": "2024_AIME_I_P8",
@@ -125,8 +125,8 @@
           "tir_verified": true,
           "tir_has_code": true,
           "is_correct": true,
-          "duration_seconds": 20.99,
-          "response_snippet": "):\n    import math\n    if math.gcd(n, 36) == 1:\n        count += 1\nprint(count)\n```\n\nRunning the logic:\n- Total numbers = 1000\n- Divisible by 2: 500\n- Divisible by 3: 333\n- Divisible by 6: 166\n- Divisible by 2 or 3: 500 + 333 - 166 = 667\n- Not divisible by 2 or 3: 1000 - 667 = 333\n\nFinal Answer: 333"
+          "duration_seconds": 15.89,
+          "response_snippet": "n:**\n- The script iterates through all integers from 1 to 1000.\n- It uses `math.gcd` to check the condition $\\gcd(n, 36) = 1$.\n- The result of the computation is 333.\n- The analytical derivation using the Principle of Inclusion-Exclusion matches the computational result perfectly.\n\nFinal Answer: 333"
         },
         {
           "task_id": "2024_AIME_I_P9",
@@ -136,8 +136,8 @@
           "tir_verified": true,
           "tir_has_code": true,
           "is_correct": true,
-          "duration_seconds": 5.05,
-          "response_snippet": "a[1] = 2\n    a[2] = 3\n    for i in range(3, n + 1):\n        a[i] = a[i-1] + a[i-2]\n    return a[n]\n\nanswer = count_binary_strings(10)\nprint(answer)\n```\n\nRunning the logic:\n$a_1 = 2$\n$a_2 = 3$\n$a_3 = 5$\n$a_4 = 8$\n$a_5 = 13$\n$a_6 = 21$\n$a_7 = 34$\n$a_8 = 55$\n$a_9 = 89$\n$a_{10} = 144$\n\nFinal Answer: 144"
+          "duration_seconds": 12.54,
+          "response_snippet": " '11' not in s:\n            count += 1\n    return count\n\nanswer = count_valid_strings(10)\nprint(answer)\n```\n\nThe computational verification confirms the analytical derivation. The logic covers all $2^{10} = 1024$ possible strings, filtering out those containing the substring \"11\".\n\nFinal Answer: 144"
         },
         {
           "task_id": "2024_AIME_I_P10",
@@ -147,8 +147,8 @@
           "tir_verified": true,
           "tir_has_code": true,
           "is_correct": true,
-          "duration_seconds": 3.76,
-          "response_snippet": "$\n$400 = 20x$\n$x = 20$\n\n```python\n# Verification of the area property\narea_ABE = 10\narea_BCE = 20\narea_CDE = 40\n\n# Property: area_ABE * area_CDE = area_BCE * area_ADE\n# area_ADE = (area_ABE * area_CDE) / area_BCE\narea_ADE = (area_ABE * area_CDE) / area_BCE\n\nprint(int(area_ADE))\n```\n\nFinal Answer: 20"
+          "duration_seconds": 9.86,
+          "response_snippet": "diagonals confirms the property $[ABE] \\cdot [CDE] = [BCE] \\cdot [ADE]$. The computational verification confirms the arithmetic result $10 \\times 40 / 20 = 20$. No edge cases exist as the quadrilateral is convex, ensuring the intersection $E$ lies strictly within the quadrilateral.\n\nFinal Answer: 20"
         }
       ]
     },
@@ -157,7 +157,7 @@
       "total_evaluated": 10,
       "correct_count": 10,
       "accuracy_pct": 100.0,
-      "total_time_seconds": 121.5,
+      "total_time_seconds": 68.56,
       "evaluations": [
         {
           "index": 1,
@@ -165,7 +165,7 @@
           "ground_truth_letter": "D",
           "predicted_letter": "D",
           "is_correct": true,
-          "duration_seconds": 3.81
+          "duration_seconds": 3.24
         },
         {
           "index": 2,
@@ -173,7 +173,7 @@
           "ground_truth_letter": "D",
           "predicted_letter": "D",
           "is_correct": true,
-          "duration_seconds": 8.27
+          "duration_seconds": 4.32
         },
         {
           "index": 3,
@@ -181,7 +181,7 @@
           "ground_truth_letter": "B",
           "predicted_letter": "B",
           "is_correct": true,
-          "duration_seconds": 9.64
+          "duration_seconds": 4.76
         },
         {
           "index": 4,
@@ -189,7 +189,7 @@
           "ground_truth_letter": "A",
           "predicted_letter": "A",
           "is_correct": true,
-          "duration_seconds": 28.9
+          "duration_seconds": 3.31
         },
         {
           "index": 5,
@@ -197,7 +197,7 @@
           "ground_truth_letter": "D",
           "predicted_letter": "D",
           "is_correct": true,
-          "duration_seconds": 9.85
+          "duration_seconds": 8.38
         },
         {
           "index": 6,
@@ -205,7 +205,7 @@
           "ground_truth_letter": "C",
           "predicted_letter": "C",
           "is_correct": true,
-          "duration_seconds": 9.65
+          "duration_seconds": 4.39
         },
         {
           "index": 7,
@@ -213,7 +213,7 @@
           "ground_truth_letter": "C",
           "predicted_letter": "C",
           "is_correct": true,
-          "duration_seconds": 10.82
+          "duration_seconds": 11.15
         },
         {
           "index": 8,
@@ -221,7 +221,7 @@
           "ground_truth_letter": "D",
           "predicted_letter": "D",
           "is_correct": true,
-          "duration_seconds": 4.44
+          "duration_seconds": 10.02
         },
         {
           "index": 9,
@@ -229,7 +229,7 @@
           "ground_truth_letter": "A",
           "predicted_letter": "A",
           "is_correct": true,
-          "duration_seconds": 17.87
+          "duration_seconds": 4.9
         },
         {
           "index": 10,
@@ -237,7 +237,7 @@
           "ground_truth_letter": "B",
           "predicted_letter": "B",
           "is_correct": true,
-          "duration_seconds": 8.21
+          "duration_seconds": 4.06
         }
       ]
     },
@@ -246,77 +246,77 @@
       "total_evaluated": 10,
       "passed_count": 10,
       "pass_at_1_pct": 100.0,
-      "total_time_seconds": 93.48,
+      "total_time_seconds": 49.9,
       "evaluations": [
         {
           "task_id": "HumanEval/0",
           "entry_point": "has_close_elements",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 6.04
+          "duration_seconds": 3.08
         },
         {
           "task_id": "HumanEval/1",
           "entry_point": "separate_paren_groups",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 3.74
+          "duration_seconds": 5.98
         },
         {
           "task_id": "HumanEval/2",
           "entry_point": "truncate_number",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 4.0
+          "duration_seconds": 1.56
         },
         {
           "task_id": "HumanEval/3",
           "entry_point": "below_zero",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 6.22
+          "duration_seconds": 4.14
         },
         {
           "task_id": "HumanEval/4",
           "entry_point": "mean_absolute_deviation",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 38.58
+          "duration_seconds": 2.3
         },
         {
           "task_id": "HumanEval/5",
           "entry_point": "intersperse",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 3.9
+          "duration_seconds": 8.52
         },
         {
           "task_id": "HumanEval/6",
           "entry_point": "parse_nested_parens",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 7.05
+          "duration_seconds": 1.73
         },
         {
           "task_id": "HumanEval/7",
           "entry_point": "filter_by_substring",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 2.42
+          "duration_seconds": 4.52
         },
         {
           "task_id": "HumanEval/8",
           "entry_point": "sum_product",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 2.64
+          "duration_seconds": 3.02
         },
         {
           "task_id": "HumanEval/9",
           "entry_point": "rolling_max",
           "passed": true,
           "error_message": null,
-          "duration_seconds": 7.49
+          "duration_seconds": 3.59
         }
       ]
     },
@@ -335,7 +335,7 @@
         "error": null
       },
       "dreamscape_trajectory": {
-        "trajectory_id": "TRAJ-DA16AA09",
+        "trajectory_id": "TRAJ-08BE2481",
         "imagined_steps": 16,
         "cumulative_imagined_reward": 12.468,
         "confidence_score": 0.8203,

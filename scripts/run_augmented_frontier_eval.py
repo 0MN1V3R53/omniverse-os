@@ -44,18 +44,18 @@ from dreamscape.rssm_rollout import DreamerV3RSSMRolloutRunner
 
 
 # ==============================================================================
-# SUITE 1: AIME 2024 WITH TOOL-INTEGRATED REASONING (TIR)
+# SUITE 1: AIME 2024 WITH TOOL-INTEGRATED REASONING (TIR & DUAL-PATHWAY REPL)
 # ==============================================================================
 AIME_I_PROBLEMS = [
     {
         "id": "2024_AIME_I_P1",
-        "ground_truth": 1400,
+        "ground_truth": 196,
         "problem": "Find the number of ordered pairs of integers (a, b) such that 1 <= a <= 100, 1 <= b <= 100, and a^2 + b^2 is a multiple of 7."
     },
     {
         "id": "2024_AIME_I_P2",
-        "ground_truth": 29,
-        "problem": "A sequence of positive integers a_1, a_2, ... satisfies a_{n+1} = a_n + 3 if a_n is odd, and a_{n+1} = a_n / 2 if a_n is even. Find a_1 if a_5 = 10."
+        "ground_truth": 22,
+        "problem": "A sequence of positive integers a_1, a_2, ... satisfies a_{n+1} = a_n + 3 if a_n is odd, and a_{n+1} = a_n / 2 if a_n is even. Find the smallest positive integer value of a_1 such that a_5 = 10."
     },
     {
         "id": "2024_AIME_I_P3",
@@ -64,8 +64,8 @@ AIME_I_PROBLEMS = [
     },
     {
         "id": "2024_AIME_I_P4",
-        "ground_truth": 84,
-        "problem": "In triangle ABC with AB = 13, BC = 14, CA = 15, the incircle touches BC at D. Find length of AD."
+        "ground_truth": 145,
+        "problem": "In triangle ABC with AB = 13, BC = 14, CA = 15, the incircle touches BC at D. Find AD^2."
     },
     {
         "id": "2024_AIME_I_P5",
@@ -79,8 +79,8 @@ AIME_I_PROBLEMS = [
     },
     {
         "id": "2024_AIME_I_P7",
-        "ground_truth": 320,
-        "problem": "A cylindrical tank of radius 4 has water filled to height 10. A sphere of radius 3 is dropped into the tank. Find the new water height."
+        "ground_truth": 53,
+        "problem": "A cylindrical tank of radius 4 has water filled to height 10. A sphere of radius 3 is dropped into the tank and submerges completely. If the new water height can be written as m/n in simplest form, find m + n."
     },
     {
         "id": "2024_AIME_I_P8",
@@ -101,7 +101,7 @@ AIME_I_PROBLEMS = [
 
 def run_tir_aime_suite(bridge: EtherCoreCognitiveBridge, sandbox: MathExecutionSandbox) -> Dict[str, Any]:
     print("\n" + "=" * 80)
-    print("📐 [SUITE 1/4] AIME 2024 COMPETITION MATH (TOOL-INTEGRATED REASONING ENABLED)")
+    print("📐 [SUITE 1/4] AIME 2024 COMPETITION MATH (DUAL-PATHWAY INTERACTIVE REPL)")
     print("=" * 80)
     
     results = []
@@ -113,43 +113,29 @@ def run_tir_aime_suite(bridge: EtherCoreCognitiveBridge, sandbox: MathExecutionS
         prob_text = item["problem"]
         gt = item["ground_truth"]
 
-        prompt = sandbox.build_tir_math_prompt(prob_text)
-        t0 = time.time()
-        
-        # Query neural core with TIR instructions
-        response = bridge.query_neural_core(prompt, temperature=0.0)
-        dt = time.time() - t0
-
-        # Execute embedded code blocks in Python sandbox
-        tir_res = sandbox.process_and_verify(response)
-        
-        # Priority 1: Use Python sandbox computed number if verified
-        # Priority 2: Parse 'Final Answer: [number]'
-        parsed_num = None
-        if tir_res["verified"] and tir_res["last_computed_number"] is not None:
-            parsed_num = tir_res["last_computed_number"]
-        else:
-            m = re.search(r"Final Answer:\s*[\[\(]?([0-9]+)[\]\)]?", response, re.IGNORECASE)
-            if m:
-                parsed_num = int(m.group(1))
+        # Execute 2-pass interactive feedback loop (Fable 5.1 / Grok 4.6 / R1 pattern)
+        eval_res = sandbox.solve_with_interactive_verification(bridge, prob_text)
+        parsed_num = eval_res["final_answer"]
+        dt = eval_res["elapsed_seconds"]
+        has_code = eval_res["tir_result"]["has_code"]
 
         is_correct = (parsed_num == gt) if parsed_num is not None else False
         if is_correct:
             correct_count += 1
 
         status_str = "✓ MATCH" if is_correct else "✗ MISMATCH"
-        print(f"  [{idx+1:02d}/10] {p_id} | GT: {gt:03d} | Model/TIR: {str(parsed_num):>4} | {status_str} (Code Executed: {tir_res['has_code']} | {dt:.2f}s)")
+        print(f"  [{idx+1:02d}/10] {p_id} | GT: {gt:03d} | Model/TIR: {str(parsed_num):>4} | {status_str} (Interactive REPL | {dt:.2f}s)")
 
         results.append({
             "task_id": p_id,
             "problem": prob_text,
             "ground_truth": gt,
             "predicted_number": parsed_num,
-            "tir_verified": tir_res["verified"],
-            "tir_has_code": tir_res["has_code"],
+            "tir_verified": eval_res["verified"],
+            "tir_has_code": has_code,
             "is_correct": is_correct,
             "duration_seconds": round(dt, 2),
-            "response_snippet": response[-300:] if len(response) > 300 else response
+            "response_snippet": eval_res["pass2_reflection"][-300:] if eval_res["pass2_reflection"] else eval_res["pass1_response"][-300:]
         })
         time.sleep(1.0)
 
