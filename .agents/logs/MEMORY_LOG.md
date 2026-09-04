@@ -2643,7 +2643,7 @@ This file serves as the **authoritative, persistent repository memory log** for 
      - *NVIDIA RTX 5090 Blackwell*: GB202-300 die, 21,760 CUDA cores, 680 5th-gen Tensor Cores, 32GB GDDR7 on 512-bit bus ($1,792\text{ GB/s}$ bandwidth), $104.8\text{ TFLOPS}$ FP32, $3,320\text{ TFLOPS}$ FP8 Tensor throughput, running 70B LLM inference at $54.4\text{ tokens/sec}$.
   2. **Automated Verification Harness (`scripts/test_flagship_2026_hardware.py`)**: End-to-end multi-tier test suite executed and validated with zero mock data and real-world verified metrics.
   3. **Interactive Substrate Console (`scripts/interactive_vm_console.py`)**: Full interactive CLI terminal with TTY autodetection, workload selection, real-time telemetry, and graceful power management.
-  4. **Native macOS DMG Packager (`scripts/package_flagship_2026_dmg.py`)**: Created `dist/Omniverse_Leviathan_2026_VM.dmg` (UDZO compressed APFS volume) containing `Omniverse 2026 Flagship VM.app`, `Boot_Flagship_2026_VM.command`, `/Applications` symlink, and `HARDWARE_SPECIFICATIONS_2026.txt`. Verified mount and detach via `hdiutil`.
+  4. **Native macOS DMG Packager (`scripts/package_flagship_2026_dmg.py`)**: Created `dist/Omniverse_Leviathan_2026_VM.dmg` (UDZO compressed APFS volume) containing `Omniverse 2026 Flagship VM.app`, `Boot_Flagship_2026_VM.command`, `/Applications` symlink, and `HARDWARE_SPECIFICATIONS_2026.txt`. Verified mount and detach via `hdiutil`. Synchronized copies directly to `~/Desktop/Omniverse_Leviathan_2026_VM.dmg` and `~/Omniverse_Leviathan_2026_VM.dmg`, mounted at `/Volumes/Omniverse 2026 Flagship VM`.
 - **Responsible Agents**: `exec_ceo_alexander_vance` (Dr. Alexander Vance), `frontier_lead_aris_thorne` (Dr. Aris Thorne), Systems Engineering Pod.
 
 
