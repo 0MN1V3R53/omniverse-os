@@ -106,18 +106,14 @@ def assemble_bundle(dest_path: str, binary_path: str):
 
     print(f"[+] Bundle assembled: {dest_path}")
 
-def start_kernel_daemon():
-    print(f"[*] Checking if Omniverse OS Kernel Daemon is running on port 8998...")
-    import urllib.request
-    try:
-        with urllib.request.urlopen("http://127.0.0.1:8998/api/status", timeout=0.8) as resp:
-            if resp.status == 200:
-                print(f"[+] Kernel daemon is already active and healthy.")
-                return
-    except Exception:
-        pass
+def kill_previous_instances():
+    print(f"[*] Terminating existing Omniverse OS GUI and Daemon processes...")
+    subprocess.run(["pkill", "-9", "-f", "OmniverseOS"], capture_output=True)
+    subprocess.run(["pkill", "-9", "-f", "apps/omniverse_os/src/main.py"], capture_output=True)
+    time.sleep(0.5)
 
-    print(f"[*] Starting Omniverse OS Kernel Daemon in background...")
+def start_kernel_daemon():
+    print(f"[*] Starting fresh Omniverse OS Kernel Daemon on port 8998...")
     daemon_script = os.path.join(APP_SRC_DIR, "src", "main.py")
     subprocess.Popen(
         [sys.executable, daemon_script],
@@ -127,9 +123,10 @@ def start_kernel_daemon():
         start_new_session=True
     )
     # Wait for daemon to bind
-    for _ in range(20):
+    for _ in range(30):
         time.sleep(0.2)
         try:
+            import urllib.request
             with urllib.request.urlopen("http://127.0.0.1:8998/api/status", timeout=0.8) as resp:
                 if resp.status == 200:
                     print(f"[+] Kernel daemon successfully started on http://127.0.0.1:8998.")
@@ -209,6 +206,7 @@ def main():
     print("  BUILDING & DEPLOYING OMNIVERSE OS (WINDOWS REWRITTEN - SUBSTRATE VM)")
     print("=" * 80)
 
+    kill_previous_instances()
     binary = compile_swift_binary()
     assemble_bundle(SYS_APP_PATH, binary)
     assemble_bundle(DESKTOP_APP_PATH, binary)

@@ -97,6 +97,69 @@ class OmniverseOSRequestHandler(BaseHTTPRequestHandler):
             self._send_json(wddm_data)
             return
 
+        elif path == "/api/audio/status":
+            self._send_json({
+                "subsystem": "OMNIVERSE_HIGH_DEFINITION_AUDIO_ENGINE",
+                "hardware_controller": "Realtek ALC4080 + ESS SABRE 9018Q2C DAC (ASUS WRX90 SAGE)",
+                "sample_rate_hz": 384000,
+                "bit_depth": "32-bit Floating Point",
+                "channels": "7.1 Surround + Direct Spatial Audio",
+                "active_codecs": [
+                    {"codec": "PCM_32BIT_FLOAT", "latency_ms": 0.4, "status": "HARDWARE_NATIVE"},
+                    {"codec": "FLAC_LOSSLESS_24BIT_192KHZ", "latency_ms": 0.8, "status": "ACTIVE"},
+                    {"codec": "OPUS_1_4_LOW_LATENCY", "latency_ms": 1.2, "status": "ACTIVE"},
+                    {"codec": "AAC_LC_SURROUND", "latency_ms": 1.8, "status": "ACTIVE"},
+                    {"codec": "DOLBY_ATMOS_SPATIAL_DSP", "latency_ms": 1.5, "status": "HARDWARE_OFFLOAD"}
+                ],
+                "master_volume_pct": 85,
+                "mute": False,
+                "signal_to_noise_ratio_db": 120.0
+            })
+            return
+
+        elif path == "/api/apps/catalog":
+            self._send_json({
+                "catalog": [
+                    {"id": "vscode", "name": "Visual Studio Code", "version": "1.93.0", "category": "Development", "size_mb": 115, "installed": True, "description": "High-performance code editor optimized for Zen 5 192-thread compilation."},
+                    {"id": "pytorch", "name": "PyTorch 2.5 + CUDA 13", "version": "2.5.0-cu13", "category": "AI / ML", "size_mb": 2450, "installed": True, "description": "Native Blackwell RTX 5090 FP8/FP4 acceleration runtime."},
+                    {"id": "blender", "name": "Blender 4.2 LTS", "version": "4.2.1", "category": "Graphics / 3D", "size_mb": 340, "installed": False, "description": "Cycles GPU OptiX ray tracing on 170 RT Cores."},
+                    {"id": "wireshark", "name": "Wireshark 4.4", "version": "4.4.0", "category": "Networking", "size_mb": 85, "installed": False, "description": "10GbE line-rate packet analysis on Intel X710-AT2."},
+                    {"id": "rust", "name": "Rust Toolchain 1.82", "version": "1.82.0", "category": "Development", "size_mb": 420, "installed": True, "description": "Zero-cost abstractions with AVX-512 target flags."},
+                    {"id": "vlc", "name": "VLC Media Player Pro", "version": "3.0.21", "category": "Media", "size_mb": 75, "installed": False, "description": "Hardware AV1/HEVC 8K decoding on Blackwell NVDEC."}
+                ]
+            })
+            return
+
+        elif path == "/api/browser/proxy":
+            query = parse_qs(parsed.query)
+            target_url = query.get("url", ["https://example.com"])[0]
+            if not target_url.startswith("http://") and not target_url.startswith("https://"):
+                target_url = "https://" + target_url
+
+            import urllib.request
+            try:
+                req = urllib.request.Request(
+                    target_url,
+                    headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Omniverse/12.0 Chromium/128.0.6613.120"}
+                )
+                with urllib.request.urlopen(req, timeout=5.0) as resp:
+                    html = resp.read().decode("utf-8", errors="ignore")
+                    self.send_response(200)
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                    self.end_headers()
+                    self.wfile.write(html.encode("utf-8"))
+                    return
+            except Exception as e:
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(f"""<!DOCTYPE html><html><body style="font-family:sans-serif;background:#0d1322;color:#fff;padding:40px;">
+                    <h2>Omniverse Chromium Engine</h2>
+                    <p style="color:#94a3b8;">Unable to connect directly to <code>{target_url}</code>: {e}</p>
+                    <p>Enter a public HTTPS URL in the address bar above to browse.</p>
+                </body></html>""".encode("utf-8"))
+                return
+
         # Serve Static UI Files
         if path == "/" or path == "":
             rel_file = "index.html"
@@ -151,6 +214,38 @@ class OmniverseOSRequestHandler(BaseHTTPRequestHandler):
             cmd = payload.get("command", "")
             res = GLOBAL_KERNEL.execute_terminal_command(cmd)
             self._send_json(res)
+            return
+
+        elif path == "/api/apps/install":
+            app_id = payload.get("id", "")
+            app_name = payload.get("name", "Unknown Software")
+            # Register new process in kernel
+            pid = 3000 + (len(GLOBAL_KERNEL.processes) * 10)
+            GLOBAL_KERNEL.processes[pid] = sys.modules["apps.omniverse_os.kernel.omniverse_nt_kernel"].KernelProcess(
+                pid=pid,
+                name=f"{app_id}.exe",
+                threads_count=16,
+                ram_mb=512.0,
+                is_system=False
+            )
+            self._send_json({
+                "status": "SOFTWARE_INSTALLED_SUCCESS",
+                "app_id": app_id,
+                "app_name": app_name,
+                "pid_allocated": pid,
+                "executable_path": f"C:\\Program Files\\Omniverse\\{app_id}\\{app_id}.exe"
+            })
+            return
+
+        elif path == "/api/audio/configure":
+            vol = payload.get("volume", 85)
+            mute = payload.get("mute", False)
+            self._send_json({
+                "status": "AUDIO_CONFIGURED",
+                "master_volume": vol,
+                "mute_state": mute,
+                "dac_clock": "384 kHz Ultra-Precision Locked"
+            })
             return
 
         elif path == "/api/memory/trim":

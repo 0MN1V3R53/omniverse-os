@@ -41,6 +41,14 @@
         <div class="icon-img directstorage-icon"></div>
         <span>DirectStorage</span>
       </div>
+      <div class="desktop-icon" onclick="openWindow('browser')">
+        <div class="icon-img browser-icon"></div>
+        <span>Chromium Web</span>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('settings')">
+        <div class="icon-img settings-icon"></div>
+        <span>Settings</span>
+      </div>
     </div>
 
     <!-- WINDOW 1: Task Manager -->
@@ -541,14 +549,116 @@ Type 'help' for available core directives.
       </div>
     </div>
 
+    <!-- WINDOW 7: Chromium Web Browser & App Store -->
+    <div id="win-browser" class="window" style="top: 70px; left: 140px; width: 960px; height: 640px; display: none;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-browser')">
+        <div class="window-title">
+          <span class="win-icon browser-small"></span>
+          <span>Omniverse Chromium Web Browser & App Center (Chromium 128.0.6613)</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('browser')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('browser')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('browser')">✕</button>
+        </div>
+      </div>
+      <div class="browser-tabs-bar">
+        <div class="browser-tab active" id="btab-web" onclick="switchBrowserTab('web')">
+          <span>🌐 Omniverse Web</span>
+        </div>
+        <div class="browser-tab" id="btab-apps" onclick="switchBrowserTab('apps')">
+          <span>🛍️ Software Center (App Store)</span>
+        </div>
+      </div>
+      <div class="browser-header-bar">
+        <button class="browser-btn" onclick="browserGoBack()">◀</button>
+        <button class="browser-btn" onclick="browserGoForward()">▶</button>
+        <button class="browser-btn" onclick="browserReload()">🔄</button>
+        <div class="browser-omnibox">
+          <span>🔒</span>
+          <input type="text" id="browserUrlInput" value="https://duckduckgo.com" onkeydown="handleBrowserKey(event)">
+        </div>
+        <button class="btn-primary" style="padding:4px 12px; font-size:11px;" onclick="navigateBrowser()">Go</button>
+      </div>
+      <div class="window-body" style="background:#0a0e17;">
+        <div id="browser-pane-web" style="width:100%; height:100%;">
+          <iframe id="browserIframe" class="browser-frame" src="https://duckduckgo.com"></iframe>
+        </div>
+        <div id="browser-pane-apps" style="display:none; height:100%; overflow-y:auto;">
+          <div style="padding: 16px 20px 8px 20px;">
+            <h3 style="color:#fff; font-size:16px;">Omniverse Software Repository & App Installer</h3>
+            <p style="color:var(--text-muted); font-size:12px; margin-top:2px;">Direct 1-click installation onto the 16TB NVMe high-speed substrate storage pool.</p>
+          </div>
+          <div class="app-catalog-grid" id="appCatalogGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW 8: System Settings -->
+    <div id="win-settings" class="window" style="top: 90px; left: 180px; width: 920px; height: 600px; display: none;">
+      <div class="window-header" onmousedown="startDrag(event, 'win-settings')">
+        <div class="window-title">
+          <span class="win-icon settings-small"></span>
+          <span>Settings — Omniverse OS (Windows & macOS Unified Control)</span>
+        </div>
+        <div class="window-controls">
+          <button class="win-btn" onclick="minimizeWindow('settings')">—</button>
+          <button class="win-btn" onclick="maximizeWindow('settings')">□</button>
+          <button class="win-btn close-btn" onclick="closeWindow('settings')">✕</button>
+        </div>
+      </div>
+      <div class="window-body settings-layout">
+        <div class="settings-sidebar">
+          <div class="settings-nav-item active" onclick="switchSettingsCategory('system')">🖥️ System & Display</div>
+          <div class="settings-nav-item" onclick="switchSettingsCategory('hardware')">⚡ Zen 5 & WRX90</div>
+          <div class="settings-nav-item" onclick="switchSettingsCategory('graphics')">🎮 RTX 5090 Blackwell</div>
+          <div class="settings-nav-item" onclick="switchSettingsCategory('sound')">🔊 Audio & Codecs</div>
+          <div class="settings-nav-item" onclick="switchSettingsCategory('network')">🌐 10GbE Network</div>
+          <div class="settings-nav-item" onclick="switchSettingsCategory('personalization')">🎨 Themes & Wallpaper</div>
+          <div class="settings-nav-item" onclick="switchSettingsCategory('update')">🔄 Omniverse Update</div>
+        </div>
+        <div class="settings-content" id="settingsContent"></div>
+      </div>
+    </div>
+
+    <!-- Spotlight / Search Flyout -->
+    <div id="searchFlyout" class="search-flyout">
+      <div class="search-bar-input-box">
+        <span style="font-size:18px;">🔍</span>
+        <input type="text" id="spotlightInput" placeholder="Search apps, settings, 192 cores, hardware specs, files, web..." oninput="handleSpotlightSearch(this.value)">
+      </div>
+      <div class="search-results-box" id="spotlightResults"></div>
+    </div>
+
+    <!-- Volume / Audio Flyout -->
+    <div id="volumeFlyout" class="volume-flyout">
+      <div class="vol-row">
+        <span>Master Output Volume</span>
+        <strong id="volPercentLabel">85%</strong>
+      </div>
+      <div class="vol-slider-container">
+        <span style="cursor:pointer;" onclick="toggleAudioMute()" id="muteIconBtn">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="85" oninput="handleVolumeSlider(this.value)">
+      </div>
+      <div class="vol-device-info">
+        <div style="color:#fff; font-weight:600;">Realtek ALC4080 + ESS SABRE 9018Q2C DAC</div>
+        <div>32-bit Floating Point @ 384,000 Hz | 7.1 Spatial Audio</div>
+        <div style="color:var(--accent-green); margin-top:2px;">Native Hardware Codecs Active (PCM, FLAC, Opus, AAC)</div>
+      </div>
+    </div>
+
     <!-- Start Menu Popover -->
     <div id="startMenu" class="start-menu">
       <div class="start-search-box">
         <span class="search-icon">🔍</span>
-        <input type="text" placeholder="Type here to search apps, settings, and hardware..." class="start-search-input">
+        <input type="text" placeholder="Type here to search apps, settings, and hardware..." class="start-search-input" onkeydown="if(event.key==='Enter'){ toggleStartMenu(); openSearchWithQuery(this.value); }">
       </div>
       <div class="start-section-title">Pinned Applications</div>
       <div class="start-pinned-grid">
+        <div class="start-item" onclick="openWindow('browser'); toggleStartMenu();">
+          <div class="icon-img browser-icon"></div>
+          <span>Chromium</span>
+        </div>
         <div class="start-item" onclick="openWindow('taskmgr'); toggleStartMenu();">
           <div class="icon-img taskmgr-icon"></div>
           <span>Task Manager</span>
@@ -565,13 +675,9 @@ Type 'help' for available core directives.
           <div class="icon-img terminal-icon"></div>
           <span>PowerShell</span>
         </div>
-        <div class="start-item" onclick="openWindow('explorer'); toggleStartMenu();">
-          <div class="icon-img explorer-icon"></div>
-          <span>File Explorer</span>
-        </div>
-        <div class="start-item" onclick="openWindow('directstorage'); toggleStartMenu();">
-          <div class="icon-img directstorage-icon"></div>
-          <span>DirectStorage</span>
+        <div class="start-item" onclick="openWindow('settings'); toggleStartMenu();">
+          <div class="icon-img settings-icon"></div>
+          <span>Settings</span>
         </div>
       </div>
       <div class="start-footer">
@@ -582,7 +688,7 @@ Type 'help' for available core directives.
             <div class="user-role">Omniverse Administrator (0MN1V3R53)</div>
           </div>
         </div>
-        <div class="power-btn" onclick="alert('Omniverse OS is operating in continuous sovereign substrate mode.')">⏻</div>
+        <div class="power-btn" onclick="showNotification('Power Substrate', 'Omniverse OS is operating in continuous sovereign substrate mode.', '⚡')">⏻</div>
       </div>
     </div>
 
@@ -592,8 +698,11 @@ Type 'help' for available core directives.
         <button class="taskbar-btn start-btn" onclick="toggleStartMenu()" title="Start">
           <span class="start-logo"></span>
         </button>
-        <button class="taskbar-btn search-btn" onclick="toggleStartMenu()" title="Search">
+        <button class="taskbar-btn search-btn" onclick="toggleSearchFlyout()" title="Search">
           <span class="tb-search-icon">🔍</span>
+        </button>
+        <button class="taskbar-btn" onclick="openWindow('browser')" title="Chromium Web Browser">
+          <span class="icon-img browser-small"></span>
         </button>
         <button class="taskbar-btn" onclick="openWindow('taskmgr')" title="Task Manager">
           <span class="icon-img taskmgr-small"></span>
@@ -610,10 +719,16 @@ Type 'help' for available core directives.
         <button class="taskbar-btn" onclick="openWindow('explorer')" title="File Explorer">
           <span class="icon-img explorer-small"></span>
         </button>
+        <button class="taskbar-btn" onclick="openWindow('settings')" title="Settings">
+          <span class="icon-img settings-small"></span>
+        </button>
+
+        <!-- Dynamic Running & Minimized Apps Container -->
+        <div id="taskbarRunningApps" class="taskbar-running-apps"></div>
       </div>
       <div class="taskbar-tray">
         <div class="tray-icon" title="10GbE Network Active">🌐</div>
-        <div class="tray-icon" title="High Definition Audio">🔊</div>
+        <div class="tray-icon" title="High Definition Audio (Click for Volume)" onclick="toggleVolumeFlyout()">🔊</div>
         <div class="tray-icon" title="Continuous Substrate Power">⚡</div>
         <div class="tray-clock" id="trayClock">
           <div class="clock-time" id="clockTime">12:00 PM</div>
@@ -621,6 +736,9 @@ Type 'help' for available core directives.
         </div>
       </div>
     </div>
+
+    <!-- Acrylic Notification Toast Container -->
+    <div id="notificationContainer" class="notification-container"></div>
   </div>
 
   <script src="desktop.js"></script>
