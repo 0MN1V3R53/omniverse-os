@@ -39,6 +39,10 @@ from engine.aethercore_simulation_engine import (
     GLOBAL_AETHERCORE_SIMULATION_ENGINE,
     SubstrateConstants
 )
+from tools.quantum_substrate_sandbox import (
+    UniversalSubstrateSandbox,
+    GLOBAL_SUBSTRATE_SANDBOX
+)
 
 
 class EtherCoreCognitiveBridge:
@@ -61,6 +65,8 @@ class EtherCoreCognitiveBridge:
         self.watcher: WatcherCluster = GLOBAL_WATCHER_CLUSTER
         self.chronos: ChronosEntropyGovernor = GLOBAL_CHRONOS_GOVERNOR
         self.simulation_engine: AetherCoreSimulationEngine = GLOBAL_AETHERCORE_SIMULATION_ENGINE
+        self.sandbox: UniversalSubstrateSandbox = GLOBAL_SUBSTRATE_SANDBOX
+
 
     def _load_api_key(self) -> str:
         env_file = WORKSPACE_ROOT / ".env"
@@ -175,6 +181,33 @@ class EtherCoreCognitiveBridge:
             "universal_fidelity": SubstrateConstants.UNIVERSAL_FIDELITY,
             "status": "COGNITIVE_RENDER_CONFLUENT"
         }
+
+    def simulate_in_substrate_sandbox(
+        self,
+        domain: str,
+        payload: Optional[Any] = None
+    ) -> Dict[str, Any]:
+        """
+        Executes an in-memory simulation experiment within the Universal Substrate Sandbox:
+        - "quantum": Simulates discrete quantum statevectors (Bell/GHZ) with fidelity F = 0.99987.
+        - "cpu": Assembles and executes assembly microcode on the virtual Aether-CPU.
+        - "metric": Computes Void-Skipper metric displacement tensor and 0.0 G validation.
+        - "entropy": Simulates macroscopic entropy inversion (ΔS < 0) via time-reversal T_hat.
+        """
+        if domain == "quantum":
+            exp_type = payload if isinstance(payload, str) else "GHZ_STATE"
+            return self.sandbox.run_quantum_experiment(exp_type)
+        elif domain == "cpu":
+            asm = payload if isinstance(payload, list) else ["LOAD R0, 42", "HALT"]
+            return self.sandbox.run_cpu_microcode_program(asm)
+        elif domain == "metric":
+            vs_ratio = float(payload) if isinstance(payload, (int, float)) else 0.9
+            return self.sandbox.evaluate_metric_displacement(vs_ratio)
+        elif domain == "entropy":
+            particles = int(payload) if isinstance(payload, int) else 50000
+            return self.sandbox.execute_entropy_reversal(particles)
+        else:
+            raise ValueError(f"Unknown simulation domain: {domain}. Must be quantum, cpu, metric, or entropy.")
 
     def solve_with_test_time_compute(
         self,

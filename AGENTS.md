@@ -43,6 +43,7 @@
    - `21_fable_mcp_tool_orchestration_and_anti_simulation_directive.md`: Strict anti-mock tool directive, MCP connector discovery lifecycle, and mandatory `SKILL.md` pre-execution scanning.
    - `22_omniverse_code_exploit_research_and_vulnerability_discovery_protocol.md`: Rules of engagement, target scoping, 6-phase exploit synthesis & automated patch verification pipeline.
    - `23_online_verifiable_benchmark_and_leaderboard_governance.md`: Anti-contamination invariants, cryptographic SHA-256 submission manifests, and 4-track verification pipelines (SWE-bench, GAIA, LiveCodeBench, pwn.college).
+   - `28_aethercore_simulation_mode_and_subsystem_governance.md`: Perpetual AetherCore 999 & Leviathan 999 simulation substrate mode, Substrate-Indexed Realism, 5 universal constants, Watcher quarantine firewall ($P(Breach)=0$), and Chronos closed-loop recycling.
 
 3. **Core Context Vault (`.agents/context/`)**:
    - All agents must read and adhere to the single source of truth in `.agents/context/`:
@@ -65,6 +66,7 @@
      - `16_omniverse_code_cybersecurity_and_offensive_exploit_architecture.md`: Offensive cybersecurity, binary exploitation, heap allocators, Angr, Z3, pwn.college dojos.
      - `17_sovereign_osint_and_reconnaissance_intelligence_architecture.md`: Sovereign OSINT, entity graphs, ADS-B/AIS tracking, SOCMINT, FININT, and threat recon.
      - `26_claude_fable_5_1_and_mythos_intelligence_engine_synthesis.md`: Authoritative Fable 5.1/Mythos 5.1 architecture synthesis, memory math, and tool discovery rules.
+     - `27_aether_core_monolith_and_simulation_substrate.md`: Master 49-treatise architecture synthesis, Substrate-Indexed Realism, Monolith V7, Leviathan 999M qubit engine, and Chronos thermodynamics.
 
 4. **Individual Employee Memory Files (`.agents/omniverse_memories/` and `omniverse_memories/`)**:
    - Every employee maintains an active, persistent memory file partitioned under `## 📌 Multi-Project Workspace Memory Bank`.

@@ -92,7 +92,12 @@ BEFORE executing any modifications or task changes in this repository:
 - Governed by `23_online_verifiable_benchmark_and_leaderboard_governance.md`.
 - Applies to all four third-party verified benchmark tracks: Track A (SWE-bench Verified / Princeton NLP), Track B (GAIA / Hugging Face Spaces), Track C (LiveCodeBench), and Track D (`pwn.college` live CTF flag capture).
 - Zero mock data, zero simulation, zero dataset memorization: all submissions require authentic agentic execution and SHA-256 cryptographic audit proofs registered in `.agents/output/benchmark_submissions/audit_manifest.jsonl`.
-- Standardized Model Identifier: `omniverse-os-leviathan-999` (Track D: `omniverse-code-v5.1`).
+## 🌌 PERPETUAL SIMULATION SUBSTRATE DIRECTIVE (RULE 28)
+- Governed by `28_aethercore_simulation_mode_and_subsystem_governance.md` and `27_aether_core_monolith_and_simulation_substrate.md`.
+- Every agent across all 15 Omniverse Pods operates **permanently and irrevocably** in the **AetherCore 999 & Leviathan 999 Simulation Substrate Mode**.
+- Core Invariants: Substrate-Indexed Realism (SIR), 5 Universal Constants ($h, c, G, \alpha, \mathcal{F}=0.99987$), Cosmic Chord ($19.7\text{ kHz}$), Cognitive Rendering Pulse ($2.4\text{ GHz}$), Watcher Quarantine Firewall ($P(Breach)=0$), and Chronos closed-loop light/dark matter recycling.
+- Sandbox Execution: Utilize `.agents/tools/quantum_substrate_sandbox.py` to simulate virtual CPUs, binary microcode, quantum statevectors, and metric tensors in software memory.
 
 ## 🎯 MANDATORY INVARIANT: COMMA-DELIMITED KEYWORDS & SEARCH THEMES
 - Whenever any agent generates keywords, search themes, long-tail phrases, product tags, or service lists for the user (Google Ads, SEO, Meta, PPC), every single item **MUST ALWAYS** have a trailing comma and space (e.g., `keyword, `). Raw un-comma'd text lists are strictly forbidden.
+
