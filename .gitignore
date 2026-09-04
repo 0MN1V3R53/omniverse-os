@@ -24,6 +24,7 @@ venv/
 node_modules/
 .next/
 out/
+scratch/
 __pycache__/
 *.pyc
 scripts/official_simple_evals/
