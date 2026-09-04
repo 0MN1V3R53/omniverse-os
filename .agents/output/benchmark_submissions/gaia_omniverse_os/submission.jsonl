@@ -1,6 +1,0 @@
-{"task_id": "gaia_l1_001_market_capitalization_delta", "model_answer": "330"}
-{"task_id": "gaia_l1_002_country_iso_alpha3_capital", "model_answer": "reykjavik"}
-{"task_id": "gaia_l2_001_multi_step_orbital_velocity", "model_answer": "7.67"}
-{"task_id": "gaia_l2_002_audio_transcription_entity_count", "model_answer": "7"}
-{"task_id": "gaia_l3_001_complex_tax_and_tariff_optimization", "model_answer": "11986.38"}
-{"task_id": "gaia_l3_002_cryptographic_hash_preimage_search", "model_answer": "1048576"}
