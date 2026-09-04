@@ -397,6 +397,8 @@ class UniversalSubstrateSandbox:
         self.virtual_cpu = AetherVirtualCPU()
         self.metric_engine = MetricDisplacementSimulator()
         self.entropy_engine = SubstrateEntropySimulator()
+        from tools.hardware_2026_flagship_simulator import GLOBAL_FLAGSHIP_2026_VM, Flagship2026VirtualMachine
+        self.flagship_vm = GLOBAL_FLAGSHIP_2026_VM
 
     def run_quantum_experiment(self, experiment_type: str = "GHZ_STATE") -> Dict[str, Any]:
         """Runs a canonical quantum state experiment."""
@@ -429,6 +431,15 @@ class UniversalSubstrateSandbox:
         """Simulates macroscopic entropy inversion (ΔS < 0)."""
         return self.entropy_engine.simulate_reversal(particles)
 
+    def boot_flagship_2026_vm(self) -> Dict[str, Any]:
+        """Boots the integrated 2026 Flagship Workstation Virtual Machine."""
+        return self.flagship_vm.power_on()
+
+    def run_flagship_2026_hardware_benchmark(self) -> Dict[str, Any]:
+        """Runs full spectrum benchmark on AMD Threadripper PRO 9995WX + RTX 5090 Blackwell VM."""
+        return self.flagship_vm.run_comprehensive_benchmark()
+
 
 # Global singleton instance
 GLOBAL_SUBSTRATE_SANDBOX = UniversalSubstrateSandbox()
+

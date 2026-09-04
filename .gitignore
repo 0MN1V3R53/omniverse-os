@@ -40,3 +40,4 @@ scripts/official_simple_evals/
 *.app
 *.app/
 *.log
+dist/dmg_staging/
