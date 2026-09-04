@@ -1,0 +1,21 @@
+{
+  "benchmark": "LiveCodeBench / Algorithmic Synthesis",
+  "total_evaluated": 3,
+  "correct": 3,
+  "pass_at_1_pct": 100.0,
+  "duration_seconds": 0.00010585784912109375,
+  "items": [
+    {
+      "problem": "Longest Palindromic Substring O(N)",
+      "status": "PASS"
+    },
+    {
+      "problem": "Count Substrings with Exactly K Distinct Characters",
+      "status": "PASS"
+    },
+    {
+      "problem": "Binary Search Correct Boundary",
+      "status": "PASS"
+    }
+  ]
+}

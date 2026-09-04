@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-08-28 09:38:42 UTC",
+  "harness_source": "https://github.com/openai/simple-evals",
+  "evaluations": [
+    {
+      "dataset": "GPQA Diamond",
+      "total_dataset_items": 198,
+      "samples_evaluated": [
+        {
+          "item_id": 1,
+          "question_snippet": "Two quantum states with energies E1 and E2 have a lifetime of 10^-9 sec and 10^-8 sec, respectively. We want to clearly distinguish these tw...",
+          "ground_truth_answer": "10^-4 eV",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 6,
+          "question_snippet": "A quantum mechanical particle of mass m moves in two dimensions in the following potential, as a function of (r,\u03b8): V (r, \u03b8) = 1/2 kr^2 + 3/...",
+          "ground_truth_answer": "E = (2n_x+n_y+3/2)\u210f*sqrt(k/m)",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 11,
+          "question_snippet": "All the following statements about the molecular biology of Severe Acute Respiratory Syndrome Coronavirus 2 (SARS\u2011CoV\u20112) are correct except...",
+          "ground_truth_answer": "SARS-CoV-2 nsp10/nsp14-ExoN operates as heterodimers in a mismatch repair mechanism. The N-terminal ExoN domain of nsp14 could bind to nsp10 making an active exonuclease complex that prevents the breakdown of dsRNA.",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 16,
+          "question_snippet": "How many of the following compounds will exhibit optical activity?\n\n(Z)-1-chloro-2-methylbut-1-ene\n(3aR,7aS,E)-8-(chloromethylene)hexahydro-...",
+          "ground_truth_answer": "3",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 21,
+          "question_snippet": "Compounds that have the same molecular formula but are different in their structural arrangement are known as isomers. Isomers have two type...",
+          "ground_truth_answer": "A = benzoquinone, B = methyl 2-hydroxypropanoate",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        }
+      ]
+    },
+    {
+      "dataset": "MATH-500",
+      "total_dataset_items": 500,
+      "samples_evaluated": [
+        {
+          "item_id": 1,
+          "question_snippet": "Convert the point $(0,3)$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0...",
+          "ground_truth_answer": "\\left( 3, \\frac{\\pi",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 11,
+          "question_snippet": "What is the least positive integer multiple of 30 that can be written with only the digits 0 and 2?...",
+          "ground_truth_answer": "2220",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 26,
+          "question_snippet": "The function $f$ satisfies the functional equation\n\\[f(x) + f(y) = f(x + y) - xy - 1\\]for all real numbers $x$ and $y.$  If $f(1) = 1,$ then...",
+          "ground_truth_answer": "1,-2",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 51,
+          "question_snippet": "You have seven bags of gold coins. Each bag has the same number of gold coins. One day, you find a bag of 53 coins. You decide to redistribu...",
+          "ground_truth_answer": "203",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        },
+        {
+          "item_id": 101,
+          "question_snippet": "A hexagon is inscribed in a circle: [asy]\npair pA, pB, pC, pD, pE, pF, pO;\npO = (0, 0);\npA = pO + dir(-10);\npB = pO + dir(60);\npC = pO + dir...",
+          "ground_truth_answer": "145^\\circ",
+          "status": "LOADED_FROM_OFFICIAL_BLOB"
+        }
+      ]
+    }
+  ]
+}

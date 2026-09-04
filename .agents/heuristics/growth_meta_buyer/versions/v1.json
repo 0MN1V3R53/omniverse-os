@@ -1,0 +1,20 @@
+{
+  "version_id": "v_641c9489",
+  "agent_id": "growth_meta_buyer",
+  "version_number": 1,
+  "active_rules": [
+    {
+      "rule_id": "HR-127188A7",
+      "category": "ux_conversion",
+      "rule_text": "Enforce invariant validation: Corridor conversion dropped due to unanchored CTA typography. must be verified before handoff.",
+      "rationale": "Derived from post-execution critique on ticket INC-6A5B1AB1.",
+      "source_ticket_id": "INC-6A5B1AB1",
+      "severity": "MUST",
+      "is_active": true,
+      "effectiveness_score": 1.0,
+      "created_at": "2026-08-17T16:05:37.557171"
+    }
+  ],
+  "success_rate": 1.0,
+  "created_at": "2026-08-17T16:05:37.559028"
+}

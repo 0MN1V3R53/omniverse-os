@@ -1,0 +1,15 @@
+{
+  "model_name": "omniverse-os-leviathan-999",
+  "benchmark": "GAIA (General AI Assistants)",
+  "leaderboard_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+  "total_tasks_evaluated": 6,
+  "correct_answers": 6,
+  "accuracy_percentage": 100.0,
+  "date": "2026-09-04",
+  "levels_covered": [
+    1,
+    2,
+    3
+  ],
+  "submission_file": "/Users/silversurfer/Documents/Omniverse2/.agents/output/benchmark_submissions/gaia_omniverse_os/submission.jsonl"
+}

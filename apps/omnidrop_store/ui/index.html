@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniDrop™ — Apex D2C Flagship Brand & Viral Best-Sellers</title>
+  <link rel="stylesheet" href="css/store_luxury.css">
+</head>
+<body>
+
+  <!-- Top Urgency Ticker -->
+  <div class="announcement-bar">
+    ⚡ FLASH SALE: 50% OFF + FREE PRIORITY AIR SHIPPING | EXPIRES IN <span id="flash-countdown" style="color: #fff; font-family: monospace; font-size: 13px;">03:45</span>
+  </div>
+
+  <!-- Luxury Navbar -->
+  <header class="navbar">
+    <a href="#" class="brand-wrap">
+      <img src="assets/logo.jpg" alt="OmniDrop Logo" class="brand-logo-img">
+      <div class="brand-text">OMNI<span>DROP</span>™</div>
+    </a>
+
+    <ul class="nav-center-links">
+      <li><a href="#hero" class="active">Featured Breakthrough</a></li>
+      <li><a href="#catalog">Viral Best-Sellers (20)</a></li>
+      <li><a href="dashboard.html" target="_blank" class="dash-link-btn">📊 Growth Command Center</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="cart-toggle-btn" onclick="toggleCartDrawer(true)">
+        <span>🛒 Cart</span>
+        <span class="cart-badge-count" id="cart-total-badge">1</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Category Filter Strip -->
+  <nav class="category-strip">
+    <button class="cat-pill active" onclick="filterCategory('ALL')">🔥 All 20 Viral Winners</button>
+    <button class="cat-pill" onclick="filterCategory('Beauty & Skincare')">✨ Beauty & Skincare</button>
+    <button class="cat-pill" onclick="filterCategory('Health & Posture')">💆 Health & Posture</button>
+    <button class="cat-pill" onclick="filterCategory('Home & Kitchen')">🍳 Home & Kitchen</button>
+    <button class="cat-pill" onclick="filterCategory('Pet Care')">🐾 Pet Care</button>
+    <button class="cat-pill" onclick="filterCategory('Smart Tech & EDC')">⚡ Smart Tech & EDC</button>
+  </nav>
+
+  <!-- Hero Product Conversion Showcase -->
+  <section class="hero-stage" id="hero">
+    <div class="hero-gallery">
+      <img id="hero-img" src="assets/luminaglow.jpg" alt="Hero Product" class="hero-main-img">
+      <div class="hero-badge-tag" id="hero-badge">🔥 #1 VIRAL ON TIKTOK</div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-social-stars">
+        <span>★★★★★</span>
+        <span id="hero-reviews-text" style="color: #f8fafc; font-weight: 700;">4.9/5 | 12,349 Verified Customer Reviews</span>
+      </div>
+
+      <h1 class="hero-headline" id="hero-title">LuminaGlow™ Pro 4-in-1 Red Light Facial Sculptor</h1>
+      <p class="hero-subhead" id="hero-subhead">Clinic-Grade Microcurrent & 660nm Red Light Contouring at Home</p>
+
+      <div class="hero-price-box">
+        <span class="price-main" id="hero-price">$49.95</span>
+        <span class="price-slash" id="hero-compare">$99.95</span>
+        <span class="save-chip">50% OFF FLASH DEAL</span>
+      </div>
+
+      <div class="hero-urgency-card">
+        <div>👥 <span id="live-viewers-tag">38 customers are viewing this product right now</span></div>
+        <div style="color: #ff0055; font-weight: 800;" id="stock-left-count">Only 14 items left in stock!</div>
+      </div>
+
+      <!-- Benefit Bullets -->
+      <ul id="hero-benefit-list" style="padding: 0; margin: 4px 0;"></ul>
+
+      <!-- Primary Action CTA -->
+      <button class="primary-buy-btn" onclick="openDirectCheckout()">
+        ⚡ BUY NOW — 1-CLICK INSTANT EXPRESS CHECKOUT
+      </button>
+
+      <!-- Trust Pillars -->
+      <div class="trust-strip">
+        <div>🛡️ 30-Day Money-Back Guarantee</div>
+        <div>✈️ Free Priority Express Shipping</div>
+        <div>🔒 256-Bit Encrypted Checkout</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full 20 Products Catalog Section -->
+  <section class="catalog-container" id="catalog">
+    <div class="catalog-heading-wrap">
+      <h2>🔥 TOP 20 VIRAL BEST-SELLERS (2026 DROPSHIPPING COLLECTION)</h2>
+      <p>High-demand problem solvers selling thousands of units weekly on TikTok Shop & Amazon Movers.</p>
+    </div>
+
+    <div class="grid-20" id="grid-20-container"></div>
+  </section>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="if(event.target===this) toggleCartDrawer(false)">
+    <div class="cart-drawer">
+      <div class="drawer-header">
+        <div class="drawer-title">🛍️ Your Shopping Cart</div>
+        <button class="drawer-close" onclick="toggleCartDrawer(false)">✕</button>
+      </div>
+
+      <div class="drawer-items" id="drawer-items-list"></div>
+
+      <div class="drawer-footer">
+        <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 800;">
+          <span>Estimated Subtotal:</span>
+          <span id="cart-subtotal-val" style="color: var(--accent-cyan); font-family: monospace;">$49.95</span>
+        </div>
+        <div style="font-size: 11px; color: var(--accent-green); text-align: center;">
+          ✓ You have qualified for FREE EXPRESS AIR SHIPPING!
+        </div>
+        <button class="primary-buy-btn" onclick="openDirectCheckout()">
+          PROCEED TO 1-CLICK CHECKOUT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1-Click Checkout Modal -->
+  <div class="checkout-modal-overlay" id="checkout-modal">
+    <div class="checkout-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-size: 18px; font-weight: 900; color: #fff;">⚡ 1-Click Express Checkout</h3>
+        <button onclick="closeDirectCheckout()" style="background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;">✕</button>
+      </div>
+
+      <div style="font-size: 13px; color: var(--text-muted);" id="checkout-modal-prod-name">Product Name</div>
+      <div style="font-size: 22px; font-weight: 900; color: var(--accent-cyan); font-family: monospace;" id="checkout-modal-price">$49.95</div>
+
+      <form onsubmit="submitOrder(event)" style="display: flex; flex-direction: column; gap: 14px;">
+        <input type="email" id="checkout-email" class="checkout-form-input" placeholder="Your Email Address" required value="customer@omniversestore.com">
+        <input type="text" class="checkout-form-input" placeholder="Full Delivery Address" required value="742 Evergreen Terrace, Los Angeles, CA 90001">
+        
+        <div style="background: rgba(0, 240, 255, 0.06); border: 1px dashed var(--accent-cyan); padding: 12px; border-radius: 8px; font-size: 11px; text-align: center; color: var(--text-muted);">
+          🔒 Apple Pay / Stripe 1-Click Instant Express Token Ready
+        </div>
+
+        <button type="submit" class="modal-stripe-btn" id="stripe-pay-btn">
+          PAY WITH 1-CLICK STRIPE / APPLE PAY
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Real-Time Social Proof Toast -->
+  <div class="social-proof-toast" id="live-toast"></div>
+
+  <script src="js/store_funnel.js"></script>
+</body>
+</html>

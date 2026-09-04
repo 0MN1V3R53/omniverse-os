@@ -1,0 +1,65 @@
+[
+  {
+    "order_id": "ORD-373448",
+    "timestamp": "2026-09-02 16:26:13 UTC",
+    "product_id": "luminaglow-pro",
+    "product_name": "LuminaGlow\u2122 Pro 4-in-1 Red Light Facial Sculptor",
+    "gross_amount": 49.95,
+    "cogs": 7.4,
+    "stripe_fee": 1.75,
+    "net_profit": 40.8,
+    "customer_email": "direct_buyer@omniversestore.com",
+    "shipping_address": "120 Broadway, New York, NY 10271",
+    "payment_gateway": "Stripe Connect / Apple Pay Express",
+    "payment_status": "CAPTURED_AND_SETTLED",
+    "supplier_fulfillment": "QUEUED_FOR_CJ_DROPSHIPPING_AUTO_DISPATCH",
+    "attribution": {
+      "utm_source": "tiktok_shop_viral",
+      "utm_campaign": "1k_to_100k_scale"
+    }
+  },
+  {
+    "order_id": "ORD-439957",
+    "timestamp": "2026-09-02 16:27:19 UTC",
+    "product_id": "luminaglow-pro",
+    "product_name": "LuminaGlow\u2122 Pro 4-in-1 Red Light Facial Sculptor",
+    "gross_amount": 49.95,
+    "cogs": 7.4,
+    "stripe_fee": 1.75,
+    "net_profit": 40.8,
+    "customer_email": "customer@omniversestore.com",
+    "shipping_address": "742 Evergreen Terrace, Los Angeles, CA 90001",
+    "payment_gateway": "Stripe Connect / Apple Pay Express",
+    "payment_status": "CAPTURED_AND_SETTLED",
+    "supplier_fulfillment": "QUEUED_FOR_CJ_DROPSHIPPING_AUTO_DISPATCH",
+    "attribution": {
+      "utm_source": "meta_advantage_plus",
+      "utm_medium": "reels_ugc_01",
+      "utm_campaign": "1k_to_100k_scale",
+      "fbclid": "fb.1.1788363000.ECOM_CONV_01",
+      "ttclid": "tt.1.1788363000.TIKTOK_SHOP_VIRAL"
+    }
+  },
+  {
+    "order_id": "ORD-441240",
+    "timestamp": "2026-09-02 16:27:21 UTC",
+    "product_id": "luminaglow-pro",
+    "product_name": "LuminaGlow\u2122 Pro 4-in-1 Red Light Facial Sculptor",
+    "gross_amount": 49.95,
+    "cogs": 7.4,
+    "stripe_fee": 1.75,
+    "net_profit": 40.8,
+    "customer_email": "customer@omniversestore.com",
+    "shipping_address": "742 Evergreen Terrace, Los Angeles, CA 90001",
+    "payment_gateway": "Stripe Connect / Apple Pay Express",
+    "payment_status": "CAPTURED_AND_SETTLED",
+    "supplier_fulfillment": "QUEUED_FOR_CJ_DROPSHIPPING_AUTO_DISPATCH",
+    "attribution": {
+      "utm_source": "meta_advantage_plus",
+      "utm_medium": "reels_ugc_01",
+      "utm_campaign": "1k_to_100k_scale",
+      "fbclid": "fb.1.1788363000.ECOM_CONV_01",
+      "ttclid": "tt.1.1788363000.TIKTOK_SHOP_VIRAL"
+    }
+  }
+]

@@ -1,0 +1,43 @@
+# 🧬 Evolved Prompt Heuristics for `ops_sweeper_web`
+*Last Updated: 2026-08-25 10:00:31 UTC*
+
+## 📜 Active Learned Invariants & Constraints
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to avoid buffer failures.` *(Derived from SLEEP-REPLAY-test_error_log.)*
+- **[TOOLING]** `Verify tool input preconditions for test_error_log.log to prevent execution anomalies.` *(Derived from DREAM-REPLAY-test_error_log.)*

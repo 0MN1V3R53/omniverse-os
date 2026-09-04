@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "links": [
+    {
+      "link_id": "CLINK-10F75AD9",
+      "context_state": "high_bounce_on_mobile_route",
+      "action_taken": "transpile_scenegraph_banner_with_instant_quote",
+      "observed_impact": "bounce_rate_reduced_24pct",
+      "success_rate": 0.94,
+      "confidence_score": 0.92,
+      "sample_count": 15,
+      "last_verified": "2026-08-17 16:22:06.488125"
+    },
+    {
+      "link_id": "CLINK-C9A8671C",
+      "context_state": "bot_scraping_content_theft",
+      "action_taken": "deploy_security_guard_and_htaccess_blockers",
+      "observed_impact": "bot_theft_reduced_99pct",
+      "success_rate": 0.99,
+      "confidence_score": 0.98,
+      "sample_count": 22,
+      "last_verified": "2026-08-17 16:22:06.488521"
+    },
+    {
+      "link_id": "CLINK-DA242ADD",
+      "context_state": "route_title_mid_word_wrapping",
+      "action_taken": "wrap_state_names_in_whitespace_nowrap_inline_block",
+      "observed_impact": "zero_mid_word_hyphenation_guaranteed",
+      "success_rate": 1.0,
+      "confidence_score": 0.99,
+      "sample_count": 48,
+      "last_verified": "2026-08-17 16:22:06.488559"
+    },
+    {
+      "link_id": "CLINK-FFA69BE7",
+      "context_state": "unanchored_cta_typography_drop",
+      "action_taken": "anchor_fixed_width_cta_button_with_svg_lock_icon",
+      "observed_impact": "click_through_rate_increased_31pct",
+      "success_rate": 0.88,
+      "confidence_score": 0.85,
+      "sample_count": 8,
+      "last_verified": "2026-08-17 16:22:06.488596"
+    },
+    {
+      "link_id": "CLINK-A25D5DFA",
+      "context_state": "east_to_west_mobile_route",
+      "action_taken": "transpile_scenegraph_banner_with_instant_quote",
+      "observed_impact": "corridor_conversion_lift_21pct",
+      "success_rate": 1.0,
+      "confidence_score": 0.75,
+      "sample_count": 1,
+      "last_verified": "2026-08-17 16:23:33.501443"
+    }
+  ],
+  "updated_at": "2026-08-17 16:23:33.501459"
+}

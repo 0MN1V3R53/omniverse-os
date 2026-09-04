@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-08-18T13:35:18Z",
+  "overall_status": "HEALTHY",
+  "total_endpoints_tested": 14,
+  "successful_responses": 14,
+  "failed_responses": 0,
+  "avg_ttfb_ms": 525.21,
+  "corridor_results": [
+    {
+      "corridor": "CA -> FL",
+      "url": "https://www.skyautoservices.com/routes/california-to-florida-auto-transport",
+      "status": 200,
+      "ttfb_ms": 563.85,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "NY -> FL",
+      "url": "https://www.skyautoservices.com/routes/new-york-to-florida-auto-transport",
+      "status": 200,
+      "ttfb_ms": 504.94,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "TX -> CA",
+      "url": "https://www.skyautoservices.com/routes/texas-to-california-auto-transport",
+      "status": 200,
+      "ttfb_ms": 463.95,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "IL -> FL",
+      "url": "https://www.skyautoservices.com/routes/illinois-to-florida-auto-transport",
+      "status": 200,
+      "ttfb_ms": 473.46,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "WA -> TX",
+      "url": "https://www.skyautoservices.com/routes/washington-to-texas-auto-transport",
+      "status": 200,
+      "ttfb_ms": 575.41,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "MA -> FL",
+      "url": "https://www.skyautoservices.com/routes/massachusetts-to-florida-auto-transport",
+      "status": 200,
+      "ttfb_ms": 578.94,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "MI -> AZ",
+      "url": "https://www.skyautoservices.com/routes/michigan-to-arizona-auto-transport",
+      "status": 200,
+      "ttfb_ms": 465.71,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "OH -> FL",
+      "url": "https://www.skyautoservices.com/routes/ohio-to-florida-auto-transport",
+      "status": 200,
+      "ttfb_ms": 452.2,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "GA -> CA",
+      "url": "https://www.skyautoservices.com/routes/georgia-to-california-auto-transport",
+      "status": 200,
+      "ttfb_ms": 457.86,
+      "state": "ONLINE_200_OK"
+    },
+    {
+      "corridor": "CO -> TX",
+      "url": "https://www.skyautoservices.com/routes/colorado-to-texas-auto-transport",
+      "status": 200,
+      "ttfb_ms": 788.45,
+      "state": "ONLINE_200_OK"
+    }
+  ],
+  "infra_results": [
+    {
+      "endpoint": "Master Sitemap Index",
+      "url": "https://www.skyautoservices.com/sitemaps/sitemap_index.xml",
+      "status": 200,
+      "ttfb_ms": 591.97,
+      "state": "VALID_200_OK"
+    },
+    {
+      "endpoint": "Priority Routes XML",
+      "url": "https://www.skyautoservices.com/sitemaps/sitemap_priority_routes.xml",
+      "status": 200,
+      "ttfb_ms": 499.91,
+      "state": "VALID_200_OK"
+    },
+    {
+      "endpoint": "Robots.txt",
+      "url": "https://www.skyautoservices.com/robots.txt",
+      "status": 200,
+      "ttfb_ms": 483.43,
+      "state": "VALID_200_OK"
+    },
+    {
+      "endpoint": "IndexNow Keyfile",
+      "url": "https://www.skyautoservices.com/8f3b2a1c9e4d5f6a7b8c9d0e1f2a3b4c.txt",
+      "status": 200,
+      "ttfb_ms": 452.8,
+      "state": "VALID_200_OK"
+    }
+  ]
+}

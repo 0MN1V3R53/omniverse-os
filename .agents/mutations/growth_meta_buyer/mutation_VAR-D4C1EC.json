@@ -1,0 +1,15 @@
+{
+  "evaluation_id": "DARWIN-8240D60A",
+  "base_agent_id": "growth_meta_buyer",
+  "winning_variant_id": "VAR-D4C1EC",
+  "baseline_score": 0.82,
+  "variant_score": 0.94,
+  "variant_won": true,
+  "adopted_traits": [
+    "Prioritize sub-100ms execution paths with pre-computed AST lookups.",
+    "Enforce strict non-copyable CSS classes (`select-none`) on all visual root nodes.",
+    "Verify complete error boundaries around network calls before emitting deliverables."
+  ],
+  "mutation_log_path": "/Users/silversurfer/Documents/Omniverse2/.agents/mutations/growth_meta_buyer/mutation_VAR-D4C1EC.json",
+  "timestamp": "2026-08-17 16:23:33.505721"
+}

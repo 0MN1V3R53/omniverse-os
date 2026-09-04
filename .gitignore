@@ -1,0 +1,39 @@
+# Omniverse 2 Root Git Ignore - Sensitive Credentials & Data Protection
+
+# Environment & Infrastructure Credentials
+.env
+*.env
+client_secret.json
+credentials/
+*.exp
+*.pem
+*.key
+
+# Sensitive Telemetry, Submissions & Client PII Data
+quote_submissions.json
+call_requests.json
+visitor_telemetry.json
+visitor_intelligence_telemetry.json
+dmca_infringements.json
+remote_seo_audit_results.json
+seo_audit_results.json
+
+# Local Python & Node Dependencies
+venv/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+scripts/official_simple_evals/
+.runtime/
+.sandbox/
+.vscode/
+
+# OS & Archive Artifacts
+.DS_Store
+*.zip
+*.tar.gz
+*.dmg
+*.app
+*.app/
+*.log

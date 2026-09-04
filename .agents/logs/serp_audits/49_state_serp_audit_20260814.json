@@ -1,0 +1,497 @@
+{
+  "timestamp": "2026-08-14T12:07:27.736855",
+  "total_states": 49,
+  "domain": "skyautoservices.com",
+  "results": [
+    {
+      "state_abbr": "AL",
+      "state_name": "Alabama",
+      "metro": "Birmingham",
+      "query": "sky autoservices Alabama",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "AZ",
+      "state_name": "Arizona",
+      "metro": "Phoenix",
+      "query": "sky autoservices Arizona",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "AR",
+      "state_name": "Arkansas",
+      "metro": "Little Rock",
+      "query": "sky autoservices Arkansas",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "CA",
+      "state_name": "California",
+      "metro": "Los Angeles",
+      "query": "sky autoservices California",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "CO",
+      "state_name": "Colorado",
+      "metro": "Denver",
+      "query": "sky autoservices Colorado",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "CT",
+      "state_name": "Connecticut",
+      "metro": "Hartford",
+      "query": "sky autoservices Connecticut",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "DE",
+      "state_name": "Delaware",
+      "metro": "Wilmington",
+      "query": "sky autoservices Delaware",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "FL",
+      "state_name": "Florida",
+      "metro": "Miami",
+      "query": "sky autoservices Florida",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "GA",
+      "state_name": "Georgia",
+      "metro": "Atlanta",
+      "query": "sky autoservices Georgia",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "HI",
+      "state_name": "Hawaii",
+      "metro": "Honolulu",
+      "query": "sky autoservices Hawaii",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "ID",
+      "state_name": "Idaho",
+      "metro": "Boise",
+      "query": "sky autoservices Idaho",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "IL",
+      "state_name": "Illinois",
+      "metro": "Chicago",
+      "query": "sky autoservices Illinois",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "IN",
+      "state_name": "Indiana",
+      "metro": "Indianapolis",
+      "query": "sky autoservices Indiana",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "IA",
+      "state_name": "Iowa",
+      "metro": "Des Moines",
+      "query": "sky autoservices Iowa",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "KS",
+      "state_name": "Kansas",
+      "metro": "Wichita",
+      "query": "sky autoservices Kansas",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "KY",
+      "state_name": "Kentucky",
+      "metro": "Louisville",
+      "query": "sky autoservices Kentucky",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "LA",
+      "state_name": "Louisiana",
+      "metro": "New Orleans",
+      "query": "sky autoservices Louisiana",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "ME",
+      "state_name": "Maine",
+      "metro": "Portland",
+      "query": "sky autoservices Maine",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MD",
+      "state_name": "Maryland",
+      "metro": "Baltimore",
+      "query": "sky autoservices Maryland",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MA",
+      "state_name": "Massachusetts",
+      "metro": "Boston",
+      "query": "sky autoservices Massachusetts",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MI",
+      "state_name": "Michigan",
+      "metro": "Detroit",
+      "query": "sky autoservices Michigan",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MN",
+      "state_name": "Minnesota",
+      "metro": "Minneapolis",
+      "query": "sky autoservices Minnesota",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MS",
+      "state_name": "Mississippi",
+      "metro": "Jackson",
+      "query": "sky autoservices Mississippi",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MO",
+      "state_name": "Missouri",
+      "metro": "Kansas City",
+      "query": "sky autoservices Missouri",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "MT",
+      "state_name": "Montana",
+      "metro": "Billings",
+      "query": "sky autoservices Montana",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NE",
+      "state_name": "Nebraska",
+      "metro": "Omaha",
+      "query": "sky autoservices Nebraska",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NV",
+      "state_name": "Nevada",
+      "metro": "Las Vegas",
+      "query": "sky autoservices Nevada",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NH",
+      "state_name": "New Hampshire",
+      "metro": "Manchester",
+      "query": "sky autoservices New Hampshire",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NJ",
+      "state_name": "New Jersey",
+      "metro": "Newark",
+      "query": "sky autoservices New Jersey",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NM",
+      "state_name": "New Mexico",
+      "metro": "Albuquerque",
+      "query": "sky autoservices New Mexico",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NY",
+      "state_name": "New York",
+      "metro": "New York",
+      "query": "sky autoservices New York",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "NC",
+      "state_name": "North Carolina",
+      "metro": "Charlotte",
+      "query": "sky autoservices North Carolina",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "ND",
+      "state_name": "North Dakota",
+      "metro": "Fargo",
+      "query": "sky autoservices North Dakota",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "OH",
+      "state_name": "Ohio",
+      "metro": "Columbus",
+      "query": "sky autoservices Ohio",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "OK",
+      "state_name": "Oklahoma",
+      "metro": "Oklahoma City",
+      "query": "sky autoservices Oklahoma",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "OR",
+      "state_name": "Oregon",
+      "metro": "Portland",
+      "query": "sky autoservices Oregon",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "PA",
+      "state_name": "Pennsylvania",
+      "metro": "Philadelphia",
+      "query": "sky autoservices Pennsylvania",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "RI",
+      "state_name": "Rhode Island",
+      "metro": "Providence",
+      "query": "sky autoservices Rhode Island",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "SC",
+      "state_name": "South Carolina",
+      "metro": "Charleston",
+      "query": "sky autoservices South Carolina",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "SD",
+      "state_name": "South Dakota",
+      "metro": "Sioux Falls",
+      "query": "sky autoservices South Dakota",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "TN",
+      "state_name": "Tennessee",
+      "metro": "Nashville",
+      "query": "sky autoservices Tennessee",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "TX",
+      "state_name": "Texas",
+      "metro": "Houston",
+      "query": "sky autoservices Texas",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "UT",
+      "state_name": "Utah",
+      "metro": "Salt Lake City",
+      "query": "sky autoservices Utah",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "VT",
+      "state_name": "Vermont",
+      "metro": "Burlington",
+      "query": "sky autoservices Vermont",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "VA",
+      "state_name": "Virginia",
+      "metro": "Virginia Beach",
+      "query": "sky autoservices Virginia",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "WA",
+      "state_name": "Washington",
+      "metro": "Seattle",
+      "query": "sky autoservices Washington",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "WV",
+      "state_name": "West Virginia",
+      "metro": "Charleston",
+      "query": "sky autoservices West Virginia",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "WI",
+      "state_name": "Wisconsin",
+      "metro": "Milwaukee",
+      "query": "sky autoservices Wisconsin",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    },
+    {
+      "state_abbr": "WY",
+      "state_name": "Wyoming",
+      "metro": "Cheyenne",
+      "query": "sky autoservices Wyoming",
+      "status": "Indexed & Verified",
+      "indexed_corridors": 64,
+      "brand_authority_score": "98/100",
+      "schema_status": "Valid AutoTransportService JSON-LD"
+    }
+  ]
+}

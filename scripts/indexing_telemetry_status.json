@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED",
+  "total_urls_submitted": 478,
+  "indexnow_submissions": [
+    {
+      "batch": 1,
+      "status": 200,
+      "count": 478
+    }
+  ],
+  "sample_urls": [
+    "https://www.skyautoservices.com",
+    "https://www.skyautoservices.com/",
+    "https://www.skyautoservices.com/about",
+    "https://www.skyautoservices.com/about.html",
+    "https://www.skyautoservices.com/auto-transport/alabama/birmingham/",
+    "https://www.skyautoservices.com/auto-transport/alabama/huntsville/",
+    "https://www.skyautoservices.com/auto-transport/alabama/mobile/",
+    "https://www.skyautoservices.com/auto-transport/alabama/montgomery/",
+    "https://www.skyautoservices.com/auto-transport/alabama/tuscaloosa/",
+    "https://www.skyautoservices.com/auto-transport/arizona/chandler/"
+  ]
+}

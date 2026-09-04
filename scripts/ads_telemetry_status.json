@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-08-28T12:20:00.000000+00:00",
+  "customer_id": "238-759-1580",
+  "account_name": "Sky Auto Services",
+  "status": "ASSET_GROUP_OPTIMIZED_UNDER_REVIEW",
+  "campaign_id": "Campaign #1 (Performance Max)",
+  "budget_pacing": {
+    "daily_target_usd": 28.5,
+    "weekly_limit_usd": 199.5,
+    "pacing_status": "STRICT_CEILING_ENFORCED",
+    "dayparting_active": "08:00 - 21:00 EST",
+    "mobile_bid_adjustment": "+15%"
+  },
+  "bidding_configuration": {
+    "strategy": "MAXIMIZE_CONVERSIONS",
+    "conversion_goals": [
+      "Request quote (Website)",
+      "Phone call lead (224-449-0397)"
+    ],
+    "conversion_tracking_tag": "AW-18396293415",
+    "tag_verification_status": "INSTALLED_AND_FIRED_LIVE_ON_PRODUCTION"
+  },
+  "ad_strength_optimization": {
+    "ad_strength_score": "PENDING_REVIEW_ELEVATED",
+    "headlines_count": 15,
+    "long_headlines_count": 5,
+    "descriptions_count": 5,
+    "sitelinks_count": 6,
+    "strategic_themes_added": [
+      "Quotes in Under 60 Seconds",
+      "Instant Online Rates",
+      "Trust the experts for your classic car. We offer premium enclosed shipping and insurance."
+    ],
+    "negative_keywords_shield_count": 50
+  },
+  "programmatic_seo_engine": {
+    "total_route_hubs": 4704,
+    "state_sitemaps_indexed": 53,
+    "indexnow_protocol_status": "HTTP_200_OK_SUBMITTED"
+  },
+  "autonomous_governance": {
+    "pod": "Pod 20 (Google Ads) & Pod 4/5 (Full-Stack Web & Technical SEO)",
+    "supervising_executive": "Dr. Alexander Vance (CEO)",
+    "ads_lead": "Dr. Lucas Vance",
+    "seo_lead": "Dr. Emily Rivera"
+  }
+}

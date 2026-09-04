@@ -1,0 +1,564 @@
+[
+  {
+    "id": "luminaglow-pro",
+    "name": "LuminaGlow™ Pro 4-in-1 Red Light Facial Sculptor",
+    "tagline": "Clinic-Grade Microcurrent & 660nm Red Light Contouring at Home",
+    "category": "Beauty & Skincare",
+    "cogs": 7.40,
+    "price": 49.95,
+    "compare_price": 99.95,
+    "gross_margin": 42.55,
+    "margin_pct": "85.2%",
+    "weekly_volume": 4200,
+    "status": "HERO_WINNER",
+    "rating": 4.9,
+    "reviews_count": 12349,
+    "badge": "🔥 #1 VIRAL ON TIKTOK",
+    "live_viewers": 38,
+    "stock_left": 14,
+    "hero_image": "assets/luminaglow.jpg",
+    "benefits": [
+      "Visibly sculpts and lifts jawline contours in 5 minutes daily",
+      "660nm Red Light stimulates natural collagen synthesis",
+      "EMS Microcurrent gently tones and tightens facial muscles",
+      "Therapeutic 42°C warmth boosts serum absorption by 300%"
+    ],
+    "faq": [
+      { "q": "How often should I use it?", "a": "Use 5 minutes daily on clean skin with your favorite serum." },
+      { "q": "When will I see results?", "a": "Noticeable contouring and reduced puffiness typically appear within 7 to 14 days." }
+    ]
+  },
+  {
+    "id": "hydropulse-shower",
+    "name": "HydroPulse™ 3-in-1 Mineral Filtered Jet Showerhead",
+    "tagline": "Purify Hard Water, Stop Hair Breakage & Boost Pressure by 200%",
+    "category": "Home & Kitchen",
+    "cogs": 5.80,
+    "price": 38.99,
+    "compare_price": 79.99,
+    "gross_margin": 33.19,
+    "margin_pct": "85.1%",
+    "weekly_volume": 3800,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 8420,
+    "badge": "💧 DERMATOLOGIST RECOMMENDED",
+    "live_viewers": 24,
+    "stock_left": 19,
+    "hero_image": "assets/hydropulse.jpg",
+    "benefits": [
+      "Quad-layer bioactive mineral stones neutralize chlorine & heavy metals",
+      "Micro-nozzle laser matrix boosts pressure by 200% while saving 30% water",
+      "Restores silky hair shine and eliminates dry, flaky skin",
+      "Universal 1-minute twist installation on any standard shower arm"
+    ],
+    "faq": [
+      { "q": "How often do mineral beads need replacement?", "a": "Every 4 to 6 months depending on local water hardness." },
+      { "q": "Will it fit my shower?", "a": "Yes! Standard universal threading fits 100% of standard shower hoses and arms." }
+    ]
+  },
+  {
+    "id": "blendflow-max",
+    "name": "BlendFlow™ Max 6-Blade Waterproof Portable Blender",
+    "tagline": "Crush Solid Ice & Frozen Fruits Anywhere in 15 Seconds",
+    "category": "Home & Kitchen",
+    "cogs": 9.10,
+    "price": 44.95,
+    "compare_price": 89.95,
+    "gross_margin": 35.85,
+    "margin_pct": "79.8%",
+    "weekly_volume": 3400,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 9140,
+    "badge": "⚡ BEST ON-THE-GO BLENDER",
+    "live_viewers": 28,
+    "stock_left": 23,
+    "hero_image": "assets/blendflow.jpg",
+    "benefits": [
+      "Turbo 20,000 RPM motor powers 6 stainless steel serrated blades",
+      "Magnetic wireless fast charging with 15+ blends per full charge",
+      "IPX7 100% waterproof design with self-cleaning spin cycle",
+      "BPA-free shatterproof bottle fits perfectly in car cupholders"
+    ],
+    "faq": [
+      { "q": "Can it crush ice?", "a": "Yes! The 6-blade 3D whirlwind system effortlessly crushes ice cubes and frozen berries." }
+    ]
+  },
+  {
+    "id": "dermavortex-vacuum",
+    "name": "DermaVortex™ Hydro-Facial Blackhead Vacuum & Pore Infuser",
+    "tagline": "Painless Deep-Pore Extraction & Hyaluronic Acid Infusion",
+    "category": "Beauty & Skincare",
+    "cogs": 6.20,
+    "price": 39.95,
+    "compare_price": 79.95,
+    "gross_margin": 33.75,
+    "margin_pct": "84.5%",
+    "weekly_volume": 3100,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 5210,
+    "badge": "✨ PORE PURIFYING WINNER",
+    "live_viewers": 18,
+    "stock_left": 12,
+    "hero_image": "https://images.unsplash.com/photo-1512290900672-1f486427a1e0?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Hydro-dermabrasion vortex technology extracts stubborn blackheads",
+      "Simultaneously infuses pores with cleansing solution or serum",
+      "3 suction modes suitable for sensitive, dry, and oily skin types",
+      "Dual-chamber tank separates clean solution from extracted impurities"
+    ],
+    "faq": [
+      { "q": "Does it cause bruising?", "a": "Start on Soft mode and keep the nozzle moving across skin to avoid localized bruising." }
+    ]
+  },
+  {
+    "id": "zenposture-stretcher",
+    "name": "ZenPosture™ Dynamic Decompression Lumbar Stretcher",
+    "tagline": "Instant Lower Back Decompression & Sciatica Relief",
+    "category": "Health & Posture",
+    "cogs": 8.50,
+    "price": 54.90,
+    "compare_price": 109.90,
+    "gross_margin": 46.40,
+    "margin_pct": "84.5%",
+    "weekly_volume": 5100,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 15810,
+    "badge": "⚡ TOP SELLING PAIN RELIEF",
+    "live_viewers": 42,
+    "stock_left": 8,
+    "hero_image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Chiropractic multi-level arch gently decompresses lumbar vertebrae",
+      "88 acupressure nodes release deep muscular trigger points",
+      "Eliminates chronic lower back ache, sciatica, and desk-hunch stiffness",
+      "Supports up to 350 lbs with aerospace-grade composite polymer"
+    ],
+    "faq": [
+      { "q": "How long should I lie on it?", "a": "Start with 5 minutes on Level 1, working up to 10 minutes twice daily." }
+    ]
+  },
+  {
+    "id": "furvac-pro",
+    "name": "FurVac Pro™ Low-Noise Pet Grooming & Vacuum Trimmer",
+    "tagline": "Groom, Deshed & Vacuum Loose Pet Hair Directly into the Tank",
+    "category": "Pet Care",
+    "cogs": 18.20,
+    "price": 79.99,
+    "compare_price": 159.99,
+    "gross_margin": 61.79,
+    "margin_pct": "77.2%",
+    "weekly_volume": 2900,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 6920,
+    "badge": "🐾 VIRAL PET GADGET",
+    "live_viewers": 19,
+    "stock_left": 11,
+    "hero_image": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Captures 99% of shedding pet hair before it touches your furniture",
+      "Ultra-quiet <50dB motor prevents anxiety in sensitive dogs and cats",
+      "5-in-1 interchangeable grooming brushes, deshedders, and precision clippers",
+      "1.5L quick-release dust canister for mess-free single-click emptying"
+    ],
+    "faq": [
+      { "q": "Will it scare my dog?", "a": "The low-frequency whisper motor is engineered specifically for nervous pets." }
+    ]
+  },
+  {
+    "id": "silkwave-curler",
+    "name": "SilkWave™ Heatless Satin Hair Curling Ribbon Set",
+    "tagline": "Wake Up with Gorgeous Bouncy Salon Curls Zero Heat Damage",
+    "category": "Beauty & Skincare",
+    "cogs": 3.10,
+    "price": 24.95,
+    "compare_price": 49.95,
+    "gross_margin": 21.85,
+    "margin_pct": "87.6%",
+    "weekly_volume": 4600,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 18400,
+    "badge": "🎀 TIKTOK TREND OF THE YEAR",
+    "live_viewers": 31,
+    "stock_left": 25,
+    "hero_image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "100% 6A grade Mulberry satin prevents friction, frizz, and hair breakage",
+      "Soft flexible cotton core is comfortable to sleep on all night",
+      "Includes 2 matching satin scrunchies and claw clip",
+      "Creates voluminous loose waves in 3 to 6 hours without hot tools"
+    ],
+    "faq": [
+      { "q": "Do I use it on wet or dry hair?", "a": "Works best on 80% dry or slightly damp hair before sleeping." }
+    ]
+  },
+  {
+    "id": "auraglo-neck",
+    "name": "AuraGlo™ LED Photon Therapy Neck & Décolletage Rejuvenator",
+    "tagline": "Target Tech-Neck Wrinkles & Loose Skin with Triple Photon Light",
+    "category": "Beauty & Skincare",
+    "cogs": 9.80,
+    "price": 59.95,
+    "compare_price": 119.95,
+    "gross_margin": 50.15,
+    "margin_pct": "83.7%",
+    "weekly_volume": 2800,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 4320,
+    "badge": "🌟 ANTI-AGING BREAKTHROUGH",
+    "live_viewers": 15,
+    "stock_left": 9,
+    "hero_image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Ergonomic dolphin-tail contour hugs neck and collarbone anatomy",
+      "Red, Blue, and Green LED wavelengths target pigmentation & elasticity",
+      "Sonic vibration stimulates microcirculation and lymphatic flow",
+      "Compact USB-C rechargeable design for seamless daily anti-aging"
+    ],
+    "faq": [
+      { "q": "How long does a session take?", "a": "Just 5 to 10 minutes per day delivers visible tightening within 3 weeks." }
+    ]
+  },
+  {
+    "id": "acurelief-massager",
+    "name": "AcuRelief™ Electric Pulse Neck & Shoulder Massager",
+    "tagline": "TENS Pulse Therapy with Constant 42°C Infrared Heat",
+    "category": "Health & Posture",
+    "cogs": 7.10,
+    "price": 46.95,
+    "compare_price": 94.95,
+    "gross_margin": 39.85,
+    "margin_pct": "84.9%",
+    "weekly_volume": 3200,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 7890,
+    "badge": "💆 INSTANT NECK RELIEF",
+    "live_viewers": 22,
+    "stock_left": 16,
+    "hero_image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Low-frequency TENS electric pulses simulate deep acupuncture kneading",
+      "Built-in infrared heating pads melt away stiff trapezius knots",
+      "Ultra-lightweight headphone-style wireless design (only 160g)",
+      "6 massage modes with 15 intensity levels"
+    ],
+    "faq": [
+      { "q": "Is the pulse painful?", "a": "No, it feels like a gentle soothing rhythmic tapping. Start at level 1." }
+    ]
+  },
+  {
+    "id": "kneeflex-sleeve",
+    "name": "KneeFlex Pro™ 3D Compression Knee Support Sleeve",
+    "tagline": "Medical-Grade Joint Stabilization with Silicone Patella Pad",
+    "category": "Health & Posture",
+    "cogs": 3.90,
+    "price": 29.95,
+    "compare_price": 59.95,
+    "gross_margin": 26.05,
+    "margin_pct": "87.0%",
+    "weekly_volume": 4900,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 14200,
+    "badge": "🏃 #1 ATHLETE CHOICE",
+    "live_viewers": 35,
+    "stock_left": 28,
+    "hero_image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Targeted 3D circular knit provides 20-30 mmHg therapeutic compression",
+      "Anatomical gel pad surrounds kneecap to absorb impact shock",
+      "Dual side spring stabilizers prevent lateral hyperextension",
+      "Breathable non-slip silicone wave strip stays securely in place"
+    ],
+    "faq": [
+      { "q": "Can I wear it under pants?", "a": "Yes! The low-profile seamless weave fits comfortably under all apparel." }
+    ]
+  },
+  {
+    "id": "thermosoothe-belt",
+    "name": "ThermoSoothe™ Graphene Heated Menstrual & Cramp Belt",
+    "tagline": "Fast 3-Second Graphene Heat with Multi-Frequency Vibration",
+    "category": "Health & Posture",
+    "cogs": 6.50,
+    "price": 42.95,
+    "compare_price": 85.95,
+    "gross_margin": 36.45,
+    "margin_pct": "84.9%",
+    "weekly_volume": 3700,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 9300,
+    "badge": "🌸 VIRAL RELIEF ESSENTIAL",
+    "live_viewers": 29,
+    "stock_left": 14,
+    "hero_image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Ultra-fast graphene heating film warms in 3 seconds flat",
+      "3 temperature settings (50°C, 55°C, 60°C) with 4 massage vibration speeds",
+      "Skin-friendly soft velvet back feels gentle against the abdomen",
+      "Slim discreet rechargeable battery lasts 4+ hours on a single charge"
+    ],
+    "faq": [
+      { "q": "Is the belt adjustable?", "a": "Yes, elastic velcro strap fits waist sizes from 24 inches to 48 inches." }
+    ]
+  },
+  {
+    "id": "crispmaster-strainer",
+    "name": "CrispMaster™ Universal Silicone Clip-On Pot Strainer",
+    "tagline": "Snap-On Pouring Strainer Fits 100% of Pots, Pans & Bowls",
+    "category": "Home & Kitchen",
+    "cogs": 2.40,
+    "price": 19.95,
+    "compare_price": 39.95,
+    "gross_margin": 17.55,
+    "margin_pct": "88.0%",
+    "weekly_volume": 5800,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 21500,
+    "badge": "🍳 KITCHEN VIRAL HIT",
+    "live_viewers": 48,
+    "stock_left": 34,
+    "hero_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Strong reinforced silicone clips grip tightly onto all round pots & pans",
+      "Drains pasta, boiling water, and grease without dumping food into the sink",
+      "Takes up 75% less storage space than bulky traditional colanders",
+      "100% Food-Grade BPA-Free silicone is dishwasher safe up to 450°F"
+    ],
+    "faq": [
+      { "q": "Will it melt with boiling water?", "a": "No, heat-resistant silicone is rated safely up to 450°F / 230°C." }
+    ]
+  },
+  {
+    "id": "freshlock-sealer",
+    "name": "FreshLock™ 2-in-1 USB Bag Sealer & Quick Cutter",
+    "tagline": "Airtight Thermal Heat Seal Keeps Chips & Snacks 100% Fresh",
+    "category": "Home & Kitchen",
+    "cogs": 2.80,
+    "price": 22.95,
+    "compare_price": 45.95,
+    "gross_margin": 20.15,
+    "margin_pct": "87.8%",
+    "weekly_volume": 4100,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 6800,
+    "badge": "🍿 FRESHNESS SAVER",
+    "live_viewers": 20,
+    "stock_left": 22,
+    "hero_image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Micro-thermal heating wire seals chip bags airtight in 2 seconds",
+      "Built-in concealed stainless steel blade opens packages effortlessly",
+      "Magnetic base sticks conveniently to refrigerator doors",
+      "USB-C rechargeable battery lasts months on occasional snack sealing"
+    ],
+    "faq": [
+      { "q": "Does it need preheating?", "a": "Zero preheat time required; slide across the bag for an instant seal." }
+    ]
+  },
+  {
+    "id": "aquapaws-fountain",
+    "name": "AquaPaws™ Ultra-Quiet Wireless Pet Water Fountain",
+    "tagline": "Induction Wireless Pump with Quad-Filtration Waterfall",
+    "category": "Pet Care",
+    "cogs": 5.90,
+    "price": 36.95,
+    "compare_price": 74.95,
+    "gross_margin": 31.05,
+    "margin_pct": "84.0%",
+    "weekly_volume": 3300,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 8100,
+    "badge": "🐱 LOVED BY 50,000+ PETS",
+    "live_viewers": 26,
+    "stock_left": 17,
+    "hero_image": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Wireless induction water pump eliminates dangerous internal cables",
+      "Whisper-quiet <20dB sound never frightens timid cats and dogs",
+      "Activated carbon + ion-exchange resin filters hair, debris, and bad tastes",
+      "2.0L transparent reservoir with LED low-water auto shutoff"
+    ],
+    "faq": [
+      { "q": "How often to clean?", "a": "Rinse fountain and replace filter monthly for optimal pet hydration." }
+    ]
+  },
+  {
+    "id": "purrfectcalm-bed",
+    "name": "PurrfectCalm™ Orthopedic Anti-Anxiety Fluffy Pet Bed",
+    "tagline": "Self-Warming Faux Fur Donut Calms Anxious Dogs & Cats",
+    "category": "Pet Care",
+    "cogs": 8.40,
+    "price": 48.95,
+    "compare_price": 98.95,
+    "gross_margin": 40.55,
+    "margin_pct": "82.8%",
+    "weekly_volume": 3900,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 16400,
+    "badge": "💤 ANXIETY RELIEF FAVORITE",
+    "live_viewers": 33,
+    "stock_left": 15,
+    "hero_image": "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Raised rim creates a sense of security and supports pet head and neck",
+      "Super-soft faux shag fur mimics mother's coat to reduce separation anxiety",
+      "High-density memory filling relieves joint and arthritis pain",
+      "Machine washable with non-skid water-resistant bottom"
+    ],
+    "faq": [
+      { "q": "Can it be machine washed?", "a": "Yes! Gentle cold cycle, tumble dry low heat to keep fur fluffy." }
+    ]
+  },
+  {
+    "id": "glowpaws-collar",
+    "name": "GlowPaws™ 360° Waterproof LED Rechargeable Dog Collar",
+    "tagline": "Ultra-Bright 1,000ft Night Visibility & USB Rechargeable",
+    "category": "Pet Care",
+    "cogs": 2.90,
+    "price": 21.95,
+    "compare_price": 44.95,
+    "gross_margin": 19.05,
+    "margin_pct": "86.8%",
+    "weekly_volume": 4700,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 11200,
+    "badge": "🌙 NIGHT SAFETY ESSENTIAL",
+    "live_viewers": 21,
+    "stock_left": 29,
+    "hero_image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Dual optical fiber lights visible up to 1,000 feet away to keep dogs safe",
+      "IPX7 100% waterproof for rainy night walks and muddy park puddles",
+      "3 lighting modes: Steady Glow, Fast Flash, and Slow Pulse",
+      "Cut-to-fit adjustable sizing for small, medium, and large breeds"
+    ],
+    "faq": [
+      { "q": "How long does battery last?", "a": "Up to 8 hours of continuous illumination on a 40-minute USB charge." }
+    ]
+  },
+  {
+    "id": "novabeam-headlamp",
+    "name": "NovaBeam™ 230° Wide-Angle Motion-Sensor LED Headlamp",
+    "tagline": "Hands-Free Wave Control & 350-Lumen Panoramic Floodlight",
+    "category": "Smart Tech & EDC",
+    "cogs": 4.10,
+    "price": 27.95,
+    "compare_price": 59.95,
+    "gross_margin": 23.85,
+    "margin_pct": "85.3%",
+    "weekly_volume": 5200,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 13900,
+    "badge": "🔦 #1 OUTDOOR GADGET",
+    "live_viewers": 36,
+    "stock_left": 18,
+    "hero_image": "https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Full 230° panoramic COB strip illuminates your entire field of view",
+      "Smart infrared motion sensor allows wave-to-turn-on hands-free control",
+      "Ultra-low profile silicone headband weighs only 70 grams",
+      "5 light modes including side spotlight and red emergency flash"
+    ],
+    "faq": [
+      { "q": "Is it comfortable for running?", "a": "Yes! The zero-bounce elastic band stays locked securely on your head." }
+    ]
+  },
+  {
+    "id": "magpulse-charger",
+    "name": "MagPulse™ 3-in-1 Foldable Magnetic Wireless Charging Station",
+    "tagline": "Fast 15W MagSafe Charging for iPhone, Apple Watch & AirPods",
+    "category": "Smart Tech & EDC",
+    "cogs": 8.20,
+    "price": 49.95,
+    "compare_price": 99.95,
+    "gross_margin": 41.75,
+    "margin_pct": "83.6%",
+    "weekly_volume": 3600,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 10500,
+    "badge": "⚡ DESK ESSENTIAL",
+    "live_viewers": 25,
+    "stock_left": 13,
+    "hero_image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Powers iPhone, Apple Watch, and AirPods simultaneously with one cable",
+      "Foldable 180° magnetic silicone design slips easily into travel pockets",
+      "Built-in smart safety chip prevents overheating, overvoltage & short circuits",
+      "Functions as an adjustable phone stand for FaceTime and movie viewing"
+    ],
+    "faq": [
+      { "q": "Does it work with phone cases?", "a": "Works with all MagSafe cases and standard thin cases under 3mm." }
+    ]
+  },
+  {
+    "id": "aeroduster-pro",
+    "name": "AeroDuster Pro™ 100,000 RPM Cordless Electric Air Duster",
+    "tagline": "Replace Canned Air Forever with Hurricane 50m/s Wind Power",
+    "category": "Smart Tech & EDC",
+    "cogs": 9.50,
+    "price": 52.95,
+    "compare_price": 109.95,
+    "gross_margin": 43.45,
+    "margin_pct": "82.1%",
+    "weekly_volume": 2700,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.8,
+    "reviews_count": 4890,
+    "badge": "💨 TECH CLEANING BEAST",
+    "live_viewers": 16,
+    "stock_left": 10,
+    "hero_image": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Brushless 100,000 RPM motor blasts away stubborn dust from keyboards and PC builds",
+      "Eco-friendly rechargeable design saves hundreds of dollars on disposable cans",
+      "3 adjustable airflow speeds with integrated LED work light",
+      "Includes 5 specialty nozzle attachments for electronics, cars, and campfires"
+    ],
+    "faq": [
+      { "q": "How long does the battery last?", "a": "High-capacity 6,000mAh battery provides 35-45 minutes of continuous blowing." }
+    ]
+  },
+  {
+    "id": "shieldvault-wallet",
+    "name": "ShieldVault™ Slim RFID-Blocking Carbon Fiber Card Wallet",
+    "tagline": "Instant Ejection Lever & Military-Grade RFID Theft Shield",
+    "category": "Smart Tech & EDC",
+    "cogs": 4.80,
+    "price": 34.95,
+    "compare_price": 69.95,
+    "gross_margin": 30.15,
+    "margin_pct": "86.3%",
+    "weekly_volume": 4400,
+    "status": "SCALING_ACTIVE",
+    "rating": 4.9,
+    "reviews_count": 15100,
+    "badge": "🛡️ EDC MUST-HAVE",
+    "live_viewers": 30,
+    "stock_left": 20,
+    "hero_image": "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+      "Ergonomic bottom trigger fans out cards in stepped cascade for 1-second access",
+      "Aerospace 3K carbon fiber and aluminum blocks 13.56MHz RFID skimming",
+      "Holds up to 6 cards inside chamber plus cash clip on the exterior",
+      "Ultra-slim 8mm profile eliminates bulky back-pocket wallet pain"
+    ],
+    "faq": [
+      { "q": "Will cards fall out if shaken?", "a": "Patented silicone friction lock keeps cards firmly in place even upside down." }
+    ]
+  }
+]

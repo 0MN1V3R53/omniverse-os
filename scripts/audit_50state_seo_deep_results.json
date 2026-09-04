@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-08-18T02:30:00Z",
+  "domain": "https://www.skyautoservices.com",
+  "total_states_analyzed": 50,
+  "metrics": {
+    "origin_states_in_dataset": 49,
+    "total_corridors_in_dataset": 2352,
+    "compiled_route_html_files": 2352,
+    "urls_in_sitemap_xml": 2753,
+    "route_urls_in_sitemap": 2352,
+    "sample_checked": 50,
+    "canonical_non_www_drift_count": 50,
+    "missing_fmcsa_schema_sample": 0,
+    "missing_faq_schema_sample": 0,
+    "missing_breadcrumb_schema_sample": 50,
+    "avg_title_length": 59.5,
+    "avg_meta_description_length": 187.5,
+    "ai_bots_allowed_in_robots": true
+  },
+  "issues_identified": [
+    {
+      "code": "CRAWL_MONOLITHIC_SITEMAP",
+      "severity": "HIGH",
+      "title": "Monolithic Flat Sitemap Bottleneck",
+      "description": "All 2,753 URLs are in a single flat sitemap.xml. Googlebot throttles crawl rate for single large files on mid-authority domains. Partitioning into 50 dedicated State Sitemaps + Sitemap Index accelerates Googlebot parallel discovery by 5x-10x."
+    },
+    {
+      "code": "CANONICAL_DOMAIN_DRIFT",
+      "severity": "MEDIUM",
+      "title": "Non-WWW vs WWW Canonical Inconsistency",
+      "description": "50/50 sampled route pages declare canonical as 'https://skyautoservices.com/' instead of 'https://www.skyautoservices.com/', causing duplicate URL evaluation in Google Search Console."
+    }
+  ],
+  "strengths_identified": [
+    {
+      "title": "Zero Upfront Deposit & FMCSA Verification Signals",
+      "description": "Prominently displays MC-1782670 and USDOT 4504932 throughout headers, footers, and structured data, building high E-E-A-T trust."
+    },
+    {
+      "title": "Exhaustive 2,352 Inter-State Programmatic Route Coverage",
+      "description": "Complete coverage of all major domestic shipping corridors across the continental US."
+    },
+    {
+      "title": "AI Bot Accessibility Enabled",
+      "description": "robots.txt explicitly allows GPTBot, Claude-Web, Google-Extended, and KimiBot with /llm-feed.json support for Generative Engine Optimization (GEO)."
+    }
+  ],
+  "grey_area_opportunities": [
+    {
+      "strategy": "Google Indexing API Automated Batch Pipeline",
+      "type": "API Acceleration",
+      "potential_impact": "Crawled in 5\u201330 minutes",
+      "details": "Automate daily 200-URL pushes via Google Cloud Service Accounts registered in Search Console. While Google states this is for job postings/broadcasts, it actively triggers Googlebot Smartphone crawl threads for all URL types."
+    },
+    {
+      "strategy": "IndexNow Protocol Direct Bot Ingestion",
+      "type": "Multi-Engine Syndication",
+      "potential_impact": "Instant (0\u201360s) indexation in Bing, Yandex, Seznam, and Copilot",
+      "details": "Submit JSON payloads to api.indexnow.org immediately upon page generation with authenticated key, forcing search engines to ingest new route URLs without waiting for scheduled crawl cycles."
+    },
+    {
+      "strategy": "50-State Partitioned Sitemaps + Real-Time Freshness Pings",
+      "type": "Crawl Budget Optimization",
+      "potential_impact": "Googlebot discovers 50 state batches concurrently",
+      "details": "Deconstruct monolithic sitemap into sitemap_index.xml with 50 State XML sitemaps, sitemap_priority_routes.xml, and sitemap_news.xml. Ping Google and Bing sitemap endpoints automatically."
+    },
+    {
+      "strategy": "Chebyshev Dynamic Mesh Internal PageRank Silos",
+      "type": "Algorithmic Graph Theory",
+      "potential_impact": "Reduces route page crawl depth from 4+ clicks to <= 2 clicks",
+      "details": "Inter-link each route page with adjacent geographic destination corridors, return lanes, and state capital hubs, eliminating orphan pages and circulating internal link juice evenly."
+    },
+    {
+      "strategy": "Dynamic Market Rate & Volatility Timestamp Injection",
+      "type": "Content Freshness Signals",
+      "potential_impact": "High re-crawl frequency via 304 Not Modified & Last-Modified headers",
+      "details": "Inject live UTC timestamps and dynamic seasonal shipping demand indicators (Snowbird index, fuel surcharge index) so search bots identify continuous updates."
+    },
+    {
+      "strategy": "Generative Engine Optimization (GEO) Direct-Answer Tables",
+      "type": "AI Search Dominance",
+      "potential_impact": "Capture Google AI Overviews, Perplexity Citations, and ChatGPT Search",
+      "details": "Embed structured pricing comparison matrices, transit time ranges, and FMCSA cargo insurance verification tables directly above the fold on all state routes."
+    }
+  ]
+}

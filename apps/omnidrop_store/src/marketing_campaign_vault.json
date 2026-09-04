@@ -1,0 +1,43 @@
+{
+  "campaigns": [
+    {
+      "product_id": "luminaglow-pro",
+      "channels": ["TikTok Shop", "Meta Reels", "Instagram Shop"],
+      "ugc_scripts": [
+        {
+          "hook_3s": "Stop paying $500 at the med-spa for jawline contouring. Look at this...",
+          "body": "This is the LuminaGlow 4-in-1 sculptor. It uses 660nm red light therapy plus EMS microcurrent to tone your facial muscles while you do your morning skincare.",
+          "cta": "Click the link below to grab yours before the 50% off flash sale ends today."
+        }
+      ],
+      "meta_ad_copy": "Tired of puffy morning skin and sagging jawlines? ✨ The LuminaGlow™ 4-in-1 Sculptor combines clinic-grade 660nm red light with microcurrent technology to sculpt, lift, and rejuvenate your skin in just 5 minutes a day. Over 12,000+ 5-star reviews! 30-Day Money-Back Guarantee. Tap Shop Now for 50% OFF.",
+      "comma_delimited_keywords": "red light facial massager, microcurrent face sculptor, jawline contour device, anti aging skin tightening tool, home spa wellness gadgets, facial lymphatic drainage tool, "
+    },
+    {
+      "product_id": "hydropulse-shower",
+      "channels": ["TikTok Shop", "Meta Advantage+", "Google Search"],
+      "ugc_scripts": [
+        {
+          "hook_3s": "If your hair feels dry and brittle after washing, your shower water is ruining it...",
+          "body": "Hard tap water is loaded with chlorine and heavy metals. The HydroPulse uses bioactive mineral stones to filter out 99% of impurities while boosting water pressure by 200%.",
+          "cta": "Get yours today with free express shipping and a 30-day money-back guarantee."
+        }
+      ],
+      "meta_ad_copy": "Save your hair from hard water damage! 🚿 The HydroPulse™ 3-in-1 Filtered Showerhead purifies your water, restores silky shine, and delivers 200% high-pressure jet streams. Installs in 60 seconds with zero tools. 50% OFF Flash Sale Live Now!",
+      "comma_delimited_keywords": "filtered showerhead for hair loss, hard water shower filter, high pressure mineral shower head, chlorine water filter for bath, silky hair shower purifier, "
+    },
+    {
+      "product_id": "zenposture-stretcher",
+      "channels": ["Meta Advantage+", "TikTok Shop", "Google Shopping"],
+      "ugc_scripts": [
+        {
+          "hook_3s": "[CRISP SPINE DECOMPRESSION POP AUDIO] Ahhh, that is what 8 hours of sitting does to your back...",
+          "body": "The ZenPosture lumbar decompression arch gently decompresses your spinal discs and releases sciatica tension in just 5 minutes a day.",
+          "cta": "Click Shop Now to claim your 50% off posture relief bundle."
+        }
+      ],
+      "meta_ad_copy": "Desk work destroying your lower back? ⚡ Decompress your spine naturally in 5 minutes with the ZenPosture™ Lumbar Stretcher. 88 acupressure nodes release deep muscular tightness. Over 15,000+ happy backs! Tap to order with free shipping.",
+      "comma_delimited_keywords": "decompression back belt, lumbar spine stretcher, sciatica pain relief arch, posture corrector lumbar board, lower back pain stretcher, "
+    }
+  ]
+}

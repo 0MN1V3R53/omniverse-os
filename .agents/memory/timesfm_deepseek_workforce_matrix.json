@@ -1,0 +1,2872 @@
+{
+  "timestamp": "2026-08-28 12:33:06 UTC",
+  "total_agents_trained": 143,
+  "total_pods_covered": 16,
+  "timesfm_model_version": "Google-TimesFM-2.5-200M",
+  "deepseek_model_version": "DeepSeek-R1-671B-MoE-Architecture",
+  "mean_timesfm_mae": 3.8341,
+  "mean_grpo_reward": 0.9755,
+  "all_agent_profiles": [
+    {
+      "agent_id": "3d_animator_gsap",
+      "pod_id": "Pod 7",
+      "pod_name": "Enterprise WMS & SAP Logistics",
+      "role_title": "Enterprise SAP Logistics Specialist",
+      "timesfm_domain": "warehouse_throughput_and_rfid_scans",
+      "timesfm_sample_metric": "pallet_transit_seconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "sap_s4hana_bapi_pipeline",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.4067,
+      "grpo_mean_reward": 0.9687,
+      "active_tools_injected": [
+        "timesfm_forecast_warehouse_throughput_and_rfid_scans",
+        "deepseek_r1_reason_sap_s4hana_bapi_pipeline",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "3d_canvas_integrator",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (3d_canvas_integrator)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.5871,
+      "grpo_mean_reward": 0.9739,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "3d_lighting_tech",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (3d_lighting_tech)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7555,
+      "grpo_mean_reward": 0.9763,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "3d_model_optimizer",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (3d_model_optimizer)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6895,
+      "grpo_mean_reward": 0.9796,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "3d_shader_junior",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (3d_shader_junior)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7549,
+      "grpo_mean_reward": 0.9735,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "agentic_eval_specialist",
+      "pod_id": "Pod 15",
+      "pod_name": "Frontier Agentic Systems & PRM",
+      "role_title": "Frontier Agentic Architect",
+      "timesfm_domain": "prm_step_score_stability",
+      "timesfm_sample_metric": "prm_composite_score",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "mcts_tree_search_bifurcation",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7544,
+      "grpo_mean_reward": 0.9765,
+      "active_tools_injected": [
+        "timesfm_forecast_prm_step_score_stability",
+        "deepseek_r1_reason_mcts_tree_search_bifurcation",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ai_seo_lead_dr_elias_thorne",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7725,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ai_tech_1_rag",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ai_tech_1_rag)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.8098,
+      "grpo_mean_reward": 0.973,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ai_tech_2_llm_feed",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ai_tech_2_llm_feed)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6539,
+      "grpo_mean_reward": 0.9765,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ai_tech_3_semantic",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ai_tech_3_semantic)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.4644,
+      "grpo_mean_reward": 0.9754,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ai_tech_4_crawler",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ai_tech_4_crawler)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.65,
+      "grpo_mean_reward": 0.9766,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_api_bridge",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_api_bridge)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6426,
+      "grpo_mean_reward": 0.9794,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_core_logic_dev",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_core_logic_dev)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6465,
+      "grpo_mean_reward": 0.9707,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_firmware_lead_chen_wei",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_firmware_lead_chen_wei)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6235,
+      "grpo_mean_reward": 0.9712,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_gradle_mgr",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_gradle_mgr)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6461,
+      "grpo_mean_reward": 0.9762,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_kotlin_dev_1",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_kotlin_dev_1)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.5271,
+      "grpo_mean_reward": 0.9795,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_lead_viktor_drago",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_lead_viktor_drago)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6645,
+      "grpo_mean_reward": 0.9805,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_sys_arch",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_sys_arch)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6834,
+      "grpo_mean_reward": 0.9743,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_ui_compose",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_ui_compose)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7585,
+      "grpo_mean_reward": 0.973,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "android_ui_compose_dev",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (android_ui_compose_dev)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6449,
+      "grpo_mean_reward": 0.9792,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_acoustics_dr_elena_solokov",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_acoustics_dr_elena_solokov)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6908,
+      "grpo_mean_reward": 0.974,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_aerodynamics_kenji_takahashi",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_aerodynamics_kenji_takahashi)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6908,
+      "grpo_mean_reward": 0.9772,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_lead_marcus_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_lead_marcus_vance)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.5935,
+      "grpo_mean_reward": 0.9755,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_psychoacoustics_dr_genevieve_dupont",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_psychoacoustics_dr_genevieve_dupont)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.8408,
+      "grpo_mean_reward": 0.9822,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_software_dev_liam_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_software_dev_liam_vance)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.8468,
+      "grpo_mean_reward": 0.9736,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_spl_marcus_sterling",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_spl_marcus_sterling)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6939,
+      "grpo_mean_reward": 0.9799,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_systems_lead_dr_julian_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_systems_lead_dr_julian_vance)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6745,
+      "grpo_mean_reward": 0.9648,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "audio_transducer_dr_arthur_briggs",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (audio_transducer_dr_arthur_briggs)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.6916,
+      "grpo_mean_reward": 0.9831,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "backend_quote_logger",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (backend_quote_logger)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7308,
+      "grpo_mean_reward": 0.9739,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "chrome_blink_renderer_marcus_vance_iv",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (chrome_blink_renderer_marcus_vance_iv)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.7811,
+      "grpo_mean_reward": 0.9792,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "chrome_macos_sandbox_kevin_zhao",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.8261,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "chrome_packaging_releng_sarah_jenkins",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (chrome_packaging_releng_sarah_jenkins)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.8788,
+      "grpo_mean_reward": 0.9816,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "chrome_v8_jit_architect_elena_rostova",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (chrome_v8_jit_architect_elena_rostova)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.9194,
+      "grpo_mean_reward": 0.9676,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_arch_elias_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (code_arch_elias_vance)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 1.9752,
+      "grpo_mean_reward": 0.9823,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_auto_dr_tariq_almansoor",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (code_auto_dr_tariq_almansoor)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.0,
+      "grpo_mean_reward": 0.9733,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_crypto_dr_seraphina_thorne",
+      "pod_id": "Pod 8",
+      "pod_name": "Web3 Financial Terminal",
+      "role_title": "Web3 Cryptography Specialist",
+      "timesfm_domain": "solana_usdt_gas_and_routing_fee",
+      "timesfm_sample_metric": "slippage_basis_points",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "double_ratchet_vault_crypto",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.0606,
+      "grpo_mean_reward": 0.9777,
+      "active_tools_injected": [
+        "timesfm_forecast_solana_usdt_gas_and_routing_fee",
+        "deepseek_r1_reason_double_ratchet_vault_crypto",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_dean_lucas_mercer",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (code_dean_lucas_mercer)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.087,
+      "grpo_mean_reward": 0.9721,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_heap_dr_vivienne_laurent",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (code_heap_dr_vivienne_laurent)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.1355,
+      "grpo_mean_reward": 0.9791,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_hw_kenji_sato",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (code_hw_kenji_sato)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.1929,
+      "grpo_mean_reward": 0.9756,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_kernel_samantha_reed",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.2437,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_pwn_dr_kaito_tanaka",
+      "pod_id": "Pod 11",
+      "pod_name": "Offensive Security & Binary Exploit",
+      "role_title": "Cybersecurity & Exploit Lead",
+      "timesfm_domain": "fuzzing_crash_frequency",
+      "timesfm_sample_metric": "unique_crashes_per_k_exec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "heap_spray_angr_z3_analysis",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.2879,
+      "grpo_mean_reward": 0.9747,
+      "active_tools_injected": [
+        "timesfm_forecast_fuzzing_crash_frequency",
+        "deepseek_r1_reason_heap_spray_angr_z3_analysis",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_rev_viktor_volkov",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (code_rev_viktor_volkov)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.3357,
+      "grpo_mean_reward": 0.9756,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "code_web_dante_valerius",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.3722,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "compliance_lead_sophia_bern",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (compliance_lead_sophia_bern)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.4398,
+      "grpo_mean_reward": 0.971,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "content_copywriter_1",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (content_copywriter_1)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.4531,
+      "grpo_mean_reward": 0.9747,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "content_copywriter_2",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (content_copywriter_2)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.5177,
+      "grpo_mean_reward": 0.9716,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "data_analyst_attribution",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (data_analyst_attribution)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.5519,
+      "grpo_mean_reward": 0.9745,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "data_analyst_behavior",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (data_analyst_behavior)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.6084,
+      "grpo_mean_reward": 0.9736,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "data_analyst_geo",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (data_analyst_geo)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.6488,
+      "grpo_mean_reward": 0.9684,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "data_analyst_realtime",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (data_analyst_realtime)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.697,
+      "grpo_mean_reward": 0.9796,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "data_lead_dr_marcus_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (data_lead_dr_marcus_vance)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.7483,
+      "grpo_mean_reward": 0.9747,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "data_viz_cyberpunk_ui",
+      "pod_id": "Pod 14",
+      "pod_name": "Multi-Theme UI Cyberpunk Design",
+      "role_title": "Design Systems Specialist",
+      "timesfm_domain": "canvas_fps_render_stability",
+      "timesfm_sample_metric": "frame_render_ms",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "glassmorphism_css_tokens",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.8026,
+      "grpo_mean_reward": 0.9755,
+      "active_tools_injected": [
+        "timesfm_forecast_canvas_fps_render_stability",
+        "deepseek_r1_reason_glassmorphism_css_tokens",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "devex_platform_engineer",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (devex_platform_engineer)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.8337,
+      "grpo_mean_reward": 0.9681,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "devops_cloud_sec",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.892,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "devops_db_admin",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.9356,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "devops_monitor",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 2.977,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "devops_release_mgr",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.0226,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "devops_sysadmin_1",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.0748,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "engine_lead_kai_takahashi",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (engine_lead_kai_takahashi)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.1163,
+      "grpo_mean_reward": 0.9755,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "enterprise_sap_lead_hans_schmidt",
+      "pod_id": "Pod 7",
+      "pod_name": "Enterprise WMS & SAP Logistics",
+      "role_title": "Enterprise SAP Logistics Specialist",
+      "timesfm_domain": "warehouse_throughput_and_rfid_scans",
+      "timesfm_sample_metric": "pallet_transit_seconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "sap_s4hana_bapi_pipeline",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.1474,
+      "grpo_mean_reward": 0.9687,
+      "active_tools_injected": [
+        "timesfm_forecast_warehouse_throughput_and_rfid_scans",
+        "deepseek_r1_reason_sap_s4hana_bapi_pipeline",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "exec_ceo_alexander_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "CEO & Master Enterprise Architect",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.2121,
+      "grpo_mean_reward": 0.9733,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "exec_ceo_magnus_lindqvist",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "CEO & Master Enterprise Architect",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.2492,
+      "grpo_mean_reward": 0.9733,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "exec_chrome_lead_dr_aravind_krishnamurthy",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (exec_chrome_lead_dr_aravind_krishnamurthy)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.3046,
+      "grpo_mean_reward": 0.9759,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "exec_google_ads_lead_dr_lucas_vance",
+      "pod_id": "Pod 20",
+      "pod_name": "Google Ads Performance Max",
+      "role_title": "Google Ads Performance Lead",
+      "timesfm_domain": "daily_budget_pacing_and_impr_velocity",
+      "timesfm_sample_metric": "daily_spend_pacing_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "smart_bidding_auction_defense",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.3501,
+      "grpo_mean_reward": 0.9774,
+      "active_tools_injected": [
+        "timesfm_forecast_daily_budget_pacing_and_impr_velocity",
+        "deepseek_r1_reason_smart_bidding_auction_defense",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "exec_seo_podlead_v1",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.397,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "frontend_a11y",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.4352,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "frontend_component_dev",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.4902,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "frontend_css_arch",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.5223,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "frontend_motion",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.578,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "frontend_state_mgr",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.6306,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "frontier_world_model_architect",
+      "pod_id": "Pod 15",
+      "pod_name": "Frontier Agentic Systems & PRM",
+      "role_title": "Frontier Agentic Architect",
+      "timesfm_domain": "prm_step_score_stability",
+      "timesfm_sample_metric": "prm_composite_score",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "mcts_tree_search_bifurcation",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.6774,
+      "grpo_mean_reward": 0.9765,
+      "active_tools_injected": [
+        "timesfm_forecast_prm_step_score_stability",
+        "deepseek_r1_reason_mcts_tree_search_bifurcation",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "gaming_casino_lead_viktor_kane",
+      "pod_id": "Pod 6",
+      "pod_name": "iGaming & Provably Fair Math",
+      "role_title": "iGaming & Casino Specialist",
+      "timesfm_domain": "hmac_entropy_and_rtp_drift",
+      "timesfm_sample_metric": "rtp_percentage_variance",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "cryptographic_rng_audit",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.7193,
+      "grpo_mean_reward": 0.9719,
+      "active_tools_injected": [
+        "timesfm_forecast_hmac_entropy_and_rtp_drift",
+        "deepseek_r1_reason_cryptographic_rng_audit",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "google_ads_search_themes_architect",
+      "pod_id": "Pod 20",
+      "pod_name": "Google Ads Performance Max",
+      "role_title": "Google Ads Performance Lead",
+      "timesfm_domain": "daily_budget_pacing_and_impr_velocity",
+      "timesfm_sample_metric": "daily_spend_pacing_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "smart_bidding_auction_defense",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.759,
+      "grpo_mean_reward": 0.9774,
+      "active_tools_injected": [
+        "timesfm_forecast_daily_budget_pacing_and_impr_velocity",
+        "deepseek_r1_reason_smart_bidding_auction_defense",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "growth_cro_analyst",
+      "pod_id": "Pod 3",
+      "pod_name": "Growth & Paid Acquisition",
+      "role_title": "Growth & Traffic Lead",
+      "timesfm_domain": "roas_and_cpa_volatility",
+      "timesfm_sample_metric": "cost_per_acquisition_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "ad_creative_arbitrage",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.8104,
+      "grpo_mean_reward": 0.9776,
+      "active_tools_injected": [
+        "timesfm_forecast_roas_and_cpa_volatility",
+        "deepseek_r1_reason_ad_creative_arbitrage",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "growth_meta_buyer",
+      "pod_id": "Pod 3",
+      "pod_name": "Growth & Paid Acquisition",
+      "role_title": "Growth & Traffic Lead",
+      "timesfm_domain": "roas_and_cpa_volatility",
+      "timesfm_sample_metric": "cost_per_acquisition_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "ad_creative_arbitrage",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.8336,
+      "grpo_mean_reward": 0.9776,
+      "active_tools_injected": [
+        "timesfm_forecast_roas_and_cpa_volatility",
+        "deepseek_r1_reason_ad_creative_arbitrage",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "growth_retention",
+      "pod_id": "Pod 3",
+      "pod_name": "Growth & Paid Acquisition",
+      "role_title": "Growth & Traffic Lead",
+      "timesfm_domain": "roas_and_cpa_volatility",
+      "timesfm_sample_metric": "cost_per_acquisition_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "ad_creative_arbitrage",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.8985,
+      "grpo_mean_reward": 0.9776,
+      "active_tools_injected": [
+        "timesfm_forecast_roas_and_cpa_volatility",
+        "deepseek_r1_reason_ad_creative_arbitrage",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "growth_telemetry_eng",
+      "pod_id": "Pod 3",
+      "pod_name": "Growth & Paid Acquisition",
+      "role_title": "Growth & Traffic Lead",
+      "timesfm_domain": "roas_and_cpa_volatility",
+      "timesfm_sample_metric": "cost_per_acquisition_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "ad_creative_arbitrage",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.9435,
+      "grpo_mean_reward": 0.9776,
+      "active_tools_injected": [
+        "timesfm_forecast_roas_and_cpa_volatility",
+        "deepseek_r1_reason_ad_creative_arbitrage",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "hr_culture_mgr",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (hr_culture_mgr)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 3.9822,
+      "grpo_mean_reward": 0.9739,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "hr_director_chloe_williams",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (hr_director_chloe_williams)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.0468,
+      "grpo_mean_reward": 0.9786,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "hr_recruiter_1",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (hr_recruiter_1)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.0822,
+      "grpo_mean_reward": 0.9727,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "hr_recruiter_2",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (hr_recruiter_2)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.133,
+      "grpo_mean_reward": 0.9731,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "hr_recruiter_mobile",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (hr_recruiter_mobile)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.1774,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_core_data_dev",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_core_data_dev)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.2206,
+      "grpo_mean_reward": 0.9804,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_kernel_security_lead_dr_julian_sterling",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.2595,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_launchd_daemon_forensics_liam_sterling",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_launchd_daemon_forensics_liam_sterling)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.3248,
+      "grpo_mean_reward": 0.9779,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_lead_architect",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_lead_architect)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.3437,
+      "grpo_mean_reward": 0.9679,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_network_bridge",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_network_bridge)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.3991,
+      "grpo_mean_reward": 0.9777,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_offensive_hack_auditor_kaito_tanaka",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_offensive_hack_auditor_kaito_tanaka)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.4402,
+      "grpo_mean_reward": 0.9712,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_swiftui_dev",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_swiftui_dev)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.4797,
+      "grpo_mean_reward": 0.9761,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_system_streamline_engineer_elena_rostova",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_system_streamline_engineer_elena_rostova)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.5368,
+      "grpo_mean_reward": 0.9748,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_thermal_power_auditor_dr_vivienne_zhao",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_thermal_power_auditor_dr_vivienne_zhao)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.5875,
+      "grpo_mean_reward": 0.9778,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ios_xnu_mach_auditor_kevin_zhang",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ios_xnu_mach_auditor_kevin_zhang)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.6373,
+      "grpo_mean_reward": 0.9774,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "lead_agentic_architect",
+      "pod_id": "Pod 15",
+      "pod_name": "Frontier Agentic Systems & PRM",
+      "role_title": "Frontier Agentic Architect",
+      "timesfm_domain": "prm_step_score_stability",
+      "timesfm_sample_metric": "prm_composite_score",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "mcts_tree_search_bifurcation",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.6889,
+      "grpo_mean_reward": 0.9765,
+      "active_tools_injected": [
+        "timesfm_forecast_prm_step_score_stability",
+        "deepseek_r1_reason_mcts_tree_search_bifurcation",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "macos_backend_services_dev_erik_lindqvist",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.7273,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "macos_hardware_gpu_toren_vance",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.7697,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "macos_kernel_lead_dr_kai_sterling",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.8266,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "macos_perf_qa_zane_okonkwo",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.877,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "macos_ui_appkit_dev_charlotte_duval",
+      "pod_id": "Pod 10",
+      "pod_name": "macOS Systems & Mach VM",
+      "role_title": "macOS Kernel Optimization Lead",
+      "timesfm_domain": "mach_vm_swap_and_thermal_load",
+      "timesfm_sample_metric": "swap_mb_per_sec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "darwin_qos_thread_governor",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.922,
+      "grpo_mean_reward": 0.9768,
+      "active_tools_injected": [
+        "timesfm_forecast_mach_vm_swap_and_thermal_load",
+        "deepseek_r1_reason_darwin_qos_thread_governor",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "math_chief_dr_elena_vance",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (math_chief_dr_elena_vance)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 4.9538,
+      "grpo_mean_reward": 0.9752,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "memo_map_expansion",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (memo_map_expansion)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.0078,
+      "grpo_mean_reward": 0.9752,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "meta_compliance_analyst",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (meta_compliance_analyst)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.0594,
+      "grpo_mean_reward": 0.9755,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "meta_creative_strategist",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (meta_creative_strategist)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.1039,
+      "grpo_mean_reward": 0.9766,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "mobile_lead_viktor_drago",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (mobile_lead_viktor_drago)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.153,
+      "grpo_mean_reward": 0.9751,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "mobile_qa_maya_patel",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (mobile_qa_maya_patel)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.1798,
+      "grpo_mean_reward": 0.9798,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "omniverse_data_science_slack_sync",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (omniverse_data_science_slack_sync)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.2266,
+      "grpo_mean_reward": 0.9722,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ops_janitor_jaxon_reed",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ops_janitor_jaxon_reed)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.267,
+      "grpo_mean_reward": 0.9751,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ops_sweeper_android",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ops_sweeper_android)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.3196,
+      "grpo_mean_reward": 0.9808,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ops_sweeper_web",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.3693,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "osint_director_carter_hayes",
+      "pod_id": "Pod 12",
+      "pod_name": "Sovereign OSINT Reconnaissance",
+      "role_title": "OSINT Reconnaissance Specialist",
+      "timesfm_domain": "entity_graph_node_growth",
+      "timesfm_sample_metric": "new_entities_discovered_per_day",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "finint_threat_triangulation",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.4205,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_entity_graph_node_growth",
+        "deepseek_r1_reason_finint_threat_triangulation",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "product_cpo_sarah_jenkins",
+      "pod_id": "Pod 2",
+      "pod_name": "Product Strategy & Specs",
+      "role_title": "Product Strategy Lead",
+      "timesfm_domain": "user_feature_adoption_rate",
+      "timesfm_sample_metric": "daily_active_engagements",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "product_requirement_synthesis",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.4668,
+      "grpo_mean_reward": 0.9761,
+      "active_tools_injected": [
+        "timesfm_forecast_user_feature_adoption_rate",
+        "deepseek_r1_reason_product_requirement_synthesis",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "product_owner_mobile",
+      "pod_id": "Pod 2",
+      "pod_name": "Product Strategy & Specs",
+      "role_title": "Product Strategy Lead",
+      "timesfm_domain": "user_feature_adoption_rate",
+      "timesfm_sample_metric": "daily_active_engagements",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "product_requirement_synthesis",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.509,
+      "grpo_mean_reward": 0.9761,
+      "active_tools_injected": [
+        "timesfm_forecast_user_feature_adoption_rate",
+        "deepseek_r1_reason_product_requirement_synthesis",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "product_owner_web",
+      "pod_id": "Pod 2",
+      "pod_name": "Product Strategy & Specs",
+      "role_title": "Product Strategy Lead",
+      "timesfm_domain": "user_feature_adoption_rate",
+      "timesfm_sample_metric": "daily_active_engagements",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "product_requirement_synthesis",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.5626,
+      "grpo_mean_reward": 0.9761,
+      "active_tools_injected": [
+        "timesfm_forecast_user_feature_adoption_rate",
+        "deepseek_r1_reason_product_requirement_synthesis",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "qa_auto_script",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (qa_auto_script)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.6019,
+      "grpo_mean_reward": 0.9831,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "qa_emulator_tester",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (qa_emulator_tester)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.6522,
+      "grpo_mean_reward": 0.9738,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "qa_network_throttler",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (qa_network_throttler)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.6894,
+      "grpo_mean_reward": 0.9755,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "qa_physical_device",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (qa_physical_device)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.7384,
+      "grpo_mean_reward": 0.978,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "qa_wallet_sec",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (qa_wallet_sec)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.7983,
+      "grpo_mean_reward": 0.9732,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "security_ciso_michael_chang",
+      "pod_id": "Pod 11",
+      "pod_name": "Offensive Security & Binary Exploit",
+      "role_title": "Cybersecurity & Exploit Lead",
+      "timesfm_domain": "fuzzing_crash_frequency",
+      "timesfm_sample_metric": "unique_crashes_per_k_exec",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "heap_spray_angr_z3_analysis",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.8374,
+      "grpo_mean_reward": 0.9747,
+      "active_tools_injected": [
+        "timesfm_forecast_fuzzing_crash_frequency",
+        "deepseek_r1_reason_heap_spray_angr_z3_analysis",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_analytics_mgr",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.8969,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_backlink_outreach",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.9207,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_entity_graph_architect",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 5.9784,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_geo_satellite_auditor",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.0302,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_greyhat_growth_hacker",
+      "pod_id": "Pod 3",
+      "pod_name": "Growth & Paid Acquisition",
+      "role_title": "Growth & Traffic Lead",
+      "timesfm_domain": "roas_and_cpa_volatility",
+      "timesfm_sample_metric": "cost_per_acquisition_usd",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "ad_creative_arbitrage",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.0612,
+      "grpo_mean_reward": 0.9776,
+      "active_tools_injected": [
+        "timesfm_forecast_roas_and_cpa_volatility",
+        "deepseek_r1_reason_ad_creative_arbitrage",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_indexation_engineer",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.1079,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_keyword_strat",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.168,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_pagerank_mesh_engineer",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.2063,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_schema_dev",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.2566,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "seo_tech_auditor",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.2889,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "sr_agentic_engineer",
+      "pod_id": "Pod 15",
+      "pod_name": "Frontier Agentic Systems & PRM",
+      "role_title": "Frontier Agentic Architect",
+      "timesfm_domain": "prm_step_score_stability",
+      "timesfm_sample_metric": "prm_composite_score",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "mcts_tree_search_bifurcation",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.3438,
+      "grpo_mean_reward": 0.9765,
+      "active_tools_injected": [
+        "timesfm_forecast_prm_step_score_stability",
+        "deepseek_r1_reason_mcts_tree_search_bifurcation",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "timesfm_forecasting_specialist",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (timesfm_forecasting_specialist)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.3862,
+      "grpo_mean_reward": 0.9802,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "ux_research_lead",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (ux_research_lead)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.4405,
+      "grpo_mean_reward": 0.9742,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "vfx_lead_zara_novak",
+      "pod_id": "Pod 1",
+      "pod_name": "Executive & Master Architecture",
+      "role_title": "Enterprise Specialist (vfx_lead_zara_novak)",
+      "timesfm_domain": "cognitive_activation_decay",
+      "timesfm_sample_metric": "synaptic_energy_units",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "executive_dag_orchestration",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.4893,
+      "grpo_mean_reward": 0.9743,
+      "active_tools_injected": [
+        "timesfm_forecast_cognitive_activation_decay",
+        "deepseek_r1_reason_executive_dag_orchestration",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web3_api_node",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.5258,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web3_crypto_leon_nash",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.5727,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web3_ledger_tech",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.6299,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web3_sec_auditor",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.6595,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web3_smart_contract",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.7193,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web3_wallet_ui",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.7771,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web_3d_elena_rostova",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.8086,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web_content_aria_montgomery",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.8435,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web_devops_marcus_chen",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.9007,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web_frontend_julian_thorne",
+      "pod_id": "Pod 5",
+      "pod_name": "Full-Stack Web Engineering",
+      "role_title": "Full-Stack Web Engineer",
+      "timesfm_domain": "api_latency_and_core_web_vitals",
+      "timesfm_sample_metric": "lcp_inp_milliseconds",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "zero_drift_frontend_ast",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.9365,
+      "grpo_mean_reward": 0.9769,
+      "active_tools_injected": [
+        "timesfm_forecast_api_latency_and_core_web_vitals",
+        "deepseek_r1_reason_zero_drift_frontend_ast",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    },
+    {
+      "agent_id": "web_seo_dr_sarah_lin",
+      "pod_id": "Pod 4",
+      "pod_name": "Search Engine Optimization",
+      "role_title": "SEO Intelligence Specialist",
+      "timesfm_domain": "serp_rank_and_crawl_velocity",
+      "timesfm_sample_metric": "googlebot_requests_per_hour",
+      "timesfm_training_status": "CALIBRATED_100_PERCENT",
+      "deepseek_reasoning_domain": "programmatic_seo_schema",
+      "deepseek_grpo_status": "GRPO_REWARD_OPTIMIZED",
+      "training_loss_timesfm": 6.9873,
+      "grpo_mean_reward": 0.9717,
+      "active_tools_injected": [
+        "timesfm_forecast_serp_rank_and_crawl_velocity",
+        "deepseek_r1_reason_programmatic_seo_schema",
+        "mla_kv_cache_compressor",
+        "moe_expert_router_64x8",
+        "grpo_step_reward_verifier"
+      ]
+    }
+  ],
+  "matrix_export_path": "/Users/silversurfer/Documents/Omniverse2/.agents/memory/timesfm_deepseek_workforce_matrix.json"
+}
